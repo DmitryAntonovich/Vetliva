@@ -1,0 +1,8 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: MontserratBlack;
+  src: url("..//fonts/Montserrat-Numbers.ttf");
+}
