@@ -43,6 +43,7 @@ $(".guide-dots").slick({
   centerMode: false,
   focusOnSelect: true,
   arrows: false,
+  swipe: false,
   responsive: [
     {
       breakpoint: 1280,
@@ -50,7 +51,7 @@ $(".guide-dots").slick({
         arrows: false,
         centerMode: false,
         slidesToShow: 3,
-        swipe: true,
+        swipe: false,
       },
     },
     {
@@ -60,7 +61,7 @@ $(".guide-dots").slick({
         centerMode: false,
         centerPadding: "20px",
         slidesToShow: 3,
-        swipe: true,
+        swipe: false,
       },
     },
   ],

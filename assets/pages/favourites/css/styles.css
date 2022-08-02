@@ -1,0 +1,130 @@
+nav {
+  justify-content: space-between;
+}
+.nav-search svg path {
+  fill: var(--main-color);
+}
+
+.nav-booking {
+  border: 2.5px solid var(--main-color);
+}
+
+.nav-booking span {
+  color: var(--main-color);
+}
+
+.nav-favourites svg path {
+  fill: var(--main-color);
+}
+
+.nav-lang svg path {
+  color: var(--main-color);
+  fill: var(--main-color);
+}
+
+.nav-cart svg path {
+  fill: var(--main-color);
+}
+
+.header-burger__block,
+.header-burger__block::before,
+.header-burger__block::after {
+  background-color: var(--main-color);
+}
+
+.favourites-nav {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.favourites-nav__arrows {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: absolute;
+  width: 129rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.favourites-nav__wrapper {
+  width: 120rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: auto;
+}
+
+.favourites-nav__items {
+  max-width: 120rem;
+  min-width: none;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 2.43rem;
+  display: inline-flex;
+  gap: 9rem;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.favourites-nav__item {
+  color: var(--main-gray);
+}
+
+@media screen and (max-width: 1280px) {
+  .favourites-nav__arrows {
+    width: 99rem;
+  }
+
+  .favourites-nav__wrapper {
+    width: 90rem;
+  }
+  .favourites-nav__items {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .nav-booking {
+    border: none;
+  }
+  .nav-booking svg path {
+    fill: var(--main-color);
+  }
+  .nav-auth-mobile svg path {
+    fill: var(--main-color);
+  }
+
+  .favourites-nav__arrows {
+    width: 76.8rem;
+  }
+
+  .favourites-nav__wrapper {
+    width: 68rem;
+  }
+  .favourites-nav__items {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .favourites-nav__arrows {
+    min-width: 30rem;
+    max-width: 70rem;
+    width: 90%;
+  }
+
+  .favourites-nav__wrapper {
+    min-width: 26rem;
+    max-width: 65rem;
+    width: 75%;
+  }
+
+  .favourites-nav__items {
+    gap: 4rem;
+  }
+}
