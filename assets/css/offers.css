@@ -115,7 +115,8 @@
   color: transparent;
   -webkit-text-stroke-width: 1.16px;
   -webkit-text-stroke-color: #ffffff;
-  font-family: MontserratBlack, sans-serif !important;
+  /* font-family: MontserratBlack, sans-serif !important; */
+  font-family: "MontserratBlack", sans-serif !important;
 }
 .offers-sub__slider {
   /* background-color: teal; */

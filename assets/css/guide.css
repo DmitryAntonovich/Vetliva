@@ -242,13 +242,6 @@
 }
 
 @media screen and (max-width: 990px) {
-  .right-modal__bg {
-    width: 40%;
-  }
-  .right-modal__content {
-    width: 60%;
-  }
-
   .guide-carousel {
     width: 100%;
   }
@@ -272,21 +265,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .right-modal__bg {
-    width: 0%;
-  }
-  .right-modal__content {
-    width: 100%;
-  }
-
-  .modal-nav {
-    left: unset;
-    right: 4rem;
-  }
-  .modal-menu {
-    margin: 15rem auto 0rem auto;
-  }
-
   .guide-carousel {
     width: 95%;
   }

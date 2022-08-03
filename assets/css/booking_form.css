@@ -63,6 +63,22 @@
   align-items: flex-end;
 }
 
+.form-nav__content::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.form-nav__content::-webkit-scrollbar-track {
+  height: 0px;
+  width: 0px;
+}
+
+.form-nav__content::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  width: 0px;
+  height: 0px;
+}
+
 .form-nav__content li {
   color: var(--main-gray);
   padding: 0rem 3.3rem;
@@ -182,7 +198,13 @@ input {
   width: 1.5rem;
   height: 1rem;
   margin-left: 1rem;
+  transform: rotate(0deg);
 }
+
+.tourists__select:hover svg {
+  transform: rotate(180deg);
+}
+
 .tourists-options {
   position: absolute;
   width: 100%;
@@ -309,6 +331,15 @@ input {
 }
 
 @media screen and (max-width: 768px) {
+  .form-nav__left svg,
+  .form-nav__right svg {
+    width: 1.2rem;
+    height: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -0.2rem;
+  }
+
   .form-nav__content {
     height: 2.8rem;
     gap: 2.1rem;
@@ -391,7 +422,7 @@ input {
   }
 
   .dash {
-    grid-column: 7 / 21;
+    grid-column: 1 / 26;
     justify-self: center;
   }
 
