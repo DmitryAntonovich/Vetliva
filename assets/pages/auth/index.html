@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="/assets/libs/jquery-ui-1.13.2.custom/jquery-ui.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/assets/libs/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="auth-form b-r">
+      <div class="auth-form__nav">
+        <div class="greetings">
+          <span class="semi-bold text-white">Добро пожаловать</span>
+        </div>
+
+        <div class="auth-nav__desc">
+          <p class="auth-nav__text medium">
+            войдите в свой аккаунт, чтобы оставаться с нами
+          </p>
+        </div>
+
+        <a href="#" class="auth-login__link"
+          ><span class="b-r bold auth-login">Войти</span></a
+        >
+      </div>
+      <div class="auth-form__form">
+        <div class="auth-form__close">
+          <div class="btn-cross cu-p"></div>
+        </div>
+        <div class="auth-reg-title bold">Создайте свой аккаунт</div>
+        <div class="auth-reg-desc medium">
+          с помощью почты или социальных сетей
+        </div>
+        <form action="" class="reg-form">
+          <div class="reg-input__wrapper">
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="reg-form__input reg-form__input__wrong"
+            />
+          </div>
+          <div class="reg-input__wrapper">
+            <input
+              type="password"
+              name=""
+              placeholder="Пароль"
+              class="reg-form__input"
+            />
+            <img src="../../images/passHide.png" class="showPass" alt="" />
+          </div>
+          <div class="reg-input__wrapper">
+            <input
+              type="password"
+              name=""
+              placeholder="Повторите пароль"
+              class="reg-form__input"
+            />
+            <img src="../../images/passHide.png" class="showPass" alt="" />
+          </div>
+        </form>
+
+        <form class="terms" action="">
+          <label class="terms__label chck cu-p"
+            ><input type="checkbox" class="terms__checkbox" /><span
+              class="terms__span"
+            >
+            </span>
+            <div class="terms__text">
+              <a href="#" class="text-gray term">
+                Я согласен со всеми условиями политики обработки персональных
+                данных, политики конфиденциальности, договора оферты
+              </a>
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
