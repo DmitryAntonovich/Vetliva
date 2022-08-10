@@ -203,10 +203,15 @@
 }
 
 @media screen and (max-width: 1280px) {
+  .guide-nav__left svg,
+  .guide-nav__right svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
   .guide {
     display: flex;
     flex-direction: column;
-    margin-top: 19rem;
+    margin-top: 16rem;
   }
   .guide-carousel {
     max-width: 119.5rem;
@@ -269,12 +274,12 @@
     width: 95%;
   }
   .guide-carousel .slick-list .slick-track {
-    gap: 0.5rem;
+    gap: 1.3rem;
   }
   .guide-slide__wrapper {
     width: 25.5rem;
     max-height: 15.5rem;
-    padding: 0rem 1.3rem;
+    /* padding: 0rem 1.3rem; */
   }
   .guide-dots__wrapper {
     max-width: 96%;

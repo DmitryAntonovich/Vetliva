@@ -13,7 +13,7 @@ $(".guide-carousel").slick({
   swipe: false,
   responsive: [
     {
-      breakpoint: 1280,
+      breakpoint: 1281,
       settings: {
         centerMode: false,
         slidesToShow: 1,
@@ -46,7 +46,7 @@ $(".guide-dots").slick({
   swipe: false,
   responsive: [
     {
-      breakpoint: 1280,
+      breakpoint: 1281,
       settings: {
         arrows: false,
         centerMode: false,
@@ -55,7 +55,7 @@ $(".guide-dots").slick({
       },
     },
     {
-      breakpoint: 768,
+      breakpoint: 769,
       settings: {
         arrows: false,
         centerMode: false,

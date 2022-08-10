@@ -11,8 +11,12 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  gap: 3rem;
+  /* gap: 3rem; */
   height: 100%;
+
+  column-gap: 3rem;
+  row-gap: 3rem;
+  -moz-column-gap: 3rem;
 }
 
 .blog-left {
@@ -71,6 +75,7 @@
   grid-row: 7 / 13;
   width: 85rem;
   height: 32.6rem;
+  -moz-height: 32rem;
   flex-direction: row;
   justify-content: flex-start;
 }
@@ -182,6 +187,7 @@
   .blog-down {
     width: 73rem;
     height: 25.3rem;
+    /* -moz-height: 24rem; */
   }
 
   .blog-item__title {
@@ -202,6 +208,10 @@
   .blog-top__content,
   .blog-down__content {
     margin-left: 3.2rem;
+  }
+  .blog-arrow svg {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 

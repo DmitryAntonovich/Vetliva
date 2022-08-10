@@ -3,7 +3,7 @@ $(".offers-main__slider").slick({
   variableWidth: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  swipe: true,
+  swipe: false,
   centerMode: false,
   infinite: true,
   variableWidth: true,
@@ -27,7 +27,7 @@ $(".offers-sub__slider").slick({
   variableWidth: true,
   slidesToShow: 2,
   slidesToScroll: 2,
-  swipe: true,
+  swipe: false,
   centerMode: false,
   infinite: true,
   responsive: [
@@ -46,10 +46,10 @@ $(".offers-sub__slider").slick({
 });
 
 $(".offers-nav__left").click(() => {
-  offersMove("Prev", 2);
+  offersMove("Prev", 1);
 });
 $(".offers-nav__right").click(() => {
-  offersMove("Next", 2);
+  offersMove("Next", 1);
 });
 
 function offersMove(way, slides) {
@@ -57,4 +57,8 @@ function offersMove(way, slides) {
   for (i = 0; i < slides; i++) {
     $(".offers-sub__slider").slick(`slick${way}`);
   }
+}
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  $(".offers-detail").text("Подробнее");
 }

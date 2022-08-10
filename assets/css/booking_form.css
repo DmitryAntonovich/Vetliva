@@ -169,7 +169,7 @@
 .date {
   width: 15.7rem;
 }
-input {
+.input {
   width: 100%;
 }
 .date__to {
@@ -182,7 +182,12 @@ input {
   position: relative;
 }
 
-.tourists:hover .tourists-options {
+/* .tourists:hover .tourists-options {
+  visibility: visible;
+  opacity: 1;
+} */
+
+.tourists-options__active {
   visibility: visible;
   opacity: 1;
 }
@@ -198,12 +203,12 @@ input {
   width: 1.5rem;
   height: 1rem;
   margin-left: 1rem;
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
 }
 
-.tourists__select:hover svg {
+/* .tourists__select:hover svg {
   transform: rotate(180deg);
-}
+} */
 
 .tourists-options {
   position: absolute;
@@ -245,6 +250,22 @@ input {
 }
 
 @media screen and (max-width: 1280px) {
+  .human__count svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .tourists__select svg {
+    width: 1.2rem;
+  }
+
+  .form-nav__left svg,
+  .form-nav__right svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0.6rem;
+  }
+
   .booking {
     margin: 8rem auto 0 auto;
   }
@@ -256,6 +277,7 @@ input {
 
   .form-nav__content {
     justify-content: space-between;
+    text-align: center;
     width: 95%;
     margin: 0 auto;
   }
@@ -268,7 +290,7 @@ input {
 
   .form-nav__left,
   .form-nav__right {
-    top: 0.8rem;
+    top: 1rem;
   }
   .date {
     width: 12rem;
@@ -291,6 +313,12 @@ input {
 }
 
 @media screen and (max-width: 990px) {
+  .form-nav__left svg,
+  .form-nav__right svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    top: -0.3rem;
+  }
   .form-nav__content {
     height: 2.5rem;
   }
@@ -337,7 +365,7 @@ input {
     height: 1.2em;
     position: absolute;
     left: 0;
-    top: -0.2rem;
+    top: -0.3rem;
   }
 
   .form-nav__content {
@@ -353,7 +381,7 @@ input {
     padding: 2rem 2rem;
   }
   .booking-form__wrapper {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
     height: 25rem;
   }

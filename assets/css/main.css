@@ -1,4 +1,4 @@
-main {
+.main {
   /* background-image: url("../images/main-background.png"); */
   background-image: url("../images/main-background123.webp");
 
@@ -27,7 +27,7 @@ main {
 }
 
 @media screen and (max-width: 1280px) {
-  main {
+  .main {
     background-position: -435px -119px;
     height: 49.1rem;
   }
@@ -57,7 +57,7 @@ main {
   .h-1 {
     font-size: 7.9rem;
   }
-  main {
+  .main {
     max-height: 43.2rem;
   }
   .main-descriptions {

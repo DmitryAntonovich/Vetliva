@@ -39,6 +39,8 @@ $(".popular-slider__sub").slick({
   slidesToScroll: 3,
   arrows: false,
   infinite: true,
+  variableWidth: true,
+
   responsive: [
     {
       breakpoint: 1280,

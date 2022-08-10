@@ -52,3 +52,13 @@ $(".modal-nav__back").click(function () {
   $(".modal-actions__rates").removeClass("modal-actions__rates__active");
   $(".modal-nav__back").removeClass("modal-nav__back__active");
 });
+
+$(".nav-booking").click(function () {
+  $(".booking-options").toggleClass("booking-options__active");
+  $(".nav-booking").children("svg").toggleClass("arrow-top");
+});
+
+$(".tourists__select__count").click(function () {
+  $(".tourists-options").toggleClass("tourists-options__active");
+  $(".tourists__select__count").children("svg").toggleClass("arrow-top");
+});
