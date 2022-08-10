@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="/assets/libs/jquery-ui-1.13.2.custom/jquery-ui.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/assets/libs/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="auth-form b-r">
+      <div class="auth-form__close">
+        <div class="btn-cross cu-p"></div>
+      </div>
+
+      <div class="auth-reg-nav">
+        <div class="auth-tab tab-auth">
+          <a href="#" class="semi-bold">Вход</a>
+        </div>
+        <div class="auth-tab tab-reg auth-tab__active">
+          <a href="#" class="semi-bold">Регистрация</a>
+        </div>
+      </div>
+
+      <div class="auth-form__nav">
+        <div class="greetings">
+          <span class="semi-bold text-white greetings__text"
+            >Добро пожаловать</span
+          >
+        </div>
+
+        <div class="auth-nav__desc">
+          <p class="auth-nav__text medium">
+            войдите в свой аккаунт, чтобы оставаться с нами
+          </p>
+        </div>
+
+        <a href="#" class="auth-login__link b-r bold auth-login">Войти</a>
+      </div>
+      <div class="auth-form__registration">
+        <!-- close btn -->
+
+        <div class="auth-reg-title bold">Создайте свой аккаунт</div>
+        <div class="auth-reg-desc medium">
+          с помощью почты или социальных сетей
+        </div>
+        <form action="" class="reg-form">
+          <div class="reg-input__wrapper">
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="reg-form__input reg-form__input__wrong"
+            />
+          </div>
+          <div class="reg-input__wrapper">
+            <input
+              type="password"
+              name=""
+              placeholder="Пароль"
+              class="reg-form__input reg-form__pass"
+            />
+
+            <div class="show-pass__wrapper">
+              <img src="../../images/passHide.png" class="show-pass" alt="" />
+            </div>
+          </div>
+          <div class="reg-input__wrapper">
+            <input
+              type="password"
+              name=""
+              placeholder="Повторите пароль"
+              class="reg-form__input reg-form__pass_confirm"
+            />
+            <div class="show-pass-confirm__wrapper">
+              <img
+                src="../../images/passHide.png"
+                class="show-pass-confirm"
+                alt=""
+              />
+            </div>
+          </div>
+        </form>
+
+        <form class="terms" action="">
+          <label class="terms__label chck cu-p"
+            ><input type="checkbox" class="terms__checkbox" /><span
+              class="terms__span"
+            >
+            </span>
+            <div class="terms__text">
+              <a href="#" class="text-gray term">
+                Я согласен со всеми условиями политики обработки персональных
+                данных, политики конфиденциальности, договора оферты
+              </a>
+            </div>
+          </label>
+        </form>
+
+        <div class="do-reg btn-bordered-blue b-r cu-p">
+          <a href="#" class="reg-link bold">Зарегистрироваться</a>
+        </div>
+
+        <div class="social">
+          <div class="social-text">
+            <span class="social-text__span text-gray semi-bold"
+              >или с помощью</span
+            >
+          </div>
+          <div class="social-icons">
+            <div class="social-icon">
+              <a href="#">
+                <svg
+                  class="social-icon__svg icon-vk"
+                  viewBox="0 0 69 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.55963 14.7844C6.51781 18.5659 8.46964 21.6541 10.6911 24.9085C16.5709 33.3957 25.5329 40.9024 36.5161 39.8171C40.6053 39.413 39.9786 37.3086 39.8913 33.6968C39.8633 32.5377 39.3758 28.4036 40.9946 28.0544C44.5671 27.2838 49.2675 32.6933 51.374 34.9932C52.993 36.761 55.1265 39.3613 57.594 39.8102C59.1981 39.9772 66.3007 40.2878 67.4697 39.3855C69.6298 37.7181 66.6816 34.0821 65.6168 32.687C63.0211 29.2862 60.1149 26.8091 57.3855 23.713C54.7594 20.7341 56.3805 19.9205 58.5033 16.9504L59.034 16.2078C60.9139 13.5126 67.9042 3.87189 66.5537 0.890324C65.7187 -0.367256 60.9395 0.0706114 59.5195 0.0863547C53.2691 0.155696 54.5959 0.700049 51.7462 6.30326C50.2256 9.29332 48.5 12.0998 46.5033 14.7951C45.2122 16.5116 39.9205 22.8781 39.8821 16.9405C39.8529 12.4126 39.8895 7.87542 39.8847 3.34629C39.8814 0.154279 39.2707 0.102038 36.2527 0.103218C33.9878 0.104102 31.723 0.103275 29.458 0.103275C27.5647 0.103275 24.3786 -0.415253 24.1738 1.64247C24.0346 3.03944 25.6776 3.65927 26.539 6.00149C27.493 8.59554 27.1185 15.8121 27.1177 19.0672C27.1171 21.3035 26.912 23.8379 24.3419 21.9166C20.4816 19.0308 15.9935 9.80654 14.136 4.94704C11.9862 -0.742384 12.2222 0.0804572 5.74209 0.0792779C-0.0120173 0.0782166 -1.10161 -0.0769157 0.971971 6.35309C1.93149 9.32846 3.13665 12.0084 4.55963 14.7844V14.7844Z"
+                    fill="#B0B5BD"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="social-icon">
+              <a href="#">
+                <svg
+                  class="social-icon__svg icon-google"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.25258 20C9.25258 14.0647 14.0637 9.25322 19.9985 9.25322C21.8721 9.25322 23.9191 9.76539 25.1745 10.5798C26.4299 11.3941 27.465 11.3559 28.3048 10.4002L31.6524 6.59063C32.4091 5.72951 32.3411 4.43267 31.5197 3.65041C28.2629 1.35086 24.2884 0 19.9985 0C8.95364 0 0 8.95431 0 20C0 31.0457 8.95364 40 19.9985 40C31.0434 40 39.997 31.0457 39.997 20C39.997 18.233 40.1762 15.3395 37.7607 15.3395H20.8465C19.6165 15.3395 18.6101 16.346 18.6101 17.5761V22.8262C18.6101 24.0563 19.6165 25.0627 20.8465 25.0627H29.4797C27.6699 28.4455 24.1029 30.7468 19.9985 30.7468C14.0637 30.7468 9.25258 25.9353 9.25258 20Z"
+                    fill="#B0B5BD"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="social-icon">
+              <a href="#">
+                <svg
+                  class="social-icon__svg icon-fb"
+                  viewBox="0 0 32 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.4784 11.1718V14.375H0.874172C0.479337 14.375 0 14.8177 0 15.3907V21.5625C0 22.0765 0.340597 22.5781 0.971326 22.5781H7.4784V38.8281C7.4784 39.4102 7.83254 40 8.35257 40H17.0936C17.7012 40 18.0647 39.5668 18.0647 39.0625V22.5781H25.7374C26.4592 22.5781 26.7085 21.9997 26.7085 21.4062V15.5469C26.7085 14.9162 26.4008 14.375 25.6403 14.375H18.0647V10.4688C18.0647 7.66204 19.9815 7.96488 21.52 7.77953C24.554 7.41401 27 8.45617 27 6.71881V1.01561C27 0.450574 26.6116 0 25.9317 0H19.2275C18.0374 0.0444028 16.9259 0.135829 16.0239 0.311417C14.7757 0.55456 14.7925 0.618067 13.734 0.969599C13.3831 1.08608 13.0416 1.26447 12.7265 1.40899C11.9693 1.75653 10.7205 2.64369 10.1958 3.20164C7.87361 5.67207 7.4784 7.87227 7.4784 11.1718Z"
+                    fill="#B0B5BD"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-form__authorize auth-form__authorize__hide">
+        <form action="" class="reg-form reg-form__authorize">
+          <div class="auth-reg-title bold">Войдите</div>
+          <div class="auth-reg-desc medium">
+            с помощью почты или социальных сетей
+          </div>
+
+          <div class="reg-input__wrapper">
+            <input
+              type="email"
+              placeholder="E-mail"
+              class="reg-form__input reg-form__input__wrong"
+            />
+          </div>
+          <div class="reg-input__wrapper">
+            <input
+              type="password"
+              name=""
+              placeholder="Пароль"
+              class="reg-form__input reg-form__pass"
+            />
+            <div class="show-pass__wrapper">
+              <img src="../../images/passHide.png" class="show-pass" alt="" />
+            </div>
+          </div>
+        </form>
+
+        <div class="auth-authorize__actions">
+          <div class="forgot-pass">
+            <a href="#" class="semi-bold">Забыли пароль?</a>
+          </div>
+
+          <div class="btn-bordered-blue b-r btn-authorize">
+            <a href="#" class="authorize-link bold auth-login__link b-r bold"
+              >Войти</a
+            >
+          </div>
+        </div>
+
+        <div class="social">
+          <div class="social-text">
+            <span class="social-text__span text-gray semi-bold"
+              >или с помощью</span
+            >
+          </div>
+          <div class="social-icons">
+            <div class="social-icon">
+              <a href="#">
+                <svg
+                  class="social-icon__svg icon-vk"
+                  viewBox="0 0 69 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.55963 14.7844C6.51781 18.5659 8.46964 21.6541 10.6911 24.9085C16.5709 33.3957 25.5329 40.9024 36.5161 39.8171C40.6053 39.413 39.9786 37.3086 39.8913 33.6968C39.8633 32.5377 39.3758 28.4036 40.9946 28.0544C44.5671 27.2838 49.2675 32.6933 51.374 34.9932C52.993 36.761 55.1265 39.3613 57.594 39.8102C59.1981 39.9772 66.3007 40.2878 67.4697 39.3855C69.6298 37.7181 66.6816 34.0821 65.6168 32.687C63.0211 29.2862 60.1149 26.8091 57.3855 23.713C54.7594 20.7341 56.3805 19.9205 58.5033 16.9504L59.034 16.2078C60.9139 13.5126 67.9042 3.87189 66.5537 0.890324C65.7187 -0.367256 60.9395 0.0706114 59.5195 0.0863547C53.2691 0.155696 54.5959 0.700049 51.7462 6.30326C50.2256 9.29332 48.5 12.0998 46.5033 14.7951C45.2122 16.5116 39.9205 22.8781 39.8821 16.9405C39.8529 12.4126 39.8895 7.87542 39.8847 3.34629C39.8814 0.154279 39.2707 0.102038 36.2527 0.103218C33.9878 0.104102 31.723 0.103275 29.458 0.103275C27.5647 0.103275 24.3786 -0.415253 24.1738 1.64247C24.0346 3.03944 25.6776 3.65927 26.539 6.00149C27.493 8.59554 27.1185 15.8121 27.1177 19.0672C27.1171 21.3035 26.912 23.8379 24.3419 21.9166C20.4816 19.0308 15.9935 9.80654 14.136 4.94704C11.9862 -0.742384 12.2222 0.0804572 5.74209 0.0792779C-0.0120173 0.0782166 -1.10161 -0.0769157 0.971971 6.35309C1.93149 9.32846 3.13665 12.0084 4.55963 14.7844V14.7844Z"
+                    fill="#B0B5BD"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="social-icon">
+              <a href="#">
+                <svg
+                  class="social-icon__svg icon-google"
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.25258 20C9.25258 14.0647 14.0637 9.25322 19.9985 9.25322C21.8721 9.25322 23.9191 9.76539 25.1745 10.5798C26.4299 11.3941 27.465 11.3559 28.3048 10.4002L31.6524 6.59063C32.4091 5.72951 32.3411 4.43267 31.5197 3.65041C28.2629 1.35086 24.2884 0 19.9985 0C8.95364 0 0 8.95431 0 20C0 31.0457 8.95364 40 19.9985 40C31.0434 40 39.997 31.0457 39.997 20C39.997 18.233 40.1762 15.3395 37.7607 15.3395H20.8465C19.6165 15.3395 18.6101 16.346 18.6101 17.5761V22.8262C18.6101 24.0563 19.6165 25.0627 20.8465 25.0627H29.4797C27.6699 28.4455 24.1029 30.7468 19.9985 30.7468C14.0637 30.7468 9.25258 25.9353 9.25258 20Z"
+                    fill="#B0B5BD"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="social-icon">
+              <a href="#">
+                <svg
+                  class="social-icon__svg icon-fb"
+                  viewBox="0 0 32 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.4784 11.1718V14.375H0.874172C0.479337 14.375 0 14.8177 0 15.3907V21.5625C0 22.0765 0.340597 22.5781 0.971326 22.5781H7.4784V38.8281C7.4784 39.4102 7.83254 40 8.35257 40H17.0936C17.7012 40 18.0647 39.5668 18.0647 39.0625V22.5781H25.7374C26.4592 22.5781 26.7085 21.9997 26.7085 21.4062V15.5469C26.7085 14.9162 26.4008 14.375 25.6403 14.375H18.0647V10.4688C18.0647 7.66204 19.9815 7.96488 21.52 7.77953C24.554 7.41401 27 8.45617 27 6.71881V1.01561C27 0.450574 26.6116 0 25.9317 0H19.2275C18.0374 0.0444028 16.9259 0.135829 16.0239 0.311417C14.7757 0.55456 14.7925 0.618067 13.734 0.969599C13.3831 1.08608 13.0416 1.26447 12.7265 1.40899C11.9693 1.75653 10.7205 2.64369 10.1958 3.20164C7.87361 5.67207 7.4784 7.87227 7.4784 11.1718Z"
+                    fill="#B0B5BD"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/scripts/script.js"></script>
+  </body>
+</html>
