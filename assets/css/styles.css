@@ -5,25 +5,14 @@
   --main-blue-light: #c8e1fb;
   --main-light: #e9f3fd;
 
-  /* color: var(--main-font-color);
-  transition: all 0.3s; */
+  /* color: var(--main-font-color); */
+  /* transition: all 0.3s; */
 
   box-sizing: inherit;
 
   margin: 0;
   padding: 0;
 }
-
-.main,
-.guide,
-.popular,
-.offers,
-.blog,
-footer {
-  color: var(--main-font-color);
-  transition: all 0.3s;
-}
-
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
@@ -263,15 +252,19 @@ nav {
   transform: rotate(180deg);
 } */
 
-.arrow-top {
-  transform: rotate(180deg);
-}
-
 .nav-booking svg {
   width: 1.5rem;
   height: 1rem;
   margin-left: 1.5rem;
   /* transform: rotate(0deg); */
+}
+
+.nav-booking__svg__active {
+  transform: rotate(180deg);
+}
+
+.svg-arrow__active {
+  transform: rotate(180deg);
 }
 
 .nav-booking svg path {
@@ -308,20 +301,6 @@ nav {
 }
 
 .nav-lang:hover .header__modal-lang__options {
-  visibility: visible;
-  opacity: 1;
-  display: flex;
-  flex-direction: column;
-  width: 22rem;
-  left: -20px;
-  position: absolute;
-
-  background: #ffffff;
-  box-shadow: 0px 0px 29.0541px rgba(0, 0, 0, 0.25);
-  border-radius: 11.6216px;
-}
-
-.modal-lang__options__active {
   visibility: visible;
   opacity: 1;
   display: flex;
@@ -605,12 +584,6 @@ footer {
   background-color: #ffffff;
   box-shadow: 0px 0px 29.0541px rgba(0, 0, 0, 0.25);
 }
-
-.booking-options__active {
-  visibility: visible;
-  opacity: 1;
-}
-
 .options ul {
   list-style-type: none;
   padding: 1.6rem 0.6rem;
@@ -635,6 +608,8 @@ footer {
   text-align: center;
   margin-top: 4.95rem;
   font-size: 2.4rem;
+
+  color: var(--main-font-color);
 }
 
 .lang-options {
@@ -866,21 +841,14 @@ footer {
   background-color: #e9ecef;
 }
 
-@media screen and (max-width: 1280px) {
-  .modal-lang__select svg {
-    width: 1.2rem;
-  }
-  .modal-lang svg {
-    width: 1.2rem;
-  }
-  .main-arrow {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-  .nav-lang svg {
-    width: 1.2rem;
-  }
+.booking-options__active {
+  visibility: visible;
+  opacity: 1;
+}
 
+/* Calendar */
+
+@media screen and (max-width: 1280px) {
   .modal-actions__header {
     font-size: 2rem;
   }
@@ -944,8 +912,6 @@ footer {
 
   .nav-booking svg {
     margin-left: 0.6rem;
-    width: 1.2rem;
-    height: 1.2rem;
   }
 }
 
@@ -1070,9 +1036,9 @@ footer {
     display: none;
   }
 
-  /* .nav-booking:hover svg {
+  .nav-booking:hover svg {
     transform: rotate(0deg);
-  } */
+  }
 
   .desk-icon {
     display: none;
@@ -1153,7 +1119,6 @@ footer {
     height: 3rem;
     transform: rotate(0);
   }
-
   .nav-booking {
     grid-row: 1;
     grid-column: 18 / 19;
