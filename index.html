@@ -262,7 +262,7 @@
                 >Забронировать</span
               >
               <svg
-                class="cu-p nav-desktop main-arrow svg-whiteFill"
+                class="cu-p nav-desktop main-arrow svg-whiteFill nav-booking__svg"
                 viewBox="0 0 15 10"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -577,8 +577,9 @@
                 <input
                   type="text"
                   id="datepicker_from"
-                  class="input bold"
+                  class="input bold datepicker_from"
                   placeholder="22.22.2022"
+                  autocomplete="off"
                 />
                 <svg
                   viewBox="0 0 14 15"
@@ -600,8 +601,9 @@
                 <input
                   type="text"
                   id="datepicker_to"
-                  class="input bold"
+                  class="input bold datepicker_to"
                   placeholder="22.22.2022"
+                  autocomplete="off"
                 />
                 <svg
                   viewBox="0 0 14 15"
@@ -617,10 +619,10 @@
                 </svg>
               </div>
               <div class="tourists">
-                <div class="tourists__select">
+                <div class="tourists__select tourists__select__count">
                   <span class="bold cu-p">3 гостя</span>
                   <svg
-                    class="cu-p main-arrow"
+                    class="cu-p main-arrow tourists-count__arrow"
                     viewBox="0 0 15 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1121,8 +1123,9 @@
         <div class="offers-main__nav">
           <div class="offers-detail cu-p bold btn-shadow btn-bordered cu-p">
             <a href="#">
-              <span class="text-shadow">Смотреть предложения</span></a
-            >
+              <span class="text-shadow text-desktop">Смотреть предложения</span>
+              <span class="text-shadow text-mobile">Подробнее</span>
+            </a>
           </div>
           <div class="offers-nav__left offers-nav__item btn-arrow cu-p">
             <svg
