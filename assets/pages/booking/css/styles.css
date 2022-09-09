@@ -1,0 +1,40 @@
+.booking-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin: 6rem auto 0rem auto;
+  justify-content: center;
+}
+
+.showmore-booking {
+  margin-bottom: 12.5rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .showmore-booking {
+    margin-bottom: 8rem;
+  }
+
+  .booking-cards {
+    max-width: 108rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .booking-sort_options {
+    display: block;
+    top: 3rem;
+    left: 11rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-nav__left {
+    right: 1.6rem;
+  }
+
+  .showmore-booking {
+    margin-bottom: 5rem;
+  }
+}

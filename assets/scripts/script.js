@@ -130,19 +130,6 @@ $(".modal-currency__select__item").click(function () {
   $(".modal-currency__current").children("span").html($(this).text());
 });
 
-// modal-menu__hide
-$(".modal-menu__rates").click(function () {
-  $(".modal-actions").addClass("modal-menu__hide");
-  $(".modal-actions__rates").addClass("modal-actions__rates__active");
-  $(".modal-nav__back").addClass("modal-nav__back__active");
-});
-
-$(".modal-nav__back").click(function () {
-  $(".modal-actions").removeClass("modal-menu__hide");
-  $(".modal-actions__rates").removeClass("modal-actions__rates__active");
-  $(".modal-nav__back").removeClass("modal-nav__back__active");
-});
-
 //onclick show options
 $(".nav-booking").click(function () {
   $(".booking-options").toggleClass("booking-options__active");
@@ -235,11 +222,25 @@ function windowSizeText() {
   if ($(window).width() <= "768") {
     $(".text-desktop").css("display", "none");
     $(".text-mobile").css("display", "block");
+    $(".booking-sort_title").css("display", "none");
   } else {
     $(".text-desktop").css("display", "block");
     $(".text-mobile").css("display", "none");
+    $(".booking-sort_title").css("display", "block");
   }
 }
+
+//Interactive map
+
+$(".city").click(function () {
+  if (!$(this).children(".map-fill__zone").hasClass("map-color")) {
+    $(this).children(".map-fill__zone").addClass("map-color");
+    $(this).children(".map-fill__point").addClass("map-color__point");
+  } else {
+    $(this).children(".map-fill__zone").removeClass("map-color");
+    $(this).children(".map-fill__point").removeClass("map-color__point");
+  }
+});
 
 windowSizeText();
 

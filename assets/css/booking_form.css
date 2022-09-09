@@ -11,7 +11,7 @@
 
 .booking {
   max-width: 129rem;
-  margin: 8rem auto 0 auto;
+  margin: 0 auto 8rem auto;
 }
 
 .booking-form__nav {
@@ -101,7 +101,7 @@
   /* left: 35%; */
   border-radius: 2rem;
 
-  width: 35%;
+  width: 50%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -409,6 +409,11 @@ input {
   .human__count svg path,
   .tourists__select svg path {
     stroke-width: 3;
+  }
+
+  .tourists__select svg {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 
   .booking-form__nav li {

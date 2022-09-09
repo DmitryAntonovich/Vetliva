@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico" />
     <title>VETLIVA - сервис онлайн-бронирования</title>
-
-    <!-- Scripts -->
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -24,56 +22,56 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="/assets/libs/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
 
-    <!-- <script src="./assets/scripts/script.js"></script> -->
     <!-- slick -->
 
     <link
       rel="stylesheet"
-      href="./assets/libs/slick-1.8.1/slick/slick.css"
+      href="/assets/libs/slick-1.8.1/slick/slick.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
     <link
       rel="stylesheet"
-      href="./assets/libs/slick-1.8.1/slick/slick-theme.css"
+      href="/assets/libs/slick-1.8.1/slick/slick-theme.css"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
 
     <script
-      src="./assets/libs/slick-1.8.1/slick/slick.min.js"
+      src="/assets/libs/slick-1.8.1/slick/slick.min.js"
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
 
     <!-- Fonts -->
-
-    <link rel="stylesheet" href="./assets/css/fonts.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/booking_form.css" />
-    <link rel="stylesheet" href="./assets/css/guide.css" />
-    <link rel="stylesheet" href="./assets/css/popular.css" />
-    <link rel="stylesheet" href="./assets/css/offers.css" />
-    <link rel="stylesheet" href="./assets/css/blog.css" />
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/booking_form.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div class="right-modal">
-      <div class="right-modal__bg"></div>
-      <div class="right-modal__content">
+      <div class="right-modal__bg left-modal__bg"></div>
+      <div class="right-modal__content left-modal__content">
         <div class="modal-nav__back arrow-back">
           <svg
-            class=""
+            class="svg__blue"
             viewBox="0 0 35 31"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -85,13 +83,14 @@
           </svg>
         </div>
 
-        <div class="modal-nav cu-p"></div>
+        <div class="modal-nav modal-nav__left cu-p"></div>
+
         <ul class="modal-actions modal-menu p-0">
           <div class="modal-lang bold">
             <span>RU</span>
 
             <svg
-              class="cu-p modal-arrow main-arrow"
+              class="cu-p modal-arrow main-arrow svg__blue"
               viewBox="0 0 15 15"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -108,7 +107,7 @@
               <div class="modal-lang__select modal-lang__current">
                 <span class="text-main semi-bold">Русский</span>
                 <svg
-                  class="cu-p modal-arrow main-arrow"
+                  class="cu-p modal-arrow main-arrow svg__blue"
                   viewBox="0 0 15 15"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -137,7 +136,7 @@
               <div class="modal-lang__select modal-currency__current">
                 <span class="text-main semi-bold">BYN</span>
                 <svg
-                  class="cu-p modal-arrow main-arrow"
+                  class="cu-p modal-arrow main-arrow svg__blue"
                   viewBox="0 0 15 15"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -171,6 +170,187 @@
             ><li class="modal-menu__item bold cu-p">Дополнительно</li></a
           >
         </ul>
+
+        <!-- МОДАЛКА ФИЛЬТР -->
+        <div class="modal-booking_filter">
+          <div class="booking-filter__tab__wrapper">
+            <div class="booking-filter_tab cu-p">
+              <div class="booking-filter_tab__arrow">
+                <svg
+                  class="cu-p main-arrow"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                    fill="#264B87"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="booking-filter_tab__title">
+                <span class="filter_tab__title__span bold text-main"
+                  >Цена, BYN</span
+                >
+              </div>
+              <div class="booking-filter_tab__reset">
+                <span class="filter_tab__reset__span medium text-gray"
+                  >Сбросить</span
+                >
+              </div>
+            </div>
+            <div class="booking-filter_details booking-filter_details__hide">
+              <div class="filter-progress">
+                <div id="slider-range"></div>
+                <div class="slider-range_values">
+                  <div class="slider-range__value">
+                    <span class="semi-bold text-main">от 1231</span>
+                  </div>
+                  <div class="slider-range__value">
+                    <span class="semi-bold text-main">до 1231</span>
+                  </div>
+                </div>
+              </div>
+              <div class="filter-check">
+                <div class="checkbox-blue">
+                  <input type="checkbox" class="checkbox" />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >Исключить варианты недоступные для оплаты на месте</span
+                >
+              </div>
+            </div>
+
+            <div class="booking-filter_tab cu-p">
+              <div class="booking-filter_tab__arrow">
+                <svg
+                  class="cu-p main-arrow"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                    fill="#264B87"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="booking-filter_tab__title">
+                <span class="filter_tab__title__span bold text-main"
+                  >Наличие мест</span
+                >
+              </div>
+              <div class="booking-filter_tab__reset">
+                <span class="filter_tab__reset__span medium text-gray"
+                  >Сбросить</span
+                >
+              </div>
+            </div>
+            <div class="booking-filter_details booking-filter_details__hide">
+              <div class="filter-check">
+                <div class="checkbox-blue">
+                  <input type="checkbox" class="checkbox" />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >Исключить варианты недоступные для оплаты на месте</span
+                >
+              </div>
+              <div class="filter-check">
+                <div class="checkbox-blue">
+                  <input type="checkbox" class="checkbox" />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >Исключить варианты недоступные для оплаты на месте</span
+                >
+              </div>
+
+              <div class="filter-check">
+                <div class="checkbox-blue">
+                  <input type="checkbox" class="checkbox" />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >Исключить варианты недоступные для оплаты на месте</span
+                >
+              </div>
+            </div>
+
+            <div class="booking-filter_tab cu-p">
+              <div class="booking-filter_tab__arrow">
+                <svg
+                  class="cu-p main-arrow"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                    fill="#264B87"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="booking-filter_tab__title">
+                <span class="filter_tab__title__span bold text-main"
+                  >Санатории за рубежом</span
+                >
+              </div>
+              <div class="booking-filter_tab__reset">
+                <span class="filter_tab__reset__span medium text-gray"
+                  >Сбросить</span
+                >
+              </div>
+            </div>
+            <div class="booking-filter_details booking-filter_details__hide">
+              <div class="filter-check">
+                <div class="checkbox-blue">
+                  <input type="checkbox" class="checkbox" />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >Исключить варианты недоступные для оплаты на месте</span
+                >
+              </div>
+            </div>
+
+            <div class="booking-filter_tab cu-p">
+              <div class="booking-filter_tab__arrow">
+                <svg
+                  class="cu-p main-arrow"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                    fill="#264B87"
+                  ></path>
+                </svg>
+              </div>
+
+              <div class="booking-filter_tab__title">
+                <span class="filter_tab__title__span bold text-main"
+                  >Медицинские профили</span
+                >
+              </div>
+              <div class="booking-filter_tab__reset">
+                <span class="filter_tab__reset__span medium text-gray"
+                  >Сбросить</span
+                >
+              </div>
+            </div>
+            <div class="booking-filter_details booking-filter_details__hide">
+              <div class="filter-check">
+                <div class="checkbox-blue">
+                  <input type="checkbox" class="checkbox" />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >Исключить варианты недоступные для оплаты на месте</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="modal-actions__rates">
           <span class="text-main bold modal-actions__header">Курс валют</span>
@@ -213,10 +393,13 @@
         <nav>
           <div class="header-logo cu-p">
             <a href="#"
-              ><img loading="lazy" src="./assets/images/logo.svg" alt="Vetliva"
+              ><img
+                loading="lazy"
+                src="../../images/logoBlue.svg"
+                alt="Vetliva"
             /></a>
           </div>
-          <div class="nav-menu">
+          <div class="nav-menu nav-menu__blue">
             <div class="nav-search">
               <a href="#">
                 <svg
@@ -232,7 +415,7 @@
                 </svg>
 
                 <svg
-                  class="cu-p desk-icon"
+                  class="cu-p desk-icon svg__blue"
                   viewBox="0 0 45 55"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -244,10 +427,10 @@
                 </svg>
               </a>
             </div>
-            <div class="nav-booking cu-p">
+            <div class="nav-booking nav-booking__blue cu-p">
               <div class="mobile-nav mobile-booking">
                 <svg
-                  class="mob-icon"
+                  class="mob-icon mob-icon__active"
                   viewBox="0 0 18 19"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -258,11 +441,9 @@
                   />
                 </svg>
               </div>
-              <span class="bold text-white nav-desktop text-shadow"
-                >Забронировать</span
-              >
+              <span class="bold text-white nav-desktop">Забронировать</span>
               <svg
-                class="cu-p nav-desktop main-arrow svg-whiteFill nav-booking__svg"
+                class="cu-p nav-desktop main-arrow svg-blueFill nav-booking__svg"
                 viewBox="0 0 15 10"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -315,7 +496,7 @@
                 </svg>
 
                 <svg
-                  class="cu-p desk-icon"
+                  class="cu-p desk-icon svg__blue"
                   viewBox="0 0 58 56"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -328,10 +509,10 @@
               </a>
             </div>
 
-            <div class="nav-lang nav-desktop cu-p">
-              <span class="text-white bold">RU</span>
+            <div class="nav-lang nav-lang__blue nav-desktop cu-p">
+              <span class="text-main bold">RU</span>
               <svg
-                class="cu-p nav-desktop header-lang__svg"
+                class="cu-p nav-desktop header-lang__svg svg-blueFill"
                 viewBox="0 0 15 10"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -403,64 +584,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- <div class="options lang-options b-r">
-                <ul>
-                  <li class="lang-option bold b-r">
-                    <span class="bold text-gray">Язык</span>
-                    <div class="lang-params">
-                      <span class="lang-active semi-bold">Русский</span>
-                      <svg
-                        class="cu-p nav-desktop"
-                        viewBox="0 0 15 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                          fill="#264B87"
-                        />
-                      </svg>
-                    </div>
-                  </li>
-
-                  <li class="lang-option bold b-r">
-                    <span class="bold text-gray">Валюта</span>
-                    <div class="lang-params currency-params">
-                      <span class="currency currency__active semi-bold"
-                        >BYN</span
-                      >
-
-                      <svg
-                        style="margin-top: 2px"
-                        class="cu-p nav-desktop"
-                        viewBox="0 0 15 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                          fill="#264B87"
-                        />
-                      </svg>
-
-                      <div class="modal-currency__select">
-                        <span
-                          class="text-gray modal-currency__select__item modal-currency__select__item__active"
-                          >BYN</span
-                        ><span class="text-gray modal-currency__select__item"
-                          >RUB</span
-                        ><span class="text-gray modal-currency__select__item"
-                          >EUR</span
-                        >
-                        <span class="text-gray modal-currency__select__item"
-                          >USD</span
-                        >
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div> -->
             </div>
 
             <div class="nav-cart">
@@ -478,7 +601,7 @@
                 </svg>
 
                 <svg
-                  class="cu-p desk-icon"
+                  class="cu-p desk-icon svg__blue"
                   viewBox="0 0 65 55"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -490,7 +613,7 @@
                 </svg>
               </a>
             </div>
-            <div class="nav-auth">
+            <div class="nav-auth nav-auth__blue">
               <div class="mobile-nav nav-auth-mobile">
                 <svg
                   class="mob-icon cu-p"
@@ -510,119 +633,83 @@
             </div>
           </div>
           <div class="header-burger cu-p">
-            <div class="header-burger__block"></div>
+            <div class="header-burger__block header-burger__block__blue"></div>
           </div>
         </nav>
       </header>
-      <div class="main-descriptions container p-0">
-        <div class="main-description__h1">
-          <h1 class="h-1">Vetliva</h1>
-        </div>
-        <div class="main-description__span">
-          <span>сервис онлайн-бронирования</span>
-        </div>
-      </div>
-      <div class="booking container p-0">
-        <div class="booking-form__wrapper block__shadow">
-          <div class="booking-form__content">
-            <div class="booking-form__nav">
-              <div class="form-nav__left">
-                <svg
-                  class="cu-p main-arrow rotate-right"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+    </main>
+
+    <div class="booking container p-0">
+      <div class="find-form__wrapper booking-form__bordered">
+        <div class="find-form__content">
+          <div class="find-form__params">
+            <div class="find-form__region">
+              <div class="find-region__icon">
+                <object
+                  class="icon-location find-icon__location"
+                  data="/assets/images/location.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="find-region__select">
+                <span class="find-region__select__span bold text-main"
+                  >Витебская область</span
                 >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
               </div>
 
-              <ul class="form-nav__content">
-                <li class="form-content__item cu-p bold tab_active">
-                  Проживание
-                </li>
-                <li class="form-content__item cu-p bold">Санатории</li>
-                <li class="form-content__item cu-p bold">Туры</li>
-                <li class="form-content__item cu-p bold">Экскурсии</li>
-                <li class="form-content__item cu-p bold">Трансферы</li>
-                <li class="form-content__item cu-p bold">Авиаперелеты</li>
-              </ul>
-
-              <div class="form-nav__right">
-                <svg
-                  class="cu-p main-arrow rotate-left"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
+              <div
+                class="options booking-options booking-options__search booking-options__active b-r"
+              >
+                <ul>
+                  <a href="#"
+                    ><li
+                      class="option booking-option booking-option__search bold b-r"
+                    >
+                      Проживание
+                    </li></a
+                  >
+                  <a href="#"
+                    ><li
+                      class="option booking-option booking-option__search bold b-r"
+                    >
+                      Экскурсии
+                    </li></a
+                  >
+                  <a href="#"
+                    ><li
+                      class="option booking-option booking-option__search bold b-r"
+                    >
+                      Туры
+                    </li></a
+                  >
+                  <a href="#"
+                    ><li
+                      class="option booking-option booking-option__search bold b-r"
+                    >
+                      Санатории
+                    </li></a
+                  >
+                  <a href="#"
+                    ><li
+                      class="option booking-option booking-option__search bold b-r"
+                    >
+                      Трансферы
+                    </li></a
+                  >
+                </ul>
               </div>
             </div>
-            <div class="booking-form__params">
-              <div class="params__name">
-                <input
-                  type="text"
-                  placeholder="Область / санаторий"
-                  class="input bold"
-                />
-              </div>
-              <div class="date date__from">
-                <input
-                  type="text"
-                  id="datepicker_from"
-                  class="input bold datepicker_from"
-                  placeholder="22.22.2022"
-                  autocomplete="off"
-                />
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div class="find-form__search">
+              <input class="find-form__input" type="text" />
+            </div>
+            <div class="find-form__category">
+              <div class="find-category__select">
+                <span class="find-category__select__span text-main bold"
+                  >Проживание</span
                 >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M3.97766 0.0142825C3.80618 0.0487992 3.62788 0.19539 3.54314 0.371533L3.49428 0.473069V2.11259V3.75211L3.543 3.85735C3.60631 3.99407 3.71617 4.10632 3.84892 4.16987C3.93242 4.20985 3.97571 4.22015 4.08148 4.22523C4.35649 4.23843 4.58245 4.0982 4.70543 3.83797L4.76076 3.72089L4.7654 2.17536C4.76874 1.06351 4.76516 0.603549 4.75261 0.53617C4.68639 0.180387 4.33339 -0.057358 3.97766 0.0142825ZM9.7158 0.0141264C9.54188 0.0492051 9.33532 0.226456 9.26724 0.399024L9.23161 0.489336V2.12105V3.75277L9.28237 3.85828C9.42454 4.15371 9.73825 4.29435 10.0435 4.19948C10.232 4.1409 10.3888 3.99337 10.4654 3.80236C10.498 3.7212 10.4981 3.71478 10.5023 2.15975C10.5051 1.12985 10.5012 0.572997 10.4908 0.523306C10.4654 0.401912 10.4001 0.284515 10.308 0.194594C10.1406 0.0312364 9.93763 -0.0306002 9.7158 0.0141264ZM5.39401 2.11292V2.60468H6.98856H8.58311V2.11292V1.62116H6.98856H5.39401V2.11292ZM11.1466 2.11259V2.60468H11.8166C12.4222 2.60468 12.4952 2.60741 12.5758 2.63313C12.7825 2.69915 12.936 2.85379 13.0109 3.07136C13.0398 3.15529 13.0412 3.20773 13.0437 4.34921L13.0463 5.53953L6.99202 5.54348L0.937702 5.54742L0.941883 4.33754L0.946049 3.12766L0.980275 3.04179C1.04932 2.86857 1.19636 2.71814 1.36567 2.6475C1.44778 2.61323 1.46465 2.61239 2.14768 2.60798L2.84578 2.60349V2.12013V1.63677L2.15531 1.63697C1.5409 1.63716 1.44973 1.64039 1.32752 1.66634C0.703555 1.79879 0.217301 2.26966 0.0420839 2.91113L0 3.06521V8.31843V13.5717L0.040909 13.7232C0.225801 14.4079 0.766819 14.8989 1.43023 14.984C1.51417 14.9948 3.35336 15.0001 6.99579 15C11.658 14.9999 12.4567 14.9967 12.5809 14.9774C13.2731 14.8698 13.8297 14.3279 13.9697 13.6253C13.9996 13.4752 14 13.3999 14 8.3138C14 3.70851 13.9975 3.14075 13.9762 3.02635C13.896 2.59384 13.6295 2.17422 13.2812 1.93225C13.1503 1.84131 12.9014 1.72455 12.7546 1.68517C12.5623 1.6336 12.4212 1.62472 11.7608 1.62253L11.1466 1.6205V2.11259ZM13.0536 9.9225C13.0534 12.1042 13.0479 13.3606 13.0381 13.4299C13.006 13.6571 12.8643 13.8516 12.6572 13.9528L12.5428 14.0088H6.98856H1.43433L1.33515 13.9603C1.15383 13.8716 1.02526 13.7216 0.967335 13.5312C0.93932 13.4391 0.93842 13.3282 0.93842 9.97965V6.52313H6.99619H13.054L13.0536 9.9225ZM3.2612 7.51374C2.8921 7.59976 2.59927 7.91713 2.53097 8.30516C2.47526 8.62162 2.57125 8.92743 2.8002 9.16291C3.17872 9.55224 3.76248 9.5519 4.14345 9.16213C4.5264 8.77033 4.52289 8.15918 4.13544 7.76951C4.03314 7.66663 3.89061 7.57764 3.76154 7.53604C3.63144 7.49412 3.39133 7.48343 3.2612 7.51374ZM6.77074 7.51479C6.60011 7.55269 6.45642 7.63604 6.31741 7.77772C6.1809 7.91683 6.12909 8.00038 6.06921 8.17793C6.01858 8.32808 6.01242 8.58412 6.05589 8.73213C6.13394 8.99792 6.32269 9.23042 6.5542 9.34594C6.94131 9.53913 7.34854 9.47085 7.65352 9.16162C7.83739 8.97517 7.92211 8.78623 7.93709 8.52918C7.95615 8.20175 7.81714 7.89308 7.55896 7.68961C7.34396 7.52014 7.04501 7.45384 6.77074 7.51479ZM10.2768 7.51538C10.0813 7.55852 9.87198 7.69376 9.74678 7.8579C9.65826 7.97395 9.62739 8.03213 9.58113 8.17012C9.5457 8.27583 9.53916 8.3214 9.53858 8.46674C9.53746 8.75349 9.62092 8.96087 9.81825 9.16162C10.1221 9.47067 10.5377 9.54024 10.9177 9.34563C11.1518 9.22578 11.3238 9.01518 11.4061 8.74774C11.4494 8.60738 11.4533 8.37237 11.4149 8.22601C11.2799 7.7119 10.7855 7.4032 10.2768 7.51538ZM3.26539 11.1047C2.90886 11.1851 2.6382 11.4445 2.53112 11.8085C2.49389 11.9351 2.49391 12.1953 2.53115 12.3219C2.69537 12.8803 3.24089 13.1751 3.7668 12.9896C3.83586 12.9652 3.93111 12.919 3.97847 12.8868C4.16516 12.7601 4.32276 12.5357 4.38021 12.3149C4.41504 12.1811 4.41504 11.9492 4.38021 11.8154C4.31128 11.5505 4.11621 11.3063 3.88176 11.1912C3.67125 11.088 3.46709 11.0593 3.26539 11.1047ZM6.78256 11.1059C6.44896 11.1792 6.15734 11.4608 6.05603 11.8076C6.01867 11.9353 6.01867 12.195 6.05603 12.3227C6.1486 12.6395 6.39195 12.9007 6.6826 12.9951C7.07668 13.1231 7.47511 12.9996 7.73326 12.6694C7.96463 12.3735 8.00556 11.9805 7.84139 11.6313C7.76338 11.4654 7.57106 11.2685 7.40817 11.188C7.20856 11.0892 6.9894 11.0605 6.78256 11.1059Z"
-                    fill="#B0B5BD"
-                  />
-                </svg>
-              </div>
-
-              <div class="dash"></div>
-
-              <div class="date date__to">
-                <input
-                  type="text"
-                  id="datepicker_to"
-                  class="input bold datepicker_to"
-                  placeholder="22.22.2022"
-                  autocomplete="off"
-                />
-                <svg
-                  viewBox="0 0 14 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M3.97766 0.0142825C3.80618 0.0487992 3.62788 0.19539 3.54314 0.371533L3.49428 0.473069V2.11259V3.75211L3.543 3.85735C3.60631 3.99407 3.71617 4.10632 3.84892 4.16987C3.93242 4.20985 3.97571 4.22015 4.08148 4.22523C4.35649 4.23843 4.58245 4.0982 4.70543 3.83797L4.76076 3.72089L4.7654 2.17536C4.76874 1.06351 4.76516 0.603549 4.75261 0.53617C4.68639 0.180387 4.33339 -0.057358 3.97766 0.0142825ZM9.7158 0.0141264C9.54188 0.0492051 9.33532 0.226456 9.26724 0.399024L9.23161 0.489336V2.12105V3.75277L9.28237 3.85828C9.42454 4.15371 9.73825 4.29435 10.0435 4.19948C10.232 4.1409 10.3888 3.99337 10.4654 3.80236C10.498 3.7212 10.4981 3.71478 10.5023 2.15975C10.5051 1.12985 10.5012 0.572997 10.4908 0.523306C10.4654 0.401912 10.4001 0.284515 10.308 0.194594C10.1406 0.0312364 9.93763 -0.0306002 9.7158 0.0141264ZM5.39401 2.11292V2.60468H6.98856H8.58311V2.11292V1.62116H6.98856H5.39401V2.11292ZM11.1466 2.11259V2.60468H11.8166C12.4222 2.60468 12.4952 2.60741 12.5758 2.63313C12.7825 2.69915 12.936 2.85379 13.0109 3.07136C13.0398 3.15529 13.0412 3.20773 13.0437 4.34921L13.0463 5.53953L6.99202 5.54348L0.937702 5.54742L0.941883 4.33754L0.946049 3.12766L0.980275 3.04179C1.04932 2.86857 1.19636 2.71814 1.36567 2.6475C1.44778 2.61323 1.46465 2.61239 2.14768 2.60798L2.84578 2.60349V2.12013V1.63677L2.15531 1.63697C1.5409 1.63716 1.44973 1.64039 1.32752 1.66634C0.703555 1.79879 0.217301 2.26966 0.0420839 2.91113L0 3.06521V8.31843V13.5717L0.040909 13.7232C0.225801 14.4079 0.766819 14.8989 1.43023 14.984C1.51417 14.9948 3.35336 15.0001 6.99579 15C11.658 14.9999 12.4567 14.9967 12.5809 14.9774C13.2731 14.8698 13.8297 14.3279 13.9697 13.6253C13.9996 13.4752 14 13.3999 14 8.3138C14 3.70851 13.9975 3.14075 13.9762 3.02635C13.896 2.59384 13.6295 2.17422 13.2812 1.93225C13.1503 1.84131 12.9014 1.72455 12.7546 1.68517C12.5623 1.6336 12.4212 1.62472 11.7608 1.62253L11.1466 1.6205V2.11259ZM13.0536 9.9225C13.0534 12.1042 13.0479 13.3606 13.0381 13.4299C13.006 13.6571 12.8643 13.8516 12.6572 13.9528L12.5428 14.0088H6.98856H1.43433L1.33515 13.9603C1.15383 13.8716 1.02526 13.7216 0.967335 13.5312C0.93932 13.4391 0.93842 13.3282 0.93842 9.97965V6.52313H6.99619H13.054L13.0536 9.9225ZM3.2612 7.51374C2.8921 7.59976 2.59927 7.91713 2.53097 8.30516C2.47526 8.62162 2.57125 8.92743 2.8002 9.16291C3.17872 9.55224 3.76248 9.5519 4.14345 9.16213C4.5264 8.77033 4.52289 8.15918 4.13544 7.76951C4.03314 7.66663 3.89061 7.57764 3.76154 7.53604C3.63144 7.49412 3.39133 7.48343 3.2612 7.51374ZM6.77074 7.51479C6.60011 7.55269 6.45642 7.63604 6.31741 7.77772C6.1809 7.91683 6.12909 8.00038 6.06921 8.17793C6.01858 8.32808 6.01242 8.58412 6.05589 8.73213C6.13394 8.99792 6.32269 9.23042 6.5542 9.34594C6.94131 9.53913 7.34854 9.47085 7.65352 9.16162C7.83739 8.97517 7.92211 8.78623 7.93709 8.52918C7.95615 8.20175 7.81714 7.89308 7.55896 7.68961C7.34396 7.52014 7.04501 7.45384 6.77074 7.51479ZM10.2768 7.51538C10.0813 7.55852 9.87198 7.69376 9.74678 7.8579C9.65826 7.97395 9.62739 8.03213 9.58113 8.17012C9.5457 8.27583 9.53916 8.3214 9.53858 8.46674C9.53746 8.75349 9.62092 8.96087 9.81825 9.16162C10.1221 9.47067 10.5377 9.54024 10.9177 9.34563C11.1518 9.22578 11.3238 9.01518 11.4061 8.74774C11.4494 8.60738 11.4533 8.37237 11.4149 8.22601C11.2799 7.7119 10.7855 7.4032 10.2768 7.51538ZM3.26539 11.1047C2.90886 11.1851 2.6382 11.4445 2.53112 11.8085C2.49389 11.9351 2.49391 12.1953 2.53115 12.3219C2.69537 12.8803 3.24089 13.1751 3.7668 12.9896C3.83586 12.9652 3.93111 12.919 3.97847 12.8868C4.16516 12.7601 4.32276 12.5357 4.38021 12.3149C4.41504 12.1811 4.41504 11.9492 4.38021 11.8154C4.31128 11.5505 4.11621 11.3063 3.88176 11.1912C3.67125 11.088 3.46709 11.0593 3.26539 11.1047ZM6.78256 11.1059C6.44896 11.1792 6.15734 11.4608 6.05603 11.8076C6.01867 11.9353 6.01867 12.195 6.05603 12.3227C6.1486 12.6395 6.39195 12.9007 6.6826 12.9951C7.07668 13.1231 7.47511 12.9996 7.73326 12.6694C7.96463 12.3735 8.00556 11.9805 7.84139 11.6313C7.76338 11.4654 7.57106 11.2685 7.40817 11.188C7.20856 11.0892 6.9894 11.0605 6.78256 11.1059Z"
-                    fill="#B0B5BD"
-                  />
-                </svg>
-              </div>
-              <div class="tourists">
-                <div class="tourists__select tourists__select__count">
-                  <span class="bold cu-p">3 гостя</span>
+                <div class="find-category__select__arrow">
                   <svg
-                    class="cu-p main-arrow tourists-count__arrow"
+                    class="cu-p main-arrow booking-sort_type__arrow"
                     viewBox="0 0 15 10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -630,628 +717,550 @@
                     <path
                       d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
                       fill="#264B87"
-                    />
+                    ></path>
                   </svg>
                 </div>
-                <div class="options tourists-options block__shadow">
-                  <div class="tourists-options__content">
-                    <div class="options-adults">
-                      <span class="bold text-gray">Взрослые</span>
-                      <div class="human__count">
-                        <svg
-                          class="cu-p rotate-right main-arrow"
-                          viewBox="0 0 15 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                            fill="#264B87"
-                          />
-                        </svg>
-                        <span class="bold text-main">2</span>
-                        <svg
-                          class="cu-p rotate-left main-arrow"
-                          viewBox="0 0 15 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                            fill="#264B87"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="options-childs">
-                      <span class="bold text-gray">Дети</span>
-                      <div class="human__count">
-                        <svg
-                          class="cu-p rotate-right"
-                          viewBox="0 0 15 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                            fill="#264B87"
-                          />
-                        </svg>
-                        <span class="bold text-main">2</span>
-                        <svg
-                          class="cu-p rotate-left"
-                          viewBox="0 0 15 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                            fill="#264B87"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="childs-ages">
-                      <p class="text-gray bold">Возраст ребенка</p>
-                      <div class="tourists__select">
-                        <span class="bold cu-p">5 лет</span>
-                        <svg
-                          class="cu-p"
-                          viewBox="0 0 15 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                            fill="#264B87"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="search-btn btn-blue cu-p">
-                <svg
-                  width="25"
-                  height="30"
-                  viewBox="0 0 45 55"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M29.3092 31.8367C29.3997 31.769 29.4941 31.7047 29.5923 31.6445C30.201 31.2202 30.7722 30.75 31.3003 30.239C33.7946 27.8251 35.3374 24.4969 35.3374 20.827C35.3374 17.1572 33.7946 13.829 31.3003 11.4151C28.7723 8.9686 25.2576 7.4552 21.3561 7.4552C17.4547 7.4552 13.9399 8.9686 11.412 11.4151C8.9177 13.829 7.3748 17.1571 7.3748 20.827C7.3748 24.4969 8.9176 27.825 11.412 30.239C13.94 32.6855 17.4546 34.1989 21.3561 34.1989C24.3175 34.1989 27.0559 33.3268 29.3092 31.8367ZM36.3132 35.6797L44.4707 49.3541C45.5208 51.1152 44.9597 53.4034 43.2176 54.4649C41.4754 55.5264 39.2119 54.9592 38.1618 53.1981L30.167 39.7965C27.4781 40.9892 24.4942 41.6541 21.3561 41.6541C15.4996 41.6541 10.1796 39.3393 6.3131 35.5974C2.4125 31.8225 0 26.6008 0 20.827C0 15.0532 2.4126 9.8314 6.3131 6.0567C10.1796 2.3146 15.4998 0 21.3561 0C27.2124 0 32.5326 2.3148 36.3992 6.0567C40.2996 9.8314 42.7123 15.0533 42.7123 20.827C42.7123 26.6008 40.2995 31.8225 36.3992 35.5974L36.3132 35.6797Z"
-                    fill="#ffffff"
-                  />
-                </svg>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </main>
 
-    <div class="guide">
-      <div class="guide-carousel">
-        <div class="guide-slide__wrapper">
-          <div class="guide-slide">
-            <div class="guide-slide__desc">
-              <span class="bold">Парки и заповедники</span>
-            </div>
-            <div class="guide-slide__nav">
-              <div class="guide-nav__left guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-              <div class="guide-nav__right guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-slide__wrapper">
-          <div class="guide-slide">
-            <div class="guide-slide__desc">
-              <span class="bold">Парки и заповедники</span>
-            </div>
-            <div class="guide-slide__nav">
-              <div class="guide-nav__left guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-              <div class="guide-nav__right guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-slide__wrapper">
-          <div class="guide-slide">
-            <div class="guide-slide__desc">
-              <span class="bold">Парки и заповедники</span>
-            </div>
-            <div class="guide-slide__nav">
-              <div class="guide-nav__left guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-              <div class="guide-nav__right guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-slide__wrapper">
-          <div class="guide-slide">
-            <div class="guide-slide__desc">
-              <span class="bold">Парки и заповедники</span>
-            </div>
-            <div class="guide-slide__nav">
-              <div class="guide-nav__left guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-              <div class="guide-nav__right guide-nav__item cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="guide-dots__wrapper">
-        <div class="guide-dots">
-          <div class="dots-slide__wrapper">
-            <div class="dots-slide">
-              <div class="dots-marker cu-p"></div>
-              <div class="dots-desc">
-                <span class="bold text-main">Парки и заповедники</span>
-              </div>
-            </div>
-          </div>
-          <div class="dots-slide__wrapper">
-            <div class="dots-slide">
-              <div class="dots-marker cu-p"></div>
-              <div class="dots-desc">
-                <span class="bold text-main">Экскурсии и туры</span>
-              </div>
-            </div>
-          </div>
-          <div class="dots-slide__wrapper">
-            <div class="dots-slide">
-              <div class="dots-marker cu-p"></div>
-              <div class="dots-desc">
-                <span class="bold text-main">Усадьбы и базы отдыха</span>
-              </div>
-            </div>
-          </div>
-          <div class="dots-slide__wrapper">
-            <div class="dots-slide">
-              <div class="dots-marker cu-p"></div>
-              <div class="dots-desc">
-                <span class="bold text-main"
-                  >Санаторно-курортное оздаровление</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="popular">
-      <div class="popular-wrapper container p-0">
-        <div class="popular-slider__main">
-          <div class="popular-main__slide">
-            <div class="popular-main__nav">
-              <div class="popular-nav__left popular-nav__item btn-arrow cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#ffffff"
-                  />
-                </svg>
-              </div>
-              <div class="popular-nav__right popular-nav__item btn-arrow cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#ffffff"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="popular-main__price">
-              <span class="medium">от 70 руб.</span>
-            </div>
-            <div class="popular-main__name">
-              <span class="extra-bold"
-                >Экскурсия на Нарочь в Аптекарский сад1
-              </span>
-            </div>
-            <div class="popular-main__actions">
-              <div class="main-actions__booking btn-shadow cu-p btn-arrow">
-                <a href="#"
-                  ><span class="bold text-shadow">Забронировать</span></a
-                >
-              </div>
-              <div class="main-actions__all medium cu-p">
-                <a href="#">Все экскурсии</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="popular-main__slide">
-            <div class="popular-main__nav">
-              <div class="popular-nav__left popular-nav__item btn-arrow cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#ffffff"
-                  />
-                </svg>
-              </div>
-              <div class="popular-nav__right popular-nav__item btn-arrow cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#ffffff"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="popular-main__price">
-              <span class="medium">от 70 руб.</span>
-            </div>
-            <div class="popular-main__name">
-              <span class="extra-bold"
-                >Экскурсия на Нарочь в Аптекарский сад1
-              </span>
-            </div>
-            <div class="popular-main__actions">
-              <div class="main-actions__booking btn-shadow cu-p btn-arrow">
-                <span class="bold text-shadow">Забронировать</span>
-              </div>
-              <div class="main-actions__all medium cu-p">Все экскурсии</div>
-            </div>
-          </div>
-
-          <div class="popular-main__slide">
-            <div class="popular-main__nav">
-              <div class="popular-nav__left popular-nav__item btn-arrow cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#ffffff"
-                  />
-                </svg>
-              </div>
-              <div class="popular-nav__right popular-nav__item btn-arrow cu-p">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#ffffff"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div class="popular-main__price">
-              <span class="medium">от 70 руб.</span>
-            </div>
-            <div class="popular-main__name">
-              <span class="extra-bold"
-                >Экскурсия на Нарочь в Аптекарский сад1
-              </span>
-            </div>
-            <div class="popular-main__actions">
-              <div class="main-actions__booking btn-shadow cu-p btn-arrow">
-                <span class="bold text-shadow">Забронировать</span>
-              </div>
-              <div class="main-actions__all medium cu-p">Все экскурсии</div>
-            </div>
-          </div>
-        </div>
-        <div class="popular-desc">
-          <span class="extra-bold text-main">Популярные предложения</span>
-        </div>
-        <div class="popular-slider__sub">
-          <a href="#"
-            ><div class="slider-sub__item cu-p">
-              <div class="slider-sub__desc bold">«Наносы Отдых»</div>
-            </div></a
-          >
-          <a href="#">
-            <div class="slider-sub__item cu-p">
-              <div class="slider-sub__desc bold">«Экскурсия какая-то»</div>
-            </div>
-          </a>
-          <a href="#"
-            ><div class="slider-sub__item cu-p">
-              <div class="slider-sub__desc bold">«Типо тур»</div>
-            </div></a
-          >
-
-          <div class="slider-sub__item cu-p">
-            <div class="slider-sub__desc bold">«Наносы Отдых2»</div>
-          </div>
-          <div class="slider-sub__item cu-p">
-            <div class="slider-sub__desc bold">«Экскурсия какая-то2»</div>
-          </div>
-          <div class="slider-sub__item cu-p">
-            <div class="slider-sub__desc bold">«Типо тур2»</div>
-          </div>
-
-          <div class="slider-sub__item cu-p">
-            <div class="slider-sub__desc bold">«Наносы Отдых3»</div>
-          </div>
-          <div class="slider-sub__item cu-p">
-            <div class="slider-sub__desc bold">«Экскурсия какая-то3»</div>
-          </div>
-          <div class="slider-sub__item cu-p">
-            <div class="slider-sub__desc bold">«Типо тур3»</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="offers">
-      <div class="offers-wrapper container p-0">
-        <div class="offers-main__slider">
-          <div class="offers-main__slide">
-            <h3 class="h-3 extra-bold">Экскурсии по Минску</h3>
-            <span class="medium"
-              >Город Минск – не только высокоразвитая столица, но и древний
-              город с богатой историей, имеющей и свои загадки.
-            </span>
-          </div>
-          <div class="offers-main__slide">
-            <h3 class="h-3 extra-bold">Экскурсии по Минску</h3>
-            <span class="medium"
-              >Город Минск – не только высокоразвитая столица, но и древний
-              город с богатой историей, имеющей и свои загадки.
-            </span>
-          </div>
-        </div>
-        <div class="offers-main__nav">
-          <div class="offers-detail cu-p bold btn-shadow btn-bordered b-r">
-            <a href="#">
-              <span class="text-shadow text-desktop">Смотреть предложения</span>
-              <span class="text-shadow text-mobile">Подробнее</span>
-            </a>
-          </div>
-          <div class="offers-nav__left offers-nav__item btn-arrow cu-p b-r">
-            <svg
-              class="cu-p main-arrow"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                fill="#ffffff"
-              />
-            </svg>
-          </div>
-          <div class="offers-nav__right offers-nav__item btn-arrow cu-p b-r">
-            <svg
-              class="cu-p main-arrow"
-              viewBox="0 0 15 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                fill="#ffffff"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="offers-page"><span>01</span></div>
-        <div class="offers-sub__slider">
-          <div class="offers-sub__slide"></div>
-          <div class="offers-sub__slide"></div>
-
-          <div class="offers-sub__slide"></div>
-          <div class="offers-sub__slide"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="blog">
-      <div class="blog-wrapper container p-0">
-        <div class="blog-content">
-          <div class="blog-left blog-item b-r">
-            <div class="blog-left__content blog-item__content">
-              <span class="blog-item__title bold"
-                >5 санаториев с лучшими детокс-программами</span
-              >
-              <span class="blog-item__desc medium"
-                >Рассказываем, как и где вернуться к жизни после новогодних
-                праздников.</span
-              >
-              <a
-                href="#"
-                class="blog-item__btn cu-p br-white bold btn-bordered"
-              >
-                Смотреть</a
-              >
-            </div>
-          </div>
-          <div class="blog-top blog-item b-r">
-            <div class="blog-top__content blog-item__content">
-              <span class="blog-item__title bold"
-                >Зимний релакс в санатории</span
-              >
-              <span class="blog-item__desc medium"
-                >В Новый год с новыми силами: 6 санаториев для зимнего
-                отдыха</span
-              >
-              <a href="#" class="blog-item__btn cu-p br-white bold btn-bordered"
-                >Смотреть</a
-              >
-            </div>
-          </div>
-          <div class="blog-down blog-item b-r">
-            <div class="blog-down__image b-r">
-              <img loading="lazy" src="./assets/images/blog.webp" alt="" />
-            </div>
-            <div class="blog-down__content blog-item__content">
-              <span class="blog-item__title bold"
-                >Где активно отдохнуть зимой?</span
-              >
-              <span class="blog-item__desc medium"
-                >Активный отдых + красивые пейзажи = идеальный зимний отдых от
-                VETLIVA</span
-              >
-              <a href="#" class="blog-item__btn cu-p br-white bold btn-bordered"
-                >Смотреть</a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="blog-nav">
-          <div class="blog-nav__arrows">
-            <div class="blog-arrow__left blog-arrow">
+            <div class="search-btn btn-blue cu-p">
               <svg
-                class="cu-p rotate-right"
-                viewBox="0 0 15 10"
+                width="25"
+                height="30"
+                viewBox="0 0 45 55"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                  fill="#264B87"
+                  d="M29.3092 31.8367C29.3997 31.769 29.4941 31.7047 29.5923 31.6445C30.201 31.2202 30.7722 30.75 31.3003 30.239C33.7946 27.8251 35.3374 24.4969 35.3374 20.827C35.3374 17.1572 33.7946 13.829 31.3003 11.4151C28.7723 8.9686 25.2576 7.4552 21.3561 7.4552C17.4547 7.4552 13.9399 8.9686 11.412 11.4151C8.9177 13.829 7.3748 17.1571 7.3748 20.827C7.3748 24.4969 8.9176 27.825 11.412 30.239C13.94 32.6855 17.4546 34.1989 21.3561 34.1989C24.3175 34.1989 27.0559 33.3268 29.3092 31.8367ZM36.3132 35.6797L44.4707 49.3541C45.5208 51.1152 44.9597 53.4034 43.2176 54.4649C41.4754 55.5264 39.2119 54.9592 38.1618 53.1981L30.167 39.7965C27.4781 40.9892 24.4942 41.6541 21.3561 41.6541C15.4996 41.6541 10.1796 39.3393 6.3131 35.5974C2.4125 31.8225 0 26.6008 0 20.827C0 15.0532 2.4126 9.8314 6.3131 6.0567C10.1796 2.3146 15.4998 0 21.3561 0C27.2124 0 32.5326 2.3148 36.3992 6.0567C40.2996 9.8314 42.7123 15.0533 42.7123 20.827C42.7123 26.6008 40.2995 31.8225 36.3992 35.5974L36.3132 35.6797Z"
+                  fill="#ffffff"
                 />
               </svg>
             </div>
-            <div class="blog-arrow__right blog-arrow">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-filters">
+      <div class="booking-filters_wrapper">
+        <div class="booking-filter cu-p">
+          <div class="filter-icon">
+            <svg
+              class="icon-filter"
+              viewBox="0 0 30 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M7.8395 0.0660417C6.83433 0.263146 5.77197 0.999802 5.2935 1.83154L5.01871 2.30908H2.95393C1.04932 2.30908 0.865384 2.31871 0.583491 2.43279C0.189065 2.59239 0.00213344 2.85832 0.00213344 3.25972C0.00213344 3.59716 0.130443 3.79558 0.49668 4.02432C0.69221 4.14647 0.81738 4.15422 2.88477 4.17272L5.06656 4.19223L5.34479 4.68164C5.81346 5.50601 6.70416 6.13095 7.79068 6.39776C8.28747 6.51972 9.33885 6.52716 9.85201 6.41226C10.938 6.16915 11.8955 5.51226 12.3929 4.66895L12.6787 4.18448H20.8997C28.3299 4.18448 29.1454 4.17472 29.3766 4.08302C30.1203 3.78795 30.2049 2.8842 29.5267 2.47974L29.2929 2.34034L20.9712 2.32364L12.6496 2.30695L12.5043 2.02371C12.0565 1.15015 11.0607 0.399175 9.98039 0.120178C9.46043 -0.0140378 8.38662 -0.041231 7.8395 0.0660417ZM9.51553 1.93925C9.96776 2.11066 10.1745 2.28045 10.3846 2.6529C10.6027 3.03961 10.6102 3.43382 10.4065 3.8094C10.2015 4.18748 9.99841 4.36033 9.55292 4.53599C9.09038 4.71834 8.61886 4.72459 8.16963 4.5543C7.48232 4.29381 7.16573 3.88141 7.16573 3.24678C7.16573 2.61214 7.48232 2.19974 8.16963 1.93925C8.598 1.7769 9.08716 1.7769 9.51553 1.93925ZM20.881 7.51493C19.8239 7.81731 19.0301 8.39724 18.5751 9.19948L18.3013 9.68226L9.59524 9.68395C1.08439 9.68558 0.882282 9.68839 0.585136 9.80892C0.417944 9.87674 0.23363 9.99614 0.175681 10.0742C-0.0909585 10.4331 -0.049684 10.9461 0.269595 11.2409C0.630523 11.5741 0.247314 11.5609 9.60661 11.5627L18.3013 11.5644L18.5855 12.0664C19.0523 12.8907 19.9305 13.5054 21.0254 13.7743C21.8472 13.9761 23.0406 13.8798 23.8345 13.5475C24.6632 13.2007 25.4535 12.4967 25.7211 11.867L25.851 11.561H27.4627C28.9869 11.561 29.0921 11.5534 29.4024 11.4204C29.8334 11.2356 30.0234 10.9467 29.9809 10.5406C29.9443 10.1909 29.7676 9.96445 29.4038 9.80135C29.175 9.69877 28.9588 9.68564 27.4984 9.68564H25.851L25.7211 9.37964C25.5572 8.99393 25.0372 8.39924 24.6106 8.10974C24.207 7.83587 23.5824 7.56857 23.0868 7.45773C22.49 7.32427 21.4534 7.35115 20.881 7.51493ZM23.0148 9.40689C23.7337 9.78129 24.0311 10.62 23.6604 11.2273C23.1206 12.112 21.835 12.3281 20.9892 11.6764C20.5699 11.3532 20.4039 10.995 20.4462 10.5053C20.5397 9.42415 21.9172 8.83515 23.0148 9.40689ZM13.2916 15.5297C13.0448 15.5753 12.6915 15.6679 12.5064 15.7354C11.6944 16.0318 10.8182 16.7879 10.4801 17.4842L10.3207 17.8124H5.56141C1.06181 17.8124 0.787994 17.8187 0.541618 17.9288C-0.155712 18.2406 -0.185621 19.1581 0.490399 19.5027C0.721222 19.6204 0.900901 19.6248 5.52746 19.625L10.3252 19.6252L10.6239 20.141C11.2999 21.3083 12.615 22.002 14.1484 22C15.2092 21.9986 16.0495 21.7116 16.8566 21.0751C17.2632 20.7545 17.4399 20.5541 17.6763 20.1458L17.9776 19.6252H23.6482H29.3188L29.5515 19.4615C30.1677 19.0281 30.1457 18.3072 29.5054 17.9564C29.3129 17.8509 28.9306 17.8416 23.586 17.8124L17.8725 17.7811L17.7298 17.4775C17.1753 16.2972 15.5605 15.4155 14.0019 15.4423C13.858 15.4448 13.5383 15.4841 13.2916 15.5297ZM14.7707 17.3965C15.8955 17.7906 16.2131 19.0214 15.3651 19.7006C14.8664 20.1 14.3822 20.2279 13.7788 20.1197C12.7958 19.9435 12.2254 19.1215 12.5185 18.3036C12.6344 17.9801 13.0636 17.5719 13.4369 17.4302C13.796 17.2938 14.4317 17.2778 14.7707 17.3965Z"
+                fill="#264B87"
+              />
+            </svg>
+          </div>
+          <div class="filter-title">
+            <span class="text-main bold">Фильтр</span>
+          </div>
+        </div>
+        <div class="booking-sort">
+          <div class="booking-sort_title">
+            <span class="text-main bold">Сортировать по:</span>
+          </div>
+          <div class="booking-sort_type cu-p">
+            <span class="text-main bold">популярности</span>
+
+            <svg
+              class="cu-p main-arrow booking-sort_type__arrow"
+              viewBox="0 0 15 10"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
+                fill="#264B87"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="options b-r booking-sort_options">
+            <ul>
+              <a href="#"
+                ><li class="option booking-option bold b-r">популярности</li></a
+              >
+              <a href="#"
+                ><li class="option booking-option bold b-r">
+                  возрастанию цены
+                </li></a
+              >
+              <a href="#"
+                ><li class="option booking-option bold b-r">
+                  убыванию цены
+                </li></a
+              >
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-cards search-cards container p-0">
+      <div class="card">
+        <div class="card-marker">
+          <svg
+            class="icon-favourites-filled"
+            viewBox="0 0 33 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.7076 1.0443L21.6214 9.23379L30.5283 10.4623C31.529 10.6006 32.2281 11.5235 32.0896 12.5236C32.0287 12.9639 31.8156 13.3457 31.5107 13.6234L25.047 19.88L26.6493 28.8528C26.8233 29.8489 26.1562 30.7974 25.1595 30.9713C24.7362 31.0452 24.3214 30.9674 23.971 30.7772L23.9705 30.7781L16.053 26.4843L8.13553 30.7781C7.2455 31.2604 6.13276 30.9303 5.65016 30.041C5.43394 29.6425 5.38107 29.1994 5.46837 28.7882L7.059 19.88L0.553533 13.5829C-0.170317 12.8793 -0.186315 11.7224 0.517773 10.9991C0.813159 10.6955 1.18837 10.5167 1.57786 10.4631L10.4846 9.23379L14.3986 1.0443C14.8337 0.131236 15.9272 -0.256486 16.841 0.17829C17.2363 0.366449 17.5331 0.677722 17.7076 1.0443Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+
+        <div class="card_image b-r">
+          <img src="/assets/images/sanator1.jpg" alt="" />
+          <img src="/assets/images/sanator2.jpg" alt="" />
+          <img src="/assets/images/sanator3.jpg" alt="" />
+        </div>
+        <div class="card_title extra-bold">
+          <span class="card-title__span"> Санаторий «Приднепровский» </span>
+        </div>
+        <div class="card_services">
+          <ul class="card-services_list p-0">
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-location card-icon"
+                  data="/assets/images/location.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                г.п. Ушачи, ул. Витебская 8, Витебский район
+              </div>
+            </li>
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-wifi card-icon"
+                  data="/assets/images/wifi.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                Бесплатный Wi-Fi
+              </div>
+            </li>
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-badperson card-icon"
+                  data="/assets/images/badperson.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                Номера для гостей с ограниченными возможностями
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="item-card_actions">
+          <div class="card-price">
+            <span class="card-price__span semi-bold">от 603.00 BYN</span>
+          </div>
+          <div class="card-details">
+            <a href="#" class="card-details_link b-r bold">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-marker">
+          <svg
+            class="icon-favourites-filled"
+            viewBox="0 0 33 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.7076 1.0443L21.6214 9.23379L30.5283 10.4623C31.529 10.6006 32.2281 11.5235 32.0896 12.5236C32.0287 12.9639 31.8156 13.3457 31.5107 13.6234L25.047 19.88L26.6493 28.8528C26.8233 29.8489 26.1562 30.7974 25.1595 30.9713C24.7362 31.0452 24.3214 30.9674 23.971 30.7772L23.9705 30.7781L16.053 26.4843L8.13553 30.7781C7.2455 31.2604 6.13276 30.9303 5.65016 30.041C5.43394 29.6425 5.38107 29.1994 5.46837 28.7882L7.059 19.88L0.553533 13.5829C-0.170317 12.8793 -0.186315 11.7224 0.517773 10.9991C0.813159 10.6955 1.18837 10.5167 1.57786 10.4631L10.4846 9.23379L14.3986 1.0443C14.8337 0.131236 15.9272 -0.256486 16.841 0.17829C17.2363 0.366449 17.5331 0.677722 17.7076 1.0443Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+
+        <div class="card_image b-r">
+          <img src="/assets/images/sanator3.jpg" alt="" />
+          <img src="/assets/images/sanator3.jpg" alt="" />
+          <img src="/assets/images/sanator1.jpg" alt="" />
+        </div>
+        <div class="card_title extra-bold">
+          <span class="card-title__span"> Санаторий «Приднепровский» </span>
+        </div>
+        <div class="card_services">
+          <ul class="card-services_list p-0">
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-location card-icon"
+                  data="/assets/images/location.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                г.п. Ушачи, ул. Витебская 8, Витебский район
+              </div>
+            </li>
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-wifi card-icon"
+                  data="/assets/images/wifi.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                Бесплатный Wi-Fi
+              </div>
+            </li>
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-badperson card-icon"
+                  data="/assets/images/badperson.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                Номера для гостей с ограниченными возможностями
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="item-card_actions">
+          <div class="card-price">
+            <span class="card-price__span semi-bold">от 603.00 BYN</span>
+          </div>
+          <div class="card-details">
+            <a href="#" class="card-details_link b-r bold">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-marker">
+          <svg
+            class="icon-favourites-filled"
+            viewBox="0 0 33 31"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.7076 1.0443L21.6214 9.23379L30.5283 10.4623C31.529 10.6006 32.2281 11.5235 32.0896 12.5236C32.0287 12.9639 31.8156 13.3457 31.5107 13.6234L25.047 19.88L26.6493 28.8528C26.8233 29.8489 26.1562 30.7974 25.1595 30.9713C24.7362 31.0452 24.3214 30.9674 23.971 30.7772L23.9705 30.7781L16.053 26.4843L8.13553 30.7781C7.2455 31.2604 6.13276 30.9303 5.65016 30.041C5.43394 29.6425 5.38107 29.1994 5.46837 28.7882L7.059 19.88L0.553533 13.5829C-0.170317 12.8793 -0.186315 11.7224 0.517773 10.9991C0.813159 10.6955 1.18837 10.5167 1.57786 10.4631L10.4846 9.23379L14.3986 1.0443C14.8337 0.131236 15.9272 -0.256486 16.841 0.17829C17.2363 0.366449 17.5331 0.677722 17.7076 1.0443Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+
+        <div class="card_image b-r">
+          <img src="/assets/images/sanator3.jpg" alt="" />
+          <img src="/assets/images/sanator3.jpg" alt="" />
+          <img src="/assets/images/sanator1.jpg" alt="" />
+        </div>
+        <div class="card_title extra-bold">
+          <span class="card-title__span"> Санаторий «Приднепровский» </span>
+        </div>
+        <div class="card_services">
+          <ul class="card-services_list p-0">
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-location card-icon"
+                  data="/assets/images/location.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                г.п. Ушачи, ул. Витебская 8, Витебский район
+              </div>
+            </li>
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-wifi card-icon"
+                  data="/assets/images/wifi.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                Бесплатный Wi-Fi
+              </div>
+            </li>
+            <li class="card-service_item">
+              <div class="card-service_item__icon">
+                <object
+                  class="icon-badperson card-icon"
+                  data="/assets/images/badperson.svg"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <div class="card-service_item__desc semi-bold">
+                Номера для гостей с ограниченными возможностями
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="item-card_actions">
+          <div class="card-price">
+            <span class="card-price__span semi-bold">от 603.00 BYN</span>
+          </div>
+          <div class="card-details">
+            <a href="#" class="card-details_link b-r bold">Подробнее</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showmore showmore-search">
+      <a href="#" class="b-r showmore-btn bold">Показать еще</a>
+    </div>
+
+    <div class="popularoffers">
+      <div class="popularoffers-wrapper">
+        <div class="popularoffers-block">
+          <div class="popularoffers-desc">
+            <span class="popularoffers-desc__span text-main extra-bold"
+              >Популярные предложения</span
+            >
+          </div>
+          <div class="popularoffers-region">
+            <div class="popularoffers-region__icon">
               <svg
-                class="cu-p rotate-right"
-                viewBox="0 0 15 10"
+                class="popularoffers-region__icon__svg"
+                viewBox="0 0 20 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.05284 0.387467C5.30796 0.946009 3.92399 1.77183 2.69503 2.98807C-0.397498 6.04848 -0.830595 10.2196 1.40638 15.3927C2.83477 18.696 5.81624 22.9242 8.64248 25.6548L10.0345 27L11.2825 25.869C14.5249 22.9307 17.9147 17.9012 19.3346 13.9229C19.8958 12.3503 19.9861 11.7528 19.9979 9.53251C20.0113 7.05741 19.9835 6.90728 19.2476 5.46338C18.4522 3.90255 16.9171 2.24749 15.4608 1.38055C13.2157 0.0439473 9.4978 -0.395305 7.05284 0.387467ZM12.6084 4.26877C13.6937 4.71017 15.1658 6.14721 15.6667 7.2538C16.1197 8.25502 16.1197 10.3817 15.6667 11.3829C15.1711 12.4779 13.7964 13.8188 12.6364 14.3388C11.4592 14.8663 8.9555 14.9385 7.76796 14.4791C5.61103 13.6449 4.10236 11.5307 4.11208 9.35604C4.11856 7.87724 4.38947 7.07647 5.22744 6.0594C7.03132 3.87043 9.91054 3.17182 12.6084 4.26877Z"
                   fill="#264B87"
                 />
               </svg>
             </div>
+            <div class="popularoffers-region__desc">
+              <span class="text-main bold popularoffers-region__desc__span"
+                >Гродненская область</span
+              >
+            </div>
           </div>
-          <div class="blog-nav__pages bold">
-            <p class="blog-pages__num cu-p">1</p>
-            <p class="blog-pages__num blog-pages__current cu-p">2</p>
-            <p class="blog-pages__any cu-p">...</p>
-            <p class="blog-pages__num cu-p">150</p>
+          <div class="popularoffers-slider">
+            <div class="popularoffers-slide">
+              <div class="popularoffers-slide__image">
+                <img src="/assets/images/popular-1.jpg" alt="" />
+              </div>
+              <div class="popularoffers-slide__desc">
+                <span class="popularoffers-slide__desc__span text-white regular"
+                  >«Экскурсия в несвижский замок»</span
+                >
+              </div>
+            </div>
+
+            <div class="popularoffers-slide">
+              <div class="popularoffers-slide__image">
+                <img src="/assets/images/popular-2.jpg" alt="" />
+              </div>
+              <div class="popularoffers-slide__desc">
+                <span class="popularoffers-slide__desc__span text-white regular"
+                  >«Наносы Отдых»</span
+                >
+              </div>
+            </div>
+
+            <div class="popularoffers-slide">
+              <div class="popularoffers-slide__image">
+                <img src="/assets/images/popular-3.jpg" alt="" />
+              </div>
+              <div class="popularoffers-slide__desc">
+                <span class="popularoffers-slide__desc__span text-white regular"
+                  >«Наносы Отдых»</span
+                >
+              </div>
+            </div>
+
+            <div class="popularoffers-slide">
+              <div class="popularoffers-slide__image">
+                <img src="/assets/images/popular-1.jpg" alt="" />
+              </div>
+              <div class="popularoffers-slide__desc">
+                <span class="popularoffers-slide__desc__span text-white regular"
+                  >«Экскурсия в несвижский замок»</span
+                >
+              </div>
+            </div>
+
+            <div class="popularoffers-slide">
+              <div class="popularoffers-slide__image">
+                <img src="/assets/images/popular-2.jpg" alt="" />
+              </div>
+              <div class="popularoffers-slide__desc">
+                <span class="popularoffers-slide__desc__span text-white regular"
+                  >«Наносы Отдых»</span
+                >
+              </div>
+            </div>
+
+            <div class="popularoffers-slide">
+              <div class="popularoffers-slide__image">
+                <img src="/assets/images/popular-3.jpg" alt="" />
+              </div>
+              <div class="popularoffers-slide__desc">
+                <span class="popularoffers-slide__desc__span text-white regular"
+                  >«Наносы Отдых»</span
+                >
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="popularoffers-map">
+          <svg
+            class="map"
+            style="
+              shape-rendering: geometricPrecision;
+              text-rendering: geometricPrecision;
+              image-rendering: optimizeQuality;
+              fill-rule: evenodd;
+              clip-rule: evenodd;
+            "
+            preserveAspectRatio="xMinYMid meet"
+            viewBox="0 0 21000 18000"
+          >
+            <g class="map-main">
+              <g class="city">
+                <polygon
+                  id="hrodnenskaia-voblasts"
+                  class="map-fill__zone"
+                  points="7719.69,6067.88 7528.78,5876.97 7528.78,5686.06 7337.88,5495.15 7146.97,5495.15 7146.97,5113.33 6765.15,4731.51 6574.24,4922.42 6192.42,4922.42 6001.51,5113.33 6001.51,5304.24 5810.6,5495.15 5810.6,6258.78 5619.69,6449.69 5619.69,6831.51 5428.78,7022.42 5619.69,7213.33 5810.6,7213.33 6001.51,7404.24 6001.51,7595.15 6001.51,7786.06 5810.6,7786.06 5619.69,7976.97 5428.78,7976.97 5226.42,7786.06 5428.78,7595.15 5428.78,7404.24 5237.88,7213.33 5046.97,7404.24 4856.06,7404.24 4474.24,7786.06 4092.42,7786.06 3901.51,7976.97 3901.51,8358.78 3710.6,8549.69 3519.69,8358.78 3328.78,8549.69 3137.88,8549.69 2946.97,8740.6 2565.15,8740.6 2374.24,8549.69 1992.42,8549.69 1801.51,8740.6 1419.69,8740.6 1228.78,8549.69 1037.88,8549.69 1037.88,8931.51 1228.78,9122.42 1228.78,9886.06 1419.69,10076.97 1419.69,10458.78 1610.6,10649.69 1610.6,10840.6 1610.6,11031.51 1801.51,11222.42 1801.51,11795.15 1992.42,11986.06 1992.42,12940.6 2183.33,12940.6 2374.24,12749.69 2565.15,12940.6 2946.97,12940.6 3137.88,13131.51 3328.78,12940.6 3328.78,12558.78 3519.69,12367.88 3710.6,12176.97 4092.42,12176.97 4092.42,12367.88 4283.33,12558.78 4856.06,12558.78 4856.06,12367.88 5046.97,12176.97 5237.88,12176.97 5428.78,11986.06 5428.78,11222.42 5619.69,11031.51 5619.69,10840.6 5810.6,10649.69 6192.42,10649.69 6765.15,10649.69 6956.06,10840.6 7146.97,10840.6 7337.88,10649.69 7528.78,10649.69 7528.78,9886.06 7337.88,9695.15 7146.97,9695.15 7146.97,9504.24 6956.06,9313.33 6956.06,9122.42 6956.06,8931.51 7337.88,8549.69 7337.88,8358.78 7146.97,8358.78 7146.97,8167.88 6765.15,8167.88 6765.15,7976.97 6574.24,7976.97 6574.24,7786.06 6765.15,7595.15 7146.97,7595.15 7528.78,7213.33 7528.78,7022.42 7719.69,6831.51 7719.69,6640.6 7910.6,6449.69 7910.6,6067.88 "
+                />
+                <circle
+                  id="horad-hrodna"
+                  class="map-fill__point"
+                  cx="1610.6"
+                  cy="9504.24"
+                  r="152.72"
+                />
+              </g>
+              <g class="city">
+                <polygon
+                  id="vitsebskaia-voblasts"
+                  class="map-fill__zone"
+                  points="17646.97,6258.78 17646.97,5876.97 17265.15,5876.97 17074.24,5686.06 16883.33,5686.06 16692.42,5495.15 16692.42,5304.24 16883.33,5113.33 16883.33,4922.42 17074.24,4922.42 17074.24,4731.51 17265.15,4540.6 17265.15,4158.78 17074.24,3967.88 16883.33,3776.97 16883.33,3395.15 17074.24,3204.24 17074.24,2440.6 16883.33,2440.6 16692.42,2631.51 16501.51,2440.6 16501.51,2249.69 16119.69,1867.88 15928.78,1867.88 15737.88,1676.97 14783.33,1676.97 14592.42,1867.88 14210.6,1867.88 14019.69,2058.78 13828.78,2058.78 13637.88,1867.88 13637.88,1676.97 13828.78,1486.06 13828.78,1295.15 13637.88,1104.24 13256.06,1104.24 13065.15,913.33 12874.24,913.33 12492.42,1295.15 12301.51,1295.15 12301.51,1104.24 12110.6,913.33 12110.6,722.42 11728.78,722.42 11537.88,722.42 11346.97,913.33 11156.06,722.42 11156.06,531.51 10774.24,531.51 10392.42,913.33 10392.42,1104.24 10201.51,1295.15 10010.6,1295.15 9819.69,1486.06 9819.69,1867.88 9628.78,1867.88 9246.97,1867.88 9056.06,1676.97 8674.24,1676.97 8101.51,2249.69 7719.69,2249.69 7719.69,2631.51 7528.78,2822.42 7528.78,3204.24 7337.88,3395.15 7528.78,3586.06 8101.51,3586.06 8292.42,3776.97 8101.51,3776.97 7910.6,3967.88 7910.6,4158.78 7146.97,4158.78 6956.06,4349.69 6956.06,4540.6 6765.15,4731.51 7146.97,5113.33 7337.88,4922.42 8674.24,4922.42 8865.15,4731.51 9056.06,4731.51 9056.06,4922.42 9246.97,5113.33 9437.88,5113.33 9628.78,5304.24 9628.78,5495.15 9819.69,5495.15 10010.6,5686.06 10010.6,5876.97 10201.51,6067.88 11156.06,6067.88 11537.88,6449.69 11728.78,6258.78 11728.78,6067.88 12110.6,6067.88 12110.6,6258.78 12301.51,6449.69 12492.42,6449.69 12683.33,6258.78 13828.78,6258.78 13828.78,7022.42 13637.88,7213.33 13637.88,7595.15 13828.78,7595.15 14210.6,7213.33 14783.33,7213.33 14974.24,7404.24 15165.15,7404.24 15165.15,7213.33 15546.97,7213.33 15737.88,7404.24 16119.69,7404.24 16310.6,7213.33 16310.6,7022.42 16501.51,6831.51 16692.42,7022.42 16883.33,7022.42 17074.24,6831.51 17456.06,6831.51 17646.97,6640.6 17456.06,6640.6 17456.06,6449.69 "
+                />
+                <circle
+                  id="horad-vitsebsk"
+                  class="map-fill__point"
+                  cx="15356.06"
+                  cy="4158.78"
+                  r="152.72"
+                />
+                <circle
+                  id="horad-navapolatsk"
+                  class="map-fill__point"
+                  cx="11919.69"
+                  cy="2822.42"
+                  r="152.72"
+                />
+              </g>
+              <g class="city">
+                <polygon
+                  id="mahiliouskaia-voblasts"
+                  class="map-fill__zone"
+                  points="20701.51,10267.88 20319.69,9886.06 20319.69,9504.24 20128.78,9313.33 19937.88,9313.33 19746.97,9122.42 19174.24,9122.42 18983.33,9122.42 18792.42,8931.51 18983.33,8740.6 18983.33,8167.88 18792.42,8167.88 18601.51,7976.97 18410.6,7976.97 18028.78,7595.15 17837.88,7595.15 17837.88,7404.24 17837.88,6831.51 17646.97,6640.6 17456.06,6831.51 17074.24,6831.51 16883.33,7022.42 16692.42,7022.42 16501.51,6831.51 16310.6,7022.42 16310.6,7213.33 16119.69,7404.24 15737.88,7404.24 15546.97,7213.33 15165.15,7213.33 15165.15,7404.24 14974.24,7404.24 14783.33,7213.33 14210.6,7213.33 13828.78,7595.15 13828.78,8167.88 13637.88,8358.78 13637.88,8931.51 13828.78,9122.42 13828.78,9504.24 13446.97,9504.24 13256.06,9695.15 13065.15,9695.15 12874.24,9886.06 12683.33,9886.06 12683.33,10076.97 12492.42,9886.06 12110.6,9886.06 11728.78,10267.88 11537.88,10267.88 11537.88,10649.69 11728.78,10840.6 11537.88,11031.51 10965.15,11031.51 10965.15,11222.42 11156.06,11413.33 11518.78,11413.33 11728.78,11604.24 11919.69,11604.24 11919.69,11986.06 11728.78,12176.97 11728.78,12367.88 11537.88,12558.78 11537.88,12749.69 11346.97,12940.6 11537.88,13131.51 12492.42,13131.51 12492.42,12940.6 12683.33,12749.69 12683.33,12558.78 13065.15,12558.78 13256.06,12367.88 13828.78,12367.88 14019.69,12176.97 14401.51,12176.97 14210.6,11986.06 14210.6,11604.24 14401.51,11604.24 14592.42,11413.33 14592.42,11222.42 14401.51,11031.51 14592.42,10840.6 14783.33,10840.6 14974.24,10840.6 15165.15,11031.51 15356.06,11031.51 15356.06,11222.42 15737.88,11222.42 16119.69,10840.6 16310.6,10840.6 16501.51,11031.51 17265.15,11031.51 17265.15,11413.33 17456.06,11604.24 18028.78,11604.24 18219.69,11413.33 18601.51,11413.33 18792.42,11413.33 19174.24,11795.15 19746.97,11795.15 20128.78,11413.33 20892.42,10649.69 20892.42,10267.88 "
+                />
+                <circle
+                  id="horad-babruisk"
+                  class="map-fill__point"
+                  cx="13256.06"
+                  cy="11413.33"
+                  r="152.72"
+                />
+                <circle
+                  id="horad-mahiliou"
+                  class="map-fill__point"
+                  cx="15737.88"
+                  cy="8740.6"
+                  r="152.72"
+                />
+              </g>
+              <g class="city">
+                <polygon
+                  id="homelskaia-voblasts"
+                  class="map-fill__zone"
+                  points="18792.42,15040.6 18792.42,14849.69 18410.6,14467.88 18410.6,13895.15 18601.51,13704.24 18410.6,13513.33 18410.6,13322.42 18410.6,12940.6 18219.69,12749.69 18219.69,12558.78 17837.88,12176.97 17837.88,11986.06 18028.78,11795.15 18028.78,11604.24 17456.06,11604.24 17265.15,11413.33 17265.15,11031.51 16501.51,11031.51 16310.6,10840.6 16119.69,10840.6 15737.88,11222.42 15356.06,11222.42 15356.06,11031.51 15165.15,11031.51 14974.24,10840.6 14592.42,10840.6 14401.51,11031.51 14592.42,11222.42 14592.42,11413.33 14401.51,11604.24 14210.6,11604.24 14210.6,11986.06 14401.51,12176.97 14019.69,12176.97 13828.78,12367.88 13637.88,12367.88 13256.06,12367.88 13065.15,12558.78 12683.33,12558.78 12683.33,12749.69 12492.42,12940.6 12492.42,13131.51 11728.78,13131.51 11728.78,13322.42 11537.88,13513.33 11537.88,13895.15 11346.97,14086.06 10965.15,14086.06 10774.24,13895.15 10583.33,13895.15 10583.33,14086.06 10010.6,14086.06 9819.69,13895.15 9819.69,13704.24 9628.78,13704.24 9246.97,14086.06 9246.97,14276.97 9056.06,14467.88 9246.97,14658.78 9437.88,14658.78 9628.78,14849.69 9628.78,15422.42 9819.69,15613.33 9819.69,15804.24 9628.78,15995.15 9628.78,16376.97 9628.78,17140.6 10010.6,17140.6 10010.6,17522.42 10201.51,17522.42 10392.42,17331.51 10774.24,17331.51 11156.06,16949.69 11346.97,16949.69 11346.97,17140.6 11537.88,17331.51 11728.78,17331.51 12110.6,17331.51 12110.6,17713.33 12301.51,17904.24 12492.42,17904.24 12492.42,17522.42 12683.33,17331.51 12874.24,17331.51 13065.15,17140.6 13065.15,16949.69 13256.06,16949.69 13256.06,17331.51 13446.97,17522.42 13446.97,17904.24 13828.78,17904.24 14210.6,17522.42 14401.51,17522.42 14592.42,17713.33 14974.24,17713.33 15165.15,17522.42 15356.06,17522.42 15737.88,17904.24 15737.88,18095.15 16119.69,18476.97 16310.6,18286.06 16310.6,17522.42 16119.69,17331.51 16119.69,17140.6 16310.6,16949.69 16310.6,16758.78 16501.51,16567.88 16501.51,16186.06 17074.24,15613.33 17074.24,15422.42 17456.06,15422.42 17646.97,15613.33 17837.88,15613.33 17837.88,15422.42 18028.78,15231.51 18410.6,15231.51 18601.51,15422.42 18983.33,15422.42 18983.33,15231.51 "
+                />
+                <circle
+                  id="horad-homel"
+                  class="map-fill__point"
+                  cx="17265.15"
+                  cy="14276.97"
+                  r="152.72"
+                />
+              </g>
+              <g class="city">
+                <polygon
+                  id="minskaia-voblasts"
+                  class="map-fill__zone"
+                  points="13828.78,7022.42 13828.78,6258.78 12683.33,6258.78 12492.42,6449.69 12301.51,6449.69 12110.6,6258.78 12110.6,6067.88 11728.78,6067.88 11728.78,6258.78 11537.88,6449.69 11156.06,6067.88 10583.33,6067.88 10201.51,6067.88 10010.6,5876.97 10010.6,5686.06 9819.69,5495.15 9628.78,5495.15 9628.78,5304.24 9437.88,5113.33 9246.97,5113.33 9056.06,4922.42 9056.06,4731.51 8865.15,4731.51 8674.24,4922.42 7337.88,4922.42 7146.97,5113.33 7146.97,5495.15 7337.88,5495.15 7528.78,5686.06 7528.78,5876.97 7719.69,6067.88 7910.6,6067.88 7910.6,6449.69 7719.69,6640.6 7719.69,6831.51 7528.78,7022.42 7528.78,7213.33 7337.88,7404.24 7146.97,7595.15 6765.15,7595.15 6574.24,7786.06 6574.24,7976.97 6765.15,7976.97 6765.15,8167.88 7146.97,8167.88 7146.97,8358.78 7337.88,8358.78 7337.88,8549.69 7146.97,8740.6 6956.06,8931.51 6956.06,9313.33 7146.97,9504.24 7146.97,9695.15 7337.88,9695.15 7528.78,9886.06 7528.78,10649.69 7337.88,10649.69 7146.97,10840.6 7146.97,11031.51 6956.06,11222.42 6956.06,11413.33 7158.42,11604.24 7337.88,11604.24 7528.78,11795.15 7146.97,12176.97 7337.88,12367.88 7337.88,12749.69 7528.78,12558.78 7719.69,12558.78 8101.51,12940.6 8483.33,12940.6 8674.24,13131.51 8674.24,13895.15 8865.15,14086.06 8865.15,14276.97 9056.06,14467.88 9246.97,14276.97 9246.97,14086.06 9628.78,13704.24 9819.69,13704.24 9819.69,13895.15 10010.6,14086.06 10583.33,14086.06 10583.33,13895.15 10774.24,13895.15 10965.15,14086.06 11346.97,14086.06 11537.88,13895.15 11537.88,13513.33 11728.78,13322.42 11728.78,13131.51 11537.88,13131.51 11346.97,12940.6 11537.88,12749.69 11537.88,12558.78 11728.78,12367.88 11728.78,12176.97 11919.69,11986.06 11919.69,11604.24 11728.78,11604.24 11518.78,11413.33 11156.06,11413.33 10965.15,11222.42 10965.15,11031.51 11537.88,11031.51 11728.78,10840.6 11537.88,10649.69 11537.88,10267.88 11728.78,10267.88 11919.69,10076.97 12110.6,9886.06 12492.42,9886.06 12683.33,10076.97 12683.33,9886.06 12874.24,9886.06 13065.15,9695.15 13256.06,9695.15 13446.97,9504.24 13828.78,9504.24 13828.78,9122.42 13637.88,8931.51 13637.88,8549.69 13637.88,8358.78 13828.78,8167.88 13828.78,7595.15 13637.88,7595.15 13637.88,7213.33 "
+                />
+                <circle
+                  id="horad-zhodzina"
+                  class="map-fill__point"
+                  cx="11346.97"
+                  cy="7976.97"
+                  r="152.72"
+                />
+                <circle
+                  id="horad-minsk"
+                  class="map-fill__point"
+                  cx="9743.33"
+                  cy="8778.78"
+                  r="305.45"
+                />
+              </g>
+              <g class="city">
+                <polygon
+                  class="map-fill__zone"
+                  points="9628.78,15422.42 9628.78,15231.51 9628.78,14849.69 9437.88,14658.78 9246.97,14658.78 9056.06,14467.88 8865.15,14276.97 8865.15,14086.06 8674.24,13895.15 8674.24,13131.51 8483.33,12940.6 8101.51,12940.6 7719.69,12558.78 7528.78,12558.78 7337.88,12749.69 7337.88,12367.88 7146.97,12176.97 7528.78,11795.15 7337.88,11604.24 7158.42,11604.24 6956.06,11413.33 6956.06,11222.42 7146.97,11031.51 7146.97,10840.6 6956.06,10840.6 6765.15,10649.69 6192.42,10649.69 5810.6,10649.69 5619.69,10840.6 5619.69,11031.51 5428.78,11222.42 5428.78,11986.06 5237.88,12176.97 5046.97,12176.97 4856.06,12367.88 4856.06,12558.78 4474.24,12558.78 4283.33,12558.78 4092.42,12367.88 4092.42,12176.97 3710.6,12176.97 3519.69,12367.88 3328.78,12558.78 3328.78,12940.6 3137.88,13131.51 2946.97,12940.6 2565.15,12940.6 2374.24,12749.69 2183.33,12940.6 1992.42,12940.6 1992.42,13322.42 1610.6,13322.42 1419.69,13513.33 1037.88,13513.33 656.06,13895.15 656.06,14086.06 465.15,14276.97 465.15,14467.88 274.24,14658.78 465.15,14849.69 656.06,14849.69 846.97,15040.6 1037.88,15231.51 1228.78,15231.51 1228.78,15422.42 1419.69,15613.33 1419.69,15804.24 1228.78,15995.15 1228.78,16567.88 1037.88,16758.78 1037.88,17331.51 1228.78,17522.42 1228.78,17140.6 1419.69,16949.69 1610.6,16949.69 1801.51,16949.69 1992.42,17140.6 1992.42,17331.51 2183.33,17331.51 2374.24,17140.6 2946.97,16567.88 2946.97,15995.15 3710.6,15995.15 4283.33,15995.15 4474.24,15804.24 4856.06,15804.24 5046.97,15995.15 5619.69,15995.15 5810.6,15804.24 6001.51,15995.15 6574.24,15995.15 6765.15,16186.06 7337.88,16186.06 7528.78,16376.97 7910.6,16376.97 8101.51,16567.88 8865.15,16567.88 9056.06,16758.78 9056.06,16949.69 9246.97,17140.6 9628.78,17140.6 9628.78,16376.97 9628.78,15995.15 9819.69,15804.24 9819.69,15613.33 "
+                />
+                <circle
+                  class="map-fill__point"
+                  cx="6574.24"
+                  cy="15231.51"
+                  r="152.72"
+                />
+                <circle
+                  id="horad-baranavichy"
+                  class="map-fill__point"
+                  cx="6383.33"
+                  cy="11604.24"
+                  r="152.72"
+                />
+                <circle
+                  id="horad-brest"
+                  class="map-fill__point"
+                  cx="1419.69"
+                  cy="15422.42"
+                  r="152.72"
+                />
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
     </div>
@@ -1375,11 +1384,10 @@
       </div>
     </footer>
 
-    <script src="./assets/scripts/carousel.js"></script>
-    <script src="./assets/scripts/carouselPopular.js"></script>
-    <script src="./assets/scripts/carouselOffers.js"></script>
-    <script src="./assets/scripts/carouselBlog.js"></script>
-    <script src="./assets/scripts/modalRight.js"></script>
-    <script src="./assets/scripts/script.js"></script>
+    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/modalRight.js"></script>
+    <script src="/assets/scripts/favouritesScripts.js"></script>
+    <script src="/assets/scripts/bookingPageScripts.js"></script>
+    <script src="/assets/scripts/searchScripts.js"></script>
   </body>
 </html>

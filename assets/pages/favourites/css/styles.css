@@ -1,130 +1,143 @@
-nav {
-  justify-content: space-between;
-}
-.nav-search svg path {
-  fill: var(--main-color);
+.svg__blue path {
+  fill: var(--main-color) !important;
 }
 
-.nav-booking {
-  border: 2.5px solid var(--main-color);
+.nav-booking__blue span,
+.nav-auth a span {
+  color: var(--main-color) !important;
 }
 
-.nav-booking span {
-  color: var(--main-color);
+.nav-lang__blue {
+  color: var(--main-color) !important;
 }
 
-.nav-favourites svg path {
-  fill: var(--main-color);
+.header-lang__svg path {
+  fill: var(--main-color) !important;
 }
 
-.nav-lang svg path {
-  color: var(--main-color);
-  fill: var(--main-color);
+.nav-booking__blue {
+  border: 0.3rem solid var(--main-color);
 }
 
-.nav-cart svg path {
-  fill: var(--main-color);
+.header-burger__block__blue {
+  background-color: var(--main-color);
 }
 
-.header-burger__block,
-.header-burger__block::before,
-.header-burger__block::after {
+.header-burger__block__blue::after {
+  background-color: var(--main-color);
+}
+.header-burger__block__blue::before {
   background-color: var(--main-color);
 }
 
 .favourites-nav {
+  max-width: 129rem;
   margin-top: 10rem;
-  position: relative;
-}
-
-.favourites-nav__arrows {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
-  position: absolute;
-  width: 129rem;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.favourites-nav__wrapper {
-  width: 120rem;
-  margin: 0 auto;
   position: relative;
-  overflow: auto;
 }
 
-.favourites-nav__items {
-  max-width: 120rem;
-  min-width: none;
-  width: 100%;
-  font-size: 2rem;
-  line-height: 2.43rem;
-  display: inline-flex;
-  gap: 9rem;
-  justify-content: center;
+.favourite-nav_items {
+  width: 120rem;
+  height: 3.5rem;
+  overflow: auto;
   list-style-type: none;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow: auto;
+  display: inline-flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
-.favourites-nav__item {
+.favourite-nav_item {
+  position: relative;
+  font-size: 2rem;
   color: var(--main-gray);
 }
 
-@media screen and (max-width: 1280px) {
-  .favourites-nav__arrows {
-    width: 99rem;
-  }
+.favourite-nav_item__active {
+  color: var(--main-color);
+}
+.favourite-nav_item__active::after {
+  content: "";
+  width: 50%;
+  height: 0.3rem;
 
-  .favourites-nav__wrapper {
-    width: 90rem;
-  }
-  .favourites-nav__items {
-    justify-content: flex-start;
-  }
+  border-radius: 2rem;
+
+  background-color: var(--main-color);
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
 }
 
+.favourites-cards {
+  max-width: 129rem;
+  margin: 6rem auto 0rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  /* justify-content: center; */
+}
+
+@media screen and (max-width: 1280px) {
+  .favourites-nav {
+    max-width: 111.9rem;
+  }
+
+  .favourite-nav_items {
+    max-width: 103.2rem;
+    height: 2.7rem;
+  }
+
+  .favourite-nav_item {
+    font-size: 1.6rem;
+  }
+
+  .favourites-cards {
+    max-width: 111.1rem;
+  }
+
+  .favourites-cards {
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 990px) {
-  .nav-booking {
+  .nav-booking__blue {
     border: none;
   }
-  .nav-booking svg path {
-    fill: var(--main-color);
+  /* Скрываем scrollbar для Chrome, Safari и Opera */
+  .favourite-nav_items::-webkit-scrollbar {
+    display: none;
   }
-  .nav-auth-mobile svg path {
-    fill: var(--main-color);
-  }
+  .favourites-nav {
+    /* max-width: 93%; */
 
-  .favourites-nav__arrows {
-    width: 76.8rem;
+    max-width: 72.9rem;
   }
+  .favourite-nav_items {
+    gap: 3rem;
+    max-width: 80%;
 
-  .favourites-nav__wrapper {
-    width: 68rem;
-  }
-  .favourites-nav__items {
-    justify-content: flex-start;
+    /* Скрываем scrollbar для IE, Edge и Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
 @media screen and (max-width: 768px) {
-  .favourites-nav__arrows {
-    min-width: 30rem;
-    max-width: 70rem;
-    width: 90%;
+  .favourites-nav {
+    max-width: 90%;
+    margin-top: 3.5rem;
+  }
+  .favourites-cards {
+    gap: 0;
   }
 
-  .favourites-nav__wrapper {
-    min-width: 26rem;
-    max-width: 65rem;
-    width: 75%;
-  }
-
-  .favourites-nav__items {
-    gap: 4rem;
+  .slick-dots li.slick-active button:before {
+    color: var(--main-color);
   }
 }

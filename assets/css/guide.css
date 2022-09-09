@@ -268,7 +268,7 @@
 
 @media screen and (max-width: 768px) {
   .guide-carousel {
-    width: 95%;
+    width: 96%;
   }
   .guide-carousel .slick-list .slick-track {
     gap: 0.5rem;

@@ -24,6 +24,19 @@ $(".popular-slider__main").slick({
       breakpoint: 768,
       settings: {
         arrows: false,
+        variableWidth: true,
+        centerMode: true,
+        centerPadding: "40px",
+        slidesToShow: 1,
+        swipe: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 580,
+      settings: {
+        arrows: false,
+        variableWidth: true,
         centerMode: false,
         centerPadding: "40px",
         slidesToShow: 1,
