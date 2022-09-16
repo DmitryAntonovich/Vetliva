@@ -1,7 +1,3 @@
-$(".booking-sort_type").click(function () {
-  $(".booking-sort_options").toggleClass("booking-sort_options__active");
-});
-
 $(function () {
   $("#slider-range").slider({
     range: true,

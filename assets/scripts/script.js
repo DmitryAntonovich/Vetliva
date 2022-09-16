@@ -209,6 +209,23 @@ $(".tab-reg").click(function () {
   $(".tab-reg").addClass("auth-tab__active");
 });
 
+$(".find-region__select").click(function () {
+  $(".booking-options__search").toggleClass("booking-options__active");
+});
+$(".booking-option__search").click(function () {
+  $(".booking-options__search").toggleClass("booking-options__active");
+});
+
+$(".booking-sort_type").click(function () {
+  $(".booking-sort_type__arrow").toggleClass("main-arrow__active");
+  $(".booking-sort_options").toggleClass("booking-sort_options__active");
+});
+
+$(".find-category__select").click(function () {
+  $(".booking-category_type__arrow").toggleClass("main-arrow__active");
+  $(".booking-type_options").toggleClass("booking-sort_options__active");
+});
+
 //active booking tab
 
 $(".form-content__item").click(function () {

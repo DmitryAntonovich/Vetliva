@@ -10,7 +10,7 @@ main {
 }
 
 .main-descriptions {
-  margin-top: 12.5rem;
+  margin: 12.5rem auto 8rem auto;
   user-select: none;
   color: var(--main-font-color);
 }
@@ -33,8 +33,8 @@ main {
     height: 49.1rem;
   }
   .main-descriptions {
-    max-width: 111rem;
-    margin-top: 8rem;
+    max-width: 87vw;
+    margin: 8rem auto 8.3rem auto;
   }
   .h-1 {
     font-size: 12rem;

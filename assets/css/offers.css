@@ -186,6 +186,9 @@
 }
 
 @media screen and (max-width: 990px) {
+  .offers-main__nav {
+    grid-column: 1 / 13;
+  }
   .offers-main__slider,
   .offers-main__nav {
     margin-left: 3rem;
