@@ -83,6 +83,12 @@
   /* justify-content: center; */
 }
 
+.menu__active::after {
+  top: 62%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+
 @media screen and (max-width: 1280px) {
   .favourites-nav {
     max-width: 111.9rem;

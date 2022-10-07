@@ -33,3 +33,15 @@ $(".popularoffers-slider").slick({
     },
   ],
 });
+
+//Interactive map
+$(".citySearch").click(function () {
+  console.log("test");
+  if (!$(this).children(".map-fill__zone").hasClass("map-color")) {
+    $(this).children(".map-fill__zone").addClass("map-color");
+    $(this).children(".map-fill__point").addClass("map-color__point");
+  } else {
+    $(this).children(".map-fill__zone").removeClass("map-color");
+    $(this).children(".map-fill__point").removeClass("map-color__point");
+  }
+});

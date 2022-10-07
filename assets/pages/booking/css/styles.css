@@ -10,6 +10,16 @@
   margin-bottom: 12.5rem;
 }
 
+.menu__active::after {
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-lang__svg path {
+  fill: var(--main-color) !important;
+}
+
 @media screen and (max-width: 1280px) {
   .showmore-booking {
     margin-bottom: 8rem;
@@ -18,14 +28,6 @@
   .booking-cards {
     max-width: 108rem;
     margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 990px) {
-  .booking-sort_options {
-    display: block;
-    top: 3rem;
-    left: 11rem;
   }
 }
 

@@ -307,11 +307,26 @@
   gap: 2.26rem;
 }
 
+.terms__text {
+  font-size: 1.2rem;
+}
+
+.terms__text a:hover {
+  color: var(--main-color);
+}
+/* .terms__agree {
+  font-size: 1.2rem;
+} */
 .social-icon {
   width: 3rem;
   align-self: center;
   text-align: center;
 }
+
+.social-icon:hover {
+  transform: translateY(-0.5rem);
+}
+
 .social-icon__svg {
   height: 2.2rem;
 }

@@ -60,5 +60,9 @@ function offersMove(way, slides) {
 }
 
 if (window.matchMedia("(max-width: 768px)").matches) {
-  $(".offers-detail").text("Подробнее");
+  $(".text-mobile").css("display", "block");
+  $(".text-desktop").css("display", "none");
+} else {
+  $(".text-desktop").css("display", "block");
+  $(".text-mobile").css("display", "none");
 }

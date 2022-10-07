@@ -61,6 +61,8 @@ function modalShow(item) {
     visibility: "visible",
     opacity: "1",
   });
+
+  $("body").css("overflow", "hidden");
 }
 
 function modalHide(item) {
@@ -69,4 +71,5 @@ function modalHide(item) {
     visibility: "none",
     opacity: "0",
   });
+  $("body").css("overflow", "auto");
 }

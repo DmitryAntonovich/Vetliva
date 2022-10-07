@@ -13,6 +13,11 @@
   margin: 0;
   padding: 0;
 }
+dl,
+ol,
+ul {
+  margin: 0;
+}
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
@@ -23,7 +28,8 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 0.5rem;
+  height: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -349,10 +355,10 @@ nav {
   padding-top: 0.5rem;
 }
 
-.nav-lang:hover .header__modal-lang__options {
+.modal-lang__options__active {
   visibility: visible;
   opacity: 1;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   width: 22rem;
   left: -20px;
@@ -363,8 +369,8 @@ nav {
   border-radius: 11.6216px;
 }
 
-.nav-lang:hover .header-lang__svg {
-  transform: rotate(180deg);
+.header-lang__svg__active {
+  transform: rotate(180deg) !important;
 }
 
 .nav-lang svg path {
@@ -649,6 +655,10 @@ footer {
 .booking-options ul {
   margin: 0;
 }
+
+.option {
+  padding: 0.2rem 1rem;
+}
 .option:hover {
   background-color: #e8eff4;
   border-radius: 1.6 rem;
@@ -726,6 +736,7 @@ footer {
 
 .modal-lang__options {
   display: none;
+  font-size: 1.6rem;
 }
 
 .modal-actions {
@@ -825,6 +836,7 @@ footer {
 .modal-lang__select svg {
   width: 1.5rem;
   height: 1.5rem;
+  margin-top: 0.4rem;
 }
 .modal-lang__select svg path {
   fill: var(--main-color);
@@ -863,7 +875,7 @@ footer {
 
 /* стили при наведении курсора на checkbox */
 .chck > input:not(:disabled):not(:checked) + span:hover::before {
-  border-color: #b3d7ff;
+  border-color: var(--main-gray);
 }
 
 /* стили для активного чекбокса (при нажатии на него) */
@@ -1170,7 +1182,7 @@ footer {
 }
 
 .booking-sort_type__arrow {
-  margin-left: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 .booking-sort_options__active {
@@ -1303,7 +1315,8 @@ footer {
 }
 
 .modal-booking_filter {
-  padding-top: 15.6rem;
+  margin-top: 15.6rem;
+  margin-bottom: 6rem;
   padding-left: 11rem;
   max-width: 57rem;
   padding-right: 40px;
@@ -1508,7 +1521,7 @@ footer {
   border-bottom: 0.2rem solid var(--main-gray);
   outline: none;
 
-  font-weight: 600;
+  font-weight: 700;
   line-height: 3rem;
   color: var(--main-color);
 }
@@ -1596,7 +1609,7 @@ footer {
 
 .form-details-nav__right,
 .form-details-nav__left {
-  top: 2.4rem;
+  top: 2.2rem;
 }
 
 .form-details_nav__content {
@@ -1632,7 +1645,708 @@ footer {
   padding: 0;
 }
 
+.see-all__wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.see-all__icon {
+  width: 2rem;
+  margin-right: 1.8rem;
+}
+
+.see-all__desc {
+  font-size: 2rem;
+}
+
+.details-description__wrapper {
+  max-width: 67vw;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.details-description__p {
+  line-height: 2.4rem;
+}
+
+.details-description__category {
+  margin-bottom: 2.5rem;
+}
+
+.details-description__text {
+  margin-bottom: 3.5rem;
+}
+
+.details-description__medical {
+  margin-bottom: 3.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem 2rem;
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.check-arrow {
+  width: 1.5rem;
+  height: 1.1rem;
+}
+
+.details-description__medical__arrow {
+  margin-right: 2rem;
+}
+.details-description__medical__item {
+  display: flex;
+  /* width: 63rem; */
+}
+
+.details-descriprion__leaving {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  gap: 3rem;
+  margin: 0 auto;
+}
+
+.details-descriprion__leaving__image {
+  width: 63rem;
+}
+
+.details-booking__wrapper {
+  max-width: 129rem;
+  margin: 0 auto 6rem auto;
+}
+
+.booking-form__details {
+  height: 15.5rem;
+}
+.booking-form__content__details {
+  padding: 1.4rem 2.5rem 3.6rem 2.5rem;
+}
+
+.params__name__details {
+  grid-column: 1 / 6;
+}
+
+.date__from__details {
+  grid-column: 7 / 11;
+}
+
+.date__to__details {
+  grid-column: 12 / 16;
+}
+
+.tourists__details {
+  grid-column: 16 / 19;
+}
+
+.citizenship__details {
+  grid-column: 19 / 25;
+}
+
+.placechess-container {
+  font-size: 1.8rem;
+  display: flex;
+}
+
+.placechess-wrapper {
+  max-width: 129rem;
+  margin: 0 auto 5rem auto;
+}
+.placechess-title {
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 7rem;
+  margin-top: 12rem;
+}
+
+.placechess-rowitem {
+  display: flex;
+  overflow: auto;
+}
+
+.placechess-rooms__info:last-child {
+  margin-bottom: 5rem;
+}
+
+.placechess-rooms__name {
+  display: flex;
+  margin-top: 8.5rem;
+}
+.placechess-rooms {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+
+.placechess-rooms__date {
+  display: flex;
+  gap: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+/* .placechess-rooms__type {
+  margin-right: 4rem;
+} */
+.placechess-rooms__type__item {
+  margin-bottom: 5.5rem;
+  display: inline-block;
+}
+
+.placechess-rooms__item {
+  margin-bottom: 1.5rem;
+}
+
+.placechess-rooms__items {
+  width: 25rem;
+  margin-right: 4rem;
+}
+.placechess-rooms__mouth {
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.placechess-rooms__day {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.placechess-room__info {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.placechess-rooms__info {
+  display: flex;
+  gap: 1.4rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+}
+
+.placechess-room__info__active {
+  background-color: #c8e1fb;
+  border-radius: 50%;
+}
+
+.placechess-room__info__active__chain {
+  position: relative;
+}
+.placechess-room__info__active__chain::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: -60%;
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #c8e1fb;
+  transform: translateY(-50%);
+}
+
+.placechess-room__info__disabled::before {
+  content: "";
+  width: 1.6rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: #c8e1fb;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.placechess-room__info__disabled::after {
+  content: "";
+  width: 1.6rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: #c8e1fb;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 50%;
+  top: 50%;
+}
+
+.placechess-room__info__noarrival::before {
+  content: "";
+  width: 1.6rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: #fbc8c8;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.placechess-room__info__noarrival::after {
+  content: "";
+  width: 1.6rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: #fbc8c8;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 50%;
+  top: 50%;
+}
+
+.placechess-notation {
+  max-width: 129rem;
+  margin: 0 auto;
+}
+.placechess-notation__wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.placechess-notation__item {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-left: 3.5rem;
+}
+.placechess-notation__item__desc {
+  margin-left: 1.2rem;
+}
+
+.dash__details {
+  grid-column: 11 / 11;
+  justify-self: start;
+}
+
+.card-rate {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  margin: 2.5rem 2rem;
+  display: flex;
+  position: relative;
+}
+.card-rate__title {
+  margin-right: 0.5rem;
+}
+.card-rate__select {
+  display: flex;
+}
+.card-select_options {
+  top: 3rem;
+  left: 5.2rem;
+}
+
+.card-select_options {
+  width: 27rem;
+}
+
+.card-select_options__active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-rate__select__arrow {
+  display: flex;
+  align-items: center;
+}
+.card-rate__select__arrow__active {
+  transform: rotate(180deg);
+  /* padding-right: 1.5rem; */
+}
+
+.card-rate__select__arrow__active > svg {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+.popularoffers-map {
+  display: flex;
+  align-items: end;
+}
+
+.reviews-comments__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.reviews-wrapper {
+  max-width: 129rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-comment__info {
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.review-comment__text {
+  font-size: 1.8rem;
+}
+
+.review-comment__author__name {
+  margin-bottom: 1rem;
+  line-height: 2.4rem;
+}
+
+.reviws-rating__current {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4.5rem;
+}
+.revies-rating__current__value {
+  font-size: 6rem;
+  line-height: 5.2rem;
+}
+
+.rewiews-count {
+  font-size: 1.8rem;
+}
+
+.my-rating {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.jq-star-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.reviews-rating {
+  width: 52rem;
+}
+
+.reviews-rating__progress {
+  width: 100%;
+  height: 0.7rem;
+  position: relative;
+  background: #e9f3fd;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.reviews-rating__progress div {
+  background: #00adff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.5rem;
+}
+.reviews-rating__progress div:after {
+  border-radius: 0.5rem;
+  background: #264b87;
+  background-size: 40px 40px;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews-rating__details {
+  font-size: 1.8rem;
+}
+.reviews-rating__details__item {
+  margin-bottom: 3rem;
+}
+.reviews-rating__details__item span {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.review-comments__comment {
+  width: 54.8rem;
+  border: 0.2rem solid #e9f3fd;
+  padding: 3.5rem 4rem;
+}
+
+.reviews-comments__nav {
+  width: 16.5rem;
+  height: 2.4rem;
+  margin: 3.2rem auto;
+  position: relative;
+}
+
+.reviews-comments__pages__arrows {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.pages-arrow svg {
+  width: 1.5rem;
+  height: 0.87rem;
+}
+
+.reviews-comments__pages__pages {
+  display: flex;
+  font-size: 2rem;
+  justify-content: space-between;
+  max-width: 70%;
+  margin: 0 auto;
+  line-height: 2.4rem;
+}
+
+.reviews-pages__num,
+.reviews-pages__any {
+  color: var(--main-gray);
+}
+
+.reviews-pages__current {
+  color: var(--main-color);
+}
+
+.date-picker-wrapper {
+  width: 60rem;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+.month-wrapper {
+  width: 54rem;
+  margin: 0;
+  padding: 0 !important;
+  display: flex;
+  gap: 5rem;
+  flex-wrap: nowrap;
+}
+.date-picker-wrapper .month-wrapper table {
+  width: 25rem;
+}
+
+.date-picker-wrapper .month-wrapper table.month2 {
+  width: 25rem;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
+  background: #e9f3fd;
+}
+/* 
+.date-range-length-tip {
+  bottom: 0;
+  left: 50%;
+  visibility: visible;
+  display: block;
+  transform: translateX(-50%);
+} */
+
+.date-picker-wrapper {
+  font-family: "Montserrat", sans-serif;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  color: var(--main-color);
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.date-picker-wrapper .month-wrapper table .day.checked {
+  background-color: #e9f3fd;
+}
+.drp_top-bar {
+  display: none;
+}
+
+.date-picker-wrapper .first-date-selected,
+.date-picker-wrapper .last-date-selected {
+  background: #c8e1fb !important;
+  color: var(--main-color) !important;
+}
+
+.day {
+  font-family: "Montserrat", sans-serif !important;
+  padding: 0.8rem !important;
+  font-size: 1.8rem !important;
+}
+
+.month-element {
+  font-weight: 700;
+  font-size: 2.1rem;
+  text-transform: lowercase;
+}
+
+.first-date-selected,
+.last-date-selected {
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.first-date-selected::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: #e9f3fd;
+  mix-blend-mode: darken;
+}
+
+.last-date-selected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: #e9f3fd;
+  mix-blend-mode: darken;
+}
+
+.valid {
+  color: var(--main-color) !important;
+  font-weight: 700 !important;
+}
+
+.date-picker-wrapper .month-wrapper {
+  border: none;
+}
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.month1 .month-element:last-child {
+  display: none;
+}
+
+.month2 .month-element:last-child {
+  position: absolute;
+  left: 54%;
+  transform: translateX(-50%);
+  color: var(--main-blue-light);
+  font-weight: 600;
+}
+
+.days-сount {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.week-name {
+  position: relative;
+  font-size: 1.6rem;
+  text-transform: lowercase !important;
+}
+.week-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  bottom: 2rem;
+  background-color: #e9f3fd;
+}
+
+.week-name > th {
+  padding: 3rem 0rem !important;
+}
+
+.month1 > tbody > tr,
+.month2 > tbody > tr {
+  border-top: 0.5rem solid transparent;
+}
+
+.date-picker-wrapper .gap {
+  background-color: #ffffff;
+}
+.gap {
+  display: none;
+}
+.gap-lines {
+  display: none;
+}
+
+.date-picker-wrapper table .caption .next:hover,
+.date-picker-wrapper table .caption .prev:hover {
+  background-color: #ffffff;
+}
+
+.date-picker-wrapper .gap {
+  margin: 0;
+}
+
+.date-picker-wrapper {
+  top: 63.5rem !important;
+}
+
+.toTop {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.5rem;
+  border: 0.25rem solid #c8e1fb;
+  position: fixed;
+  bottom: 15rem;
+  right: 10vw;
+  cursor: pointer;
+  z-index: 20;
+  display: none;
+  background-color: rgba(233, 243, 253, 0.25);
+}
+.toTop > svg {
+  transform: rotate(180deg);
+}
+.toTop > svg > path {
+  fill: #c8e1fb;
+}
+
+.city {
+  cursor: pointer;
+}
+
+.card-marker__active {
+  background-color: var(--main-color);
+}
+
+.menu__active {
+  position: relative;
+}
+
 @media screen and (max-width: 1280px) {
+  .placechess-rooms__items {
+    width: 27rem;
+  }
+  .placechess-wrapper {
+    max-width: 87vw;
+  }
+
+  .placechess-notation {
+    max-width: 87vw;
+  }
+
+  .details-nav {
+    margin: -10rem auto 2rem auto;
+  }
+  .details-description__p {
+    line-height: 1.7rem;
+  }
+  .details-description__category {
+    margin-bottom: 2rem;
+  }
+  .details-description__wrapper {
+    max-width: 87vw;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+
+  .see-all__desc {
+    font-size: 1.6rem;
+  }
+
   .form-details-content__item {
     font-size: 1.6rem;
   }
@@ -1656,9 +2370,7 @@ footer {
   .find-form__wrapper {
     margin-bottom: 4.5rem;
   }
-  .popularoffers-map {
-    transform: scale(0.85) translateY(-10rem);
-  }
+
   .map {
     transform: scale(0.95);
   }
@@ -1878,7 +2590,7 @@ footer {
 
   header {
     max-width: 110rem;
-    margin: 0 auto;
+    margin: 0 auto 6rem auto;
     height: 7rem;
   }
   .header-burger {
@@ -1896,9 +2608,120 @@ footer {
   .popularoffers-slide__desc__span {
     font-size: 1.6rem;
   }
+
+  .booking-form__details {
+    height: 11.7rem;
+  }
+
+  .booking-form__content__details {
+    padding: 1.4rem 2.5rem 3.6rem 2.5rem;
+  }
+
+  .params__name__details {
+    grid-column: 1 / 6;
+  }
+
+  .date__from__details {
+    grid-column: 7 / 11;
+  }
+
+  .date__to__details {
+    grid-column: 12 / 16;
+  }
+
+  .tourists__details {
+    grid-column: 16 / 19;
+  }
+
+  .citizenship__details {
+    grid-column: 19 / 25;
+  }
+  .details-booking__wrapper {
+    max-width: 100%;
+  }
+
+  .reviews-wrapper {
+    max-width: 87vw;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 12.4rem;
+    justify-content: center;
+  }
+  .revies-rating__current__value {
+    font-size: 5rem;
+  }
+
+  .reviews-rating {
+    width: 44.5rem;
+  }
+
+  .rewiews-count {
+    font-size: 1.4rem;
+  }
+
+  .reviews-rating__details {
+    font-size: 1.4rem;
+  }
+
+  .review-comments__comment {
+    width: 47.6rem;
+    padding: 2.5rem 3rem;
+  }
+
+  .review-comment__info {
+    font-size: 1.6rem;
+  }
+
+  .review-comment__text {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    max-height: 6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
 }
 
 @media screen and (max-width: 990px) {
+  /* .menu__active::after {
+    content: url("/assets/images/menu__active.png");
+    position: absolute;
+    background-position: 0%;
+  } */
+
+  .placechess-container {
+    font-size: 1.4rem;
+    /* flex-direction: column; */
+  }
+
+  .placechess-rooms__item {
+    margin-bottom: 2.1rem;
+  }
+  .placechess-notation__wrapper {
+    flex-direction: column;
+  }
+
+  .placechess-notation__item {
+    margin-left: 0;
+  }
+
+  .details-descriprion__leaving {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .details-descriprion__leaving__image {
+    width: 100%;
+  }
+  .booking-sort_options {
+    display: block;
+    top: 3rem;
+    left: -7rem;
+  }
+
   .popularoffers-wrapper {
     position: relative;
   }
@@ -1908,7 +2731,7 @@ footer {
 
   .popularoffers-map {
     position: absolute;
-    top: 25rem;
+    top: 23rem;
   }
 
   .find-form__params {
@@ -2085,7 +2908,7 @@ footer {
   }
   header {
     max-width: 91vw;
-    margin: 0 auto;
+    margin: 0rem auto 6rem auto;
   }
   .h-1 {
     font-size: 7.9rem;
@@ -2211,9 +3034,92 @@ footer {
   .card:last-child {
     margin: 0rem auto 3rem auto;
   }
+
+  .details-booking__wrapper {
+    /* max-width: 129rem; */
+    margin: 0 auto 6rem auto;
+  }
+
+  .booking-form__details {
+    height: 21rem;
+  }
+  .booking-form__content__details {
+    padding: 1.4rem 2.5rem 3.6rem 2.5rem;
+  }
+
+  .params__name__details {
+    grid-column: 1 / 15;
+  }
+
+  .date__from__details {
+    grid-column: 1 / 5;
+  }
+
+  .date__to__details {
+    grid-column: 7 / 11;
+  }
+
+  .tourists__details {
+    grid-column: 12 / 15;
+  }
+
+  .citizenship__details {
+    grid-column: 16 / 24;
+    grid-row: 2;
+  }
+
+  .dash__details {
+    grid-column: 5 / 7;
+    justify-self: center;
+  }
+
+  .reviews-wrapper {
+    gap: 3rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .card-rate {
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+  }
+  .card-select_options {
+    top: 3rem;
+    left: 0;
+  }
+
+  .placechess-wrapper {
+    margin: 0 auto;
+  }
+  .placechess-title {
+    line-height: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .placechess-rooms__mouth {
+    text-align: left;
+  }
+
+  .placechess-rooms__item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .placechess-rooms__items {
+    max-width: 10rem;
+  }
+  .details-description__medical {
+    grid: none;
+  }
+
+  .see-all__icon {
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+  .see-all__desc {
+    font-size: 1.4rem;
+  }
   .popularoffers-region {
     margin-bottom: 28rem;
   }
@@ -2448,6 +3354,7 @@ footer {
   }
   header {
     max-width: 96vw;
+    margin-bottom: 4rem;
   }
   .header-logo {
     /* margin-left: 1.5rem; */
@@ -2491,5 +3398,58 @@ footer {
 
   .nav-auth {
     grid-column: 31 / 35;
+  }
+
+  .booking-form__details {
+    height: 23rem;
+  }
+  .booking-form__content__details {
+    padding: 1.4rem 1.5rem 3.6rem 1.5rem;
+  }
+
+  .booking-form__params {
+    margin-top: 0;
+  }
+
+  .params__name__details {
+    grid-column: 1 / 26;
+  }
+
+  .date__from__details {
+    grid-column: 1 / 5;
+  }
+
+  .date__to__details {
+    grid-column: 19 / 26;
+  }
+
+  .tourists__details {
+    grid-column: 1 / 9;
+  }
+
+  .citizenship__details {
+    grid-column: 1 / 24;
+    grid-row: 4;
+  }
+  .search-btn__details {
+    grid-column: 16 / 26;
+  }
+
+  .dash__details {
+    grid-column: 5 / 19;
+  }
+
+  .reviews-rating,
+  .reviews-comments {
+    width: 87vw;
+  }
+
+  .review-comments__comment {
+    padding: 2rem 1.5rem;
+    width: initial;
+  }
+
+  .reviews-comments__wrapper {
+    gap: 1.5rem;
   }
 }

@@ -1,12 +1,12 @@
 .blog {
   margin-top: 10rem;
-  height: 69.2rem;
+  /* height: 69.2rem; */
 }
 .blog-wrapper {
   max-width: 129rem;
-  max-height: 63.6rem;
-
+  /* max-height: 63.6rem; */
   color: var(--main-font-color);
+  margin-bottom: 8rem;
 }
 
 .blog-content {

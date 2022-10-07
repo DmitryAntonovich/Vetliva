@@ -1,4 +1,4 @@
-// $(function () {
+// $(function () {\
 //   $(".datepicker_from").datepicker();
 //   $(".datepicker_from").datepicker("option", "dateFormat", "dd.mm.yy");
 
@@ -12,95 +12,97 @@
 //   $(".datepicker_to").datepicker("option", $.datepicker.regional["ru"]);
 // });
 
-$(function () {
-  $.datepicker.regional["ru"] = {
-    closeText: "Закрыть",
-    prevText: "Пред",
-    nextText: "След",
-    currentText: "Сегодня",
-    monthNames: [
-      "Январь",
-      "Февраль",
-      "Март",
-      "Апрель",
-      "Май",
-      "Июнь",
-      "Июль",
-      "Август",
-      "Сентябрь",
-      "Октябрь",
-      "Ноябрь",
-      "Декабрь",
-    ],
-    monthNamesShort: [
-      "Янв",
-      "Фев",
-      "Мар",
-      "Апр",
-      "Май",
-      "Июн",
-      "Июл",
-      "Авг",
-      "Сен",
-      "Окт",
-      "Ноя",
-      "Дек",
-    ],
-    dayNames: [
-      "воскресенье",
-      "понедельник",
-      "вторник",
-      "среда",
-      "четверг",
-      "пятница",
-      "суббота",
-    ],
-    dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
-    dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
-    weekHeader: "Нед",
-    dateFormat: "dd.mm.yy",
-    firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: "",
-  };
-  $.datepicker.setDefaults($.datepicker.regional["ru"]);
+// $(function () {
+//   $.datepicker.regional["ru"] = {
+//     closeText: "Закрыть",
+//     prevText: "Пред",
+//     nextText: "След",
+//     currentText: "Сегодня",
+//     monthNames: [
+//       "Январь",
+//       "Февраль",
+//       "Март",
+//       "Апрель",
+//       "Май",
+//       "Июнь",
+//       "Июль",
+//       "Август",
+//       "Сентябрь",
+//       "Октябрь",
+//       "Ноябрь",
+//       "Декабрь",
+//     ],
+//     monthNamesShort: [
+//       "Янв",
+//       "Фев",
+//       "Мар",
+//       "Апр",
+//       "Май",
+//       "Июн",
+//       "Июл",
+//       "Авг",
+//       "Сен",
+//       "Окт",
+//       "Ноя",
+//       "Дек",
+//     ],
+//     dayNames: [
+//       "воскресенье",
+//       "понедельник",
+//       "вторник",
+//       "среда",
+//       "четверг",
+//       "пятница",
+//       "суббота",
+//     ],
+//     dayNamesShort: ["вск", "пнд", "втр", "срд", "чтв", "птн", "сбт"],
+//     dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+//     weekHeader: "Нед",
+//     dateFormat: "dd.mm.yy",
+//     firstDay: 1,
+//     isRTL: false,
+//     showMonthAfterYear: false,
+//     yearSuffix: "",
+//   };
+//   $.datepicker.setDefaults($.datepicker.regional["ru"]);
 
-  var dateFormat = "dd.mm.yy",
-    from = $(".datepicker_from")
-      .datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 2,
-        dateFormat: "dd.mm.yy",
-      })
-      .on("change", function () {
-        to.datepicker("option", "minDate", getDate(this));
-      }),
-    to = $(".datepicker_to")
-      .datepicker({
-        defaultDate: "+1w",
-        changeMonth: true,
-        numberOfMonths: 2,
-        dateFormat: "dd.mm.yy",
-      })
-      .on("change", function () {
-        from.datepicker("option", "maxDate", getDate(this));
-      });
+//   var dateFormat = "dd.mm.yy",
+//     from = $(".datepicker_from")
+//       .datepicker({
+//         defaultDate: "+1w",
+//         changeMonth: true,
+//         numberOfMonths: 2,
+//         dateFormat: "dd.mm.yy",
+//       })
+//       .on("change", function () {
+//         to.datepicker("option", "minDate", getDate(this));
+//       }),
+//     to = $(".datepicker_to")
+//       .datepicker({
+//         defaultDate: "+1w",
+//         changeMonth: true,
+//         numberOfMonths: 2,
+//         dateFormat: "dd.mm.yy",
+//       })
+//       .on("change", function () {
+//         from.datepicker("option", "maxDate", getDate(this));
+//       });
 
-  function getDate(element) {
-    var date;
-    try {
-      date = $.datepicker.parseDate(dateFormat, element.value);
-    } catch (error) {
-      date = null;
-    }
+//   function getDate(element) {
+//     var date;
+//     try {
+//       date = $.datepicker.parseDate(dateFormat, element.value);
+//     } catch (error) {
+//       date = null;
+//     }
 
-    return date;
-  }
-});
+//     return date;
+//   }
+// });
 
-$(".ui-datepicker-div").after(".booking-form__params");
+// $(".ui-datepicker-div").after(".booking-form__params");
+
+// import starRating from "../libs/star-rating-svg-master/";
 
 $(".modal-lang").click(function () {
   $(".modal-lang__options").toggleClass("modal-lang__active");
@@ -226,12 +228,56 @@ $(".find-category__select").click(function () {
   $(".booking-type_options").toggleClass("booking-sort_options__active");
 });
 
+$(".card-rate__select").click(function () {
+  $(this.nextElementSibling).toggleClass("card-select_options__active");
+  $(this)
+    .children("div.card-rate__select__arrow")
+    .toggleClass("card-rate__select__arrow__active");
+});
+
+$(".nav-lang__wrapper").click(() => {
+  $(".header__modal-lang__options").toggleClass("modal-lang__options__active");
+  $(".header-lang__svg").toggleClass("header-lang__svg__active");
+});
+
+$(".card-select__option").click(function () {
+  $(this).parent().parent().toggleClass("card-select_options__active");
+  $(this)
+    .children("div.card-rate__select__arrow")
+    .toggleClass("card-rate__select__arrow__active");
+
+  $(this)
+    .parents(".card-rate")
+    .children(".card-rate__select")
+    .children(".card-rate__select__arrow")
+    .toggleClass("card-rate__select__arrow__active");
+});
+
 //active booking tab
 
 $(".form-content__item").click(function () {
   $(".tab_active").removeClass("tab_active");
   $(this).addClass("tab_active");
 });
+
+//table chess active tabs
+function chessActiveAfter() {
+  items = document.querySelectorAll(".placechess-room__info__active");
+  items.forEach((item) => {
+    if (
+      item.nextElementSibling !== null &&
+      item.nextElementSibling.classList.contains(
+        "placechess-room__info__active"
+      )
+    ) {
+      item.nextElementSibling.classList.add(
+        "placechess-room__info__active__chain"
+      );
+    }
+  });
+}
+
+chessActiveAfter();
 
 //text toggle
 
@@ -240,7 +286,9 @@ function windowSizeText() {
     $(".text-desktop").css("display", "none");
     $(".text-mobile").css("display", "block");
     $(".booking-sort_title").css("display", "none");
+    $(".placechess-rooms__type").css("display", "none");
   } else {
+    $(".placechess-rooms__type").css("display", "block");
     $(".text-desktop").css("display", "block");
     $(".text-mobile").css("display", "none");
     $(".booking-sort_title").css("display", "block");
@@ -248,8 +296,8 @@ function windowSizeText() {
 }
 
 //Interactive map
-
 $(".city").click(function () {
+  // console.log("test");
   if (!$(this).children(".map-fill__zone").hasClass("map-color")) {
     $(this).children(".map-fill__zone").addClass("map-color");
     $(this).children(".map-fill__point").addClass("map-color__point");
@@ -259,9 +307,67 @@ $(".city").click(function () {
   }
 });
 
+adultMinusAction = $(".adults__decrement");
+adultPlusAction = $(".adults__increment");
+
+childMinusAction = $(".childs__decrement");
+childPlusAction = $(".childs__increment");
+
+adultMinusAction.click(function () {
+  decrement($(".adults__count"));
+});
+
+adultPlusAction.click(function () {
+  increment($(".adults__count"));
+});
+
+childMinusAction.click(function () {
+  decrement($(".childs__count"));
+});
+
+childPlusAction.click(function () {
+  increment($(".childs__count"));
+});
+
+function increment(field) {
+  value = Number(field.html());
+  field.html(value + 1);
+  value == 10 ? field.html(10) : field.html(value + 1);
+
+  setTourists();
+}
+
+function decrement(field) {
+  value = Number(field.html());
+  value == 0 ? field.html(0) : field.html(value - 1);
+  setTourists();
+}
+
+function setTourists() {
+  adultsCount = Number($(".adults__count").html());
+  childsCount = Number($(".childs__count").html());
+
+  touristsCount = $(".tourists__count").html();
+  touristsString = touristsCount.split(" ");
+
+  touristsCount = adultsCount + childsCount;
+
+  if (touristsCount > 1 && touristsCount <= 4) {
+    touristsStr = "гостя";
+  } else {
+    touristsStr = "гостей";
+  }
+  if (touristsCount > 0 && touristsCount <= 1) {
+    touristsStr = "гость";
+  }
+
+  $(".tourists__count").html(`
+    ${touristsCount} ${touristsStr}
+  `);
+
+  console.log(touristsCount);
+}
+
 windowSizeText();
 
-$(window).load(windowSizeText); // при загрузке
-$(window).resize(windowSizeText); // при изменении размеров
-// или "два-в-одном", вместо двух последних строк:
 $(window).on("load resize", windowSizeText);

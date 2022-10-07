@@ -47,6 +47,21 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- CALENDAR NEW -->
+    <link
+      rel="stylesheet"
+      href="/assets/libs/jquery-date-range-picker/dist/daterangepicker.min.css"
+    />
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- <script type="text/javascript" src="moment.min.js"></script> -->
+    <script
+      type="text/javascript"
+      src="/assets/libs/jquery-date-range-picker/dist/jquery.daterangepicker.min.js"
+    ></script>
+
     <!-- Fonts -->
 
     <link rel="stylesheet" href="./assets/css/fonts.css" />
@@ -66,7 +81,42 @@
     <link rel="stylesheet" href="./assets/css/popular.css" />
     <link rel="stylesheet" href="./assets/css/offers.css" />
     <link rel="stylesheet" href="./assets/css/blog.css" />
+
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+            $("#toTop").css({
+              display: "flex",
+              "justify-content": "center",
+              "align-items": "center",
+            });
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 100);
+        });
+      });
+    </script>
   </head>
+
+  <div id="toTop" class="toTop">
+    <svg
+      class="cu-p main-arrow"
+      viewBox="0 0 15 15"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+        fill="#264B87"
+      ></path>
+    </svg>
+  </div>
   <body>
     <div class="right-modal">
       <div class="right-modal__bg"></div>
@@ -329,24 +379,26 @@
             </div>
 
             <div class="nav-lang nav-desktop cu-p">
-              <span class="text-white bold">RU</span>
-              <svg
-                class="cu-p nav-desktop header-lang__svg"
-                viewBox="0 0 15 10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                  fill="#264B87"
-                />
-              </svg>
+              <div class="nav-lang__wrapper">
+                <span class="text-white bold">RU</span>
+                <svg
+                  class="cu-p nav-desktop header-lang__svg"
+                  viewBox="0 0 15 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
+                    fill="#264B87"
+                  />
+                </svg>
+              </div>
 
               <div class="modal-lang__options header__modal-lang__options">
                 <div class="modal-options__lang">
                   <span class="text-gray bold">Язык</span>
                   <div class="modal-lang__select modal-lang__current">
-                    <span class="text-main semi-bold">Русский</span>
+                    <span class="text-main bold">Русский</span>
                     <svg
                       class="cu-p modal-arrow main-arrow"
                       viewBox="0 0 15 15"
@@ -375,7 +427,7 @@
                 <div class="modal-options__currency">
                   <span class="text-gray bold">Валюта</span>
                   <div class="modal-lang__select modal-currency__current">
-                    <span class="text-main semi-bold">BYN</span>
+                    <span class="text-main bold">BYN</span>
                     <svg
                       class="cu-p modal-arrow main-arrow"
                       viewBox="0 0 15 15"
@@ -403,64 +455,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- <div class="options lang-options b-r">
-                <ul>
-                  <li class="lang-option bold b-r">
-                    <span class="bold text-gray">Язык</span>
-                    <div class="lang-params">
-                      <span class="lang-active semi-bold">Русский</span>
-                      <svg
-                        class="cu-p nav-desktop"
-                        viewBox="0 0 15 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                          fill="#264B87"
-                        />
-                      </svg>
-                    </div>
-                  </li>
-
-                  <li class="lang-option bold b-r">
-                    <span class="bold text-gray">Валюта</span>
-                    <div class="lang-params currency-params">
-                      <span class="currency currency__active semi-bold"
-                        >BYN</span
-                      >
-
-                      <svg
-                        style="margin-top: 2px"
-                        class="cu-p nav-desktop"
-                        viewBox="0 0 15 10"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                          fill="#264B87"
-                        />
-                      </svg>
-
-                      <div class="modal-currency__select">
-                        <span
-                          class="text-gray modal-currency__select__item modal-currency__select__item__active"
-                          >BYN</span
-                        ><span class="text-gray modal-currency__select__item"
-                          >RUB</span
-                        ><span class="text-gray modal-currency__select__item"
-                          >EUR</span
-                        >
-                        <span class="text-gray modal-currency__select__item"
-                          >USD</span
-                        >
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div> -->
             </div>
 
             <div class="nav-cart">
@@ -620,7 +614,7 @@
               </div>
               <div class="tourists">
                 <div class="tourists__select tourists__select__count">
-                  <span class="bold cu-p">3 гостя</span>
+                  <span class="bold cu-p tourists__count">3 гостя</span>
                   <svg
                     class="cu-p main-arrow tourists-count__arrow"
                     viewBox="0 0 15 10"
@@ -639,7 +633,7 @@
                       <span class="bold text-gray">Взрослые</span>
                       <div class="human__count">
                         <svg
-                          class="cu-p rotate-right main-arrow"
+                          class="cu-p rotate-right main-arrow adults__decrement"
                           viewBox="0 0 15 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -649,9 +643,9 @@
                             fill="#264B87"
                           />
                         </svg>
-                        <span class="bold text-main">2</span>
+                        <span class="bold text-main adults__count">2</span>
                         <svg
-                          class="cu-p rotate-left main-arrow"
+                          class="cu-p rotate-left main-arrow adults__increment"
                           viewBox="0 0 15 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -667,7 +661,7 @@
                       <span class="bold text-gray">Дети</span>
                       <div class="human__count">
                         <svg
-                          class="cu-p rotate-right"
+                          class="cu-p rotate-right childs__decrement"
                           viewBox="0 0 15 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -677,9 +671,9 @@
                             fill="#264B87"
                           />
                         </svg>
-                        <span class="bold text-main">2</span>
+                        <span class="bold text-main childs__count">2</span>
                         <svg
-                          class="cu-p rotate-left"
+                          class="cu-p rotate-left childs__increment"
                           viewBox="0 0 15 10"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -1381,5 +1375,6 @@
     <script src="./assets/scripts/carouselBlog.js"></script>
     <script src="./assets/scripts/modalRight.js"></script>
     <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/calendar.js"></script>
   </body>
 </html>
