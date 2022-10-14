@@ -84,7 +84,7 @@
 
         <div class="modal-nav cu-p"></div>
         <ul class="modal-actions modal-menu p-0">
-          <div class="modal-lang bold">
+          <div class="modal-lang bold" onclick="modalLangToggler()">
             <span>RU</span>
 
             <svg
@@ -102,7 +102,10 @@
           <div class="modal-lang__options">
             <div class="modal-options__lang">
               <span class="text-gray bold">Язык</span>
-              <div class="modal-lang__select modal-lang__current">
+              <div
+                class="modal-lang__select modal-lang__current"
+                onclick="langListToggler()"
+              >
                 <span class="text-main semi-bold">Русский</span>
                 <svg
                   class="cu-p modal-arrow main-arrow svg__blue"
@@ -117,13 +120,22 @@
               </div>
 
               <div class="modal-lang-list">
-                <div class="modal-lang-item">
+                <div
+                  class="modal-lang-item"
+                  onclick="modalLangItemToggler(this)"
+                >
                   <span class="text-gray">Белорусский</span>
                 </div>
-                <div class="modal-lang-item modal-lang-item__active">
+                <div
+                  class="modal-lang-item modal-lang-item__active"
+                  onclick="modalLangItemToggler(this)"
+                >
                   <span class="text-gray">Русский</span>
                 </div>
-                <div class="modal-lang-item text-gray">
+                <div
+                  class="modal-lang-item text-gray"
+                  onclick="modalLangItemToggler(this)"
+                >
                   <span class="text-gray">Английский</span>
                 </div>
               </div>
@@ -131,7 +143,10 @@
 
             <div class="modal-options__currency">
               <span class="text-gray bold">Валюта</span>
-              <div class="modal-lang__select modal-currency__current">
+              <div
+                class="modal-lang__select modal-currency__current"
+                onclick="modalCurrencyToggler()"
+              >
                 <span class="text-main semi-bold">BYN</span>
                 <svg
                   class="cu-p modal-arrow main-arrow svg__blue"
@@ -148,10 +163,22 @@
               <div class="modal-currency__select">
                 <span
                   class="text-gray modal-currency__select__item modal-currency__select__item__active"
+                  onclick="currencySelectItemToggler(this)"
                   >BYN</span
-                ><span class="text-gray modal-currency__select__item">RUB</span
-                ><span class="text-gray modal-currency__select__item">EUR</span>
-                <span class="text-gray modal-currency__select__item">USD</span>
+                ><span
+                  class="text-gray modal-currency__select__item"
+                  onclick="currencySelectItemToggler(this)"
+                  >RUB</span
+                ><span
+                  class="text-gray modal-currency__select__item"
+                  onclick="currencySelectItemToggler(this)"
+                  >EUR</span
+                >
+                <span
+                  class="text-gray modal-currency__select__item"
+                  onclick="currencySelectItemToggler(this)"
+                  >USD</span
+                >
               </div>
             </div>
           </div>
@@ -244,7 +271,10 @@
                 </svg>
               </a>
             </div>
-            <div class="nav-booking nav-booking__blue cu-p">
+            <div
+              class="nav-booking nav-booking__blue cu-p"
+              onclick="navBookingClick()"
+            >
               <div class="mobile-nav mobile-booking">
                 <svg
                   class="mob-icon mob-icon__active"
@@ -327,7 +357,7 @@
             </div>
 
             <div class="nav-lang nav-desktop cu-p">
-              <div class="nav-lang__wrapper">
+              <div class="nav-lang__wrapper" onclick="navLangClick()">
                 <span class="text-main bold">RU</span>
                 <svg
                   class="cu-p nav-desktop header-lang__svg"
@@ -345,7 +375,10 @@
               <div class="modal-lang__options header__modal-lang__options">
                 <div class="modal-options__lang">
                   <span class="text-gray bold">Язык</span>
-                  <div class="modal-lang__select modal-lang__current">
+                  <div
+                    class="modal-lang__select modal-lang__current"
+                    onclick="langListToggler()"
+                  >
                     <span class="text-main bold">Русский</span>
                     <svg
                       class="cu-p modal-arrow main-arrow"
@@ -360,13 +393,22 @@
                   </div>
 
                   <div class="modal-lang-list">
-                    <div class="modal-lang-item">
+                    <div
+                      class="modal-lang-item"
+                      onclick="modalLangItemToggler(this)"
+                    >
                       <span class="text-gray">Белорусский</span>
                     </div>
-                    <div class="modal-lang-item modal-lang-item__active">
+                    <div
+                      class="modal-lang-item modal-lang-item__active"
+                      onclick="modalLangItemToggler(this)"
+                    >
                       <span class="text-gray">Русский</span>
                     </div>
-                    <div class="modal-lang-item text-gray">
+                    <div
+                      class="modal-lang-item text-gray"
+                      onclick="modalLangItemToggler(this)"
+                    >
                       <span class="text-gray">Английский</span>
                     </div>
                   </div>
@@ -374,7 +416,10 @@
 
                 <div class="modal-options__currency">
                   <span class="text-gray bold">Валюта</span>
-                  <div class="modal-lang__select modal-currency__current">
+                  <div
+                    class="modal-lang__select modal-currency__current"
+                    onclick="modalCurrencyToggler()"
+                  >
                     <span class="text-main bold">BYN</span>
                     <svg
                       class="cu-p modal-arrow main-arrow"
@@ -391,13 +436,20 @@
                   <div class="modal-currency__select">
                     <span
                       class="text-gray modal-currency__select__item modal-currency__select__item__active"
+                      onclick="currencySelectItemToggler(this)"
                       >BYN</span
-                    ><span class="text-gray modal-currency__select__item"
+                    ><span
+                      class="text-gray modal-currency__select__item"
+                      onclick="currencySelectItemToggler(this)"
                       >RUB</span
-                    ><span class="text-gray modal-currency__select__item"
+                    ><span
+                      class="text-gray modal-currency__select__item"
+                      onclick="currencySelectItemToggler(this)"
                       >EUR</span
                     >
-                    <span class="text-gray modal-currency__select__item"
+                    <span
+                      class="text-gray modal-currency__select__item"
+                      onclick="currencySelectItemToggler(this)"
                       >USD</span
                     >
                   </div>
@@ -451,7 +503,7 @@
               >
             </div>
           </div>
-          <div class="header-burger cu-p">
+          <div class="header-burger cu-p" onclick="rightModalToggler()">
             <div class="header-burger__block header-burger__block__blue"></div>
           </div>
         </nav>

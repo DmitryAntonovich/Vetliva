@@ -59,17 +59,67 @@
       crossorigin="anonymous"
     />
 
+    <!-- CALENDAR NEW -->
+    <link
+      rel="stylesheet"
+      href="/assets/libs/jquery-date-range-picker/dist/daterangepicker.min.css"
+    />
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"
+      type="text/javascript"
+    ></script>
+    <!-- <script type="text/javascript" src="moment.min.js"></script> -->
+    <script
+      type="text/javascript"
+      src="/assets/libs/jquery-date-range-picker/dist/jquery.daterangepicker.min.js"
+    ></script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/fonts.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/booking_form.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+            $("#toTop").css({
+              display: "flex",
+              "justify-content": "center",
+              "align-items": "center",
+            });
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 100);
+        });
+      });
+    </script>
   </head>
   <body>
+    <div id="toTop" class="toTop">
+      <svg
+        class="cu-p main-arrow"
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+          fill="#264B87"
+        ></path>
+      </svg>
+    </div>
+
     <div class="right-modal">
       <div class="right-modal__bg left-modal__bg"></div>
       <div class="right-modal__content left-modal__content">
-        <div class="modal-nav__back arrow-back">
+        <div class="modal-nav__back arrow-back cu-p">
           <svg
             class="svg__blue"
             viewBox="0 0 35 31"
@@ -86,7 +136,7 @@
         <div class="modal-nav modal-nav__left cu-p"></div>
 
         <ul class="modal-actions modal-menu p-0">
-          <div class="modal-lang bold">
+          <div class="modal-lang bold" onclick="modalLangToggler()">
             <span>RU</span>
 
             <svg
@@ -104,7 +154,10 @@
           <div class="modal-lang__options">
             <div class="modal-options__lang">
               <span class="text-gray bold">Язык</span>
-              <div class="modal-lang__select modal-lang__current">
+              <div
+                class="modal-lang__select modal-lang__current"
+                onclick="langListToggler()"
+              >
                 <span class="text-main semi-bold">Русский</span>
                 <svg
                   class="cu-p modal-arrow main-arrow svg__blue"
@@ -119,13 +172,22 @@
               </div>
 
               <div class="modal-lang-list">
-                <div class="modal-lang-item">
+                <div
+                  class="modal-lang-item"
+                  onclick="modalLangItemToggler(this)"
+                >
                   <span class="text-gray">Белорусский</span>
                 </div>
-                <div class="modal-lang-item modal-lang-item__active">
+                <div
+                  class="modal-lang-item modal-lang-item__active"
+                  onclick="modalLangItemToggler(this)"
+                >
                   <span class="text-gray">Русский</span>
                 </div>
-                <div class="modal-lang-item text-gray">
+                <div
+                  class="modal-lang-item text-gray"
+                  onclick="modalLangItemToggler(this)"
+                >
                   <span class="text-gray">Английский</span>
                 </div>
               </div>
@@ -133,7 +195,10 @@
 
             <div class="modal-options__currency">
               <span class="text-gray bold">Валюта</span>
-              <div class="modal-lang__select modal-currency__current">
+              <div
+                class="modal-lang__select modal-currency__current"
+                onclick="modalCurrencyToggler()"
+              >
                 <span class="text-main semi-bold">BYN</span>
                 <svg
                   class="cu-p modal-arrow main-arrow svg__blue"
@@ -150,10 +215,22 @@
               <div class="modal-currency__select">
                 <span
                   class="text-gray modal-currency__select__item modal-currency__select__item__active"
+                  onclick="currencySelectItemToggler(this)"
                   >BYN</span
-                ><span class="text-gray modal-currency__select__item">RUB</span
-                ><span class="text-gray modal-currency__select__item">EUR</span>
-                <span class="text-gray modal-currency__select__item">USD</span>
+                ><span
+                  class="text-gray modal-currency__select__item"
+                  onclick="currencySelectItemToggler(this)"
+                  >RUB</span
+                ><span
+                  class="text-gray modal-currency__select__item"
+                  onclick="currencySelectItemToggler(this)"
+                  >EUR</span
+                >
+                <span
+                  class="text-gray modal-currency__select__item"
+                  onclick="currencySelectItemToggler(this)"
+                  >USD</span
+                >
               </div>
             </div>
           </div>
@@ -214,7 +291,11 @@
               </div>
               <div class="filter-check">
                 <div class="checkbox-blue">
-                  <input type="checkbox" class="checkbox" />
+                  <!-- <input type="checkbox" class="checkbox" /> -->
+                  <label class="terms__label chck chck__filter cu-p">
+                    <input type="checkbox" class="terms__checkbox" />
+                    <span class="terms__span"> </span>
+                  </label>
                 </div>
                 <span class="text-main semi-bold checkbox-title"
                   >Исключить варианты недоступные для оплаты на месте</span
@@ -251,7 +332,13 @@
             <div class="booking-filter_details booking-filter_details__hide">
               <div class="filter-check">
                 <div class="checkbox-blue">
-                  <input type="checkbox" class="checkbox" />
+                  <!-- <input type="checkbox" class="checkbox" /> -->
+                  <label class="terms__label chck chck__filter cu-p"
+                    ><input type="checkbox" class="terms__checkbox" /><span
+                      class="terms__span"
+                    >
+                    </span>
+                  </label>
                 </div>
                 <span class="text-main semi-bold checkbox-title"
                   >Исключить варианты недоступные для оплаты на месте</span
@@ -259,7 +346,13 @@
               </div>
               <div class="filter-check">
                 <div class="checkbox-blue">
-                  <input type="checkbox" class="checkbox" />
+                  <!-- <input type="checkbox" class="checkbox" /> -->
+                  <label class="terms__label chck chck__filter cu-p"
+                    ><input type="checkbox" class="terms__checkbox" /><span
+                      class="terms__span"
+                    >
+                    </span>
+                  </label>
                 </div>
                 <span class="text-main semi-bold checkbox-title"
                   >Исключить варианты недоступные для оплаты на месте</span
@@ -268,7 +361,13 @@
 
               <div class="filter-check">
                 <div class="checkbox-blue">
-                  <input type="checkbox" class="checkbox" />
+                  <!-- <input type="checkbox" class="checkbox" /> -->
+                  <label class="terms__label chck chck__filter cu-p"
+                    ><input type="checkbox" class="terms__checkbox" /><span
+                      class="terms__span"
+                    >
+                    </span>
+                  </label>
                 </div>
                 <span class="text-main semi-bold checkbox-title"
                   >Исключить варианты недоступные для оплаты на месте</span
@@ -305,7 +404,13 @@
             <div class="booking-filter_details booking-filter_details__hide">
               <div class="filter-check">
                 <div class="checkbox-blue">
-                  <input type="checkbox" class="checkbox" />
+                  <!-- <input type="checkbox" class="checkbox" /> -->
+                  <label class="terms__label chck chck__filter cu-p"
+                    ><input type="checkbox" class="terms__checkbox" /><span
+                      class="terms__span"
+                    >
+                    </span>
+                  </label>
                 </div>
                 <span class="text-main semi-bold checkbox-title"
                   >Исключить варианты недоступные для оплаты на месте</span
@@ -342,7 +447,13 @@
             <div class="booking-filter_details booking-filter_details__hide">
               <div class="filter-check">
                 <div class="checkbox-blue">
-                  <input type="checkbox" class="checkbox" />
+                  <!-- <input type="checkbox" class="checkbox" /> -->
+                  <label class="terms__label chck chck__filter cu-p"
+                    ><input type="checkbox" class="terms__checkbox" /><span
+                      class="terms__span"
+                    >
+                    </span>
+                  </label>
                 </div>
                 <span class="text-main semi-bold checkbox-title"
                   >Исключить варианты недоступные для оплаты на месте</span
@@ -427,7 +538,10 @@
                 </svg>
               </a>
             </div>
-            <div class="nav-booking nav-booking__blue cu-p menu__active">
+            <div
+              class="nav-booking nav-booking__blue cu-p menu__active"
+              onclick="navBookingClick()"
+            >
               <div class="mobile-nav mobile-booking">
                 <svg
                   class="mob-icon mob-icon__active"
@@ -509,8 +623,8 @@
               </a>
             </div>
 
-            <div class="nav-lang nav-desktop cu-p">
-              <div class="nav-lang__wrapper">
+            <div class="nav-lang nav-lang__blue nav-desktop cu-p">
+              <div class="nav-lang__wrapper" onclick="navLangClick()">
                 <span class="text-main bold">RU</span>
                 <svg
                   class="cu-p nav-desktop header-lang__svg"
@@ -528,7 +642,10 @@
               <div class="modal-lang__options header__modal-lang__options">
                 <div class="modal-options__lang">
                   <span class="text-gray bold">Язык</span>
-                  <div class="modal-lang__select modal-lang__current">
+                  <div
+                    class="modal-lang__select modal-lang__current"
+                    onclick="langListToggler()"
+                  >
                     <span class="text-main bold">Русский</span>
                     <svg
                       class="cu-p modal-arrow main-arrow"
@@ -543,13 +660,22 @@
                   </div>
 
                   <div class="modal-lang-list">
-                    <div class="modal-lang-item">
+                    <div
+                      class="modal-lang-item"
+                      onclick="modalLangItemToggler(this)"
+                    >
                       <span class="text-gray">Белорусский</span>
                     </div>
-                    <div class="modal-lang-item modal-lang-item__active">
+                    <div
+                      class="modal-lang-item modal-lang-item__active"
+                      onclick="modalLangItemToggler(this)"
+                    >
                       <span class="text-gray">Русский</span>
                     </div>
-                    <div class="modal-lang-item text-gray">
+                    <div
+                      class="modal-lang-item text-gray"
+                      onclick="modalLangItemToggler(this)"
+                    >
                       <span class="text-gray">Английский</span>
                     </div>
                   </div>
@@ -557,7 +683,10 @@
 
                 <div class="modal-options__currency">
                   <span class="text-gray bold">Валюта</span>
-                  <div class="modal-lang__select modal-currency__current">
+                  <div
+                    class="modal-lang__select modal-currency__current"
+                    onclick="modalCurrencyToggler()"
+                  >
                     <span class="text-main bold">BYN</span>
                     <svg
                       class="cu-p modal-arrow main-arrow"
@@ -574,13 +703,20 @@
                   <div class="modal-currency__select">
                     <span
                       class="text-gray modal-currency__select__item modal-currency__select__item__active"
+                      onclick="currencySelectItemToggler(this)"
                       >BYN</span
-                    ><span class="text-gray modal-currency__select__item"
+                    ><span
+                      class="text-gray modal-currency__select__item"
+                      onclick="currencySelectItemToggler(this)"
                       >RUB</span
-                    ><span class="text-gray modal-currency__select__item"
+                    ><span
+                      class="text-gray modal-currency__select__item"
+                      onclick="currencySelectItemToggler(this)"
                       >EUR</span
                     >
-                    <span class="text-gray modal-currency__select__item"
+                    <span
+                      class="text-gray modal-currency__select__item"
+                      onclick="currencySelectItemToggler(this)"
                       >USD</span
                     >
                   </div>
@@ -629,12 +765,12 @@
                   />
                 </svg>
               </div>
-              <a href="#"
+              <a href="/assets/pages/auth/index.html"
                 ><span class="bold text-white nav-desktop cu-p">Войти</span></a
               >
             </div>
           </div>
-          <div class="header-burger cu-p">
+          <div class="header-burger cu-p" onclick="rightModalToggler()">
             <div class="header-burger__block header-burger__block__blue"></div>
           </div>
         </nav>
@@ -692,7 +828,7 @@
                 class="input bold"
               />
             </div>
-            <div class="date date__from">
+            <div class="date date__from cu-p">
               <input
                 type="text"
                 id="datepicker_from"
@@ -716,7 +852,7 @@
 
             <div class="dash"></div>
 
-            <div class="date date__to">
+            <div class="date date__to cu-p">
               <input
                 type="text"
                 id="datepicker_to"
@@ -739,7 +875,7 @@
             </div>
             <div class="tourists">
               <div class="tourists__select tourists__select__count">
-                <span class="bold cu-p">3 гостя</span>
+                <span class="bold cu-p tourists__count">2 гостя</span>
                 <svg
                   class="cu-p main-arrow tourists-count__arrow"
                   viewBox="0 0 15 10"
@@ -758,7 +894,7 @@
                     <span class="bold text-gray">Взрослые</span>
                     <div class="human__count">
                       <svg
-                        class="cu-p rotate-right main-arrow"
+                        class="cu-p rotate-right main-arrow adults__decrement"
                         viewBox="0 0 15 10"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -768,9 +904,9 @@
                           fill="#264B87"
                         />
                       </svg>
-                      <span class="bold text-main">2</span>
+                      <span class="bold text-main adults__count">2</span>
                       <svg
-                        class="cu-p rotate-left main-arrow"
+                        class="cu-p rotate-left main-arrow adults__increment"
                         viewBox="0 0 15 10"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -786,7 +922,7 @@
                     <span class="bold text-gray">Дети</span>
                     <div class="human__count">
                       <svg
-                        class="cu-p rotate-right"
+                        class="cu-p rotate-right childs__decrement"
                         viewBox="0 0 15 10"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -796,9 +932,9 @@
                           fill="#264B87"
                         />
                       </svg>
-                      <span class="bold text-main">2</span>
+                      <span class="bold text-main childs__count">0</span>
                       <svg
-                        class="cu-p rotate-left"
+                        class="cu-p rotate-left childs__increment"
                         viewBox="0 0 15 10"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -855,14 +991,20 @@
           <div class="filter-icon">
             <svg
               class="icon-filter"
-              viewBox="0 0 30 22"
+              viewBox="0 0 51 37"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
-                d="M7.8395 0.0660417C6.83433 0.263146 5.77197 0.999802 5.2935 1.83154L5.01871 2.30908H2.95393C1.04932 2.30908 0.865384 2.31871 0.583491 2.43279C0.189065 2.59239 0.00213344 2.85832 0.00213344 3.25972C0.00213344 3.59716 0.130443 3.79558 0.49668 4.02432C0.69221 4.14647 0.81738 4.15422 2.88477 4.17272L5.06656 4.19223L5.34479 4.68164C5.81346 5.50601 6.70416 6.13095 7.79068 6.39776C8.28747 6.51972 9.33885 6.52716 9.85201 6.41226C10.938 6.16915 11.8955 5.51226 12.3929 4.66895L12.6787 4.18448H20.8997C28.3299 4.18448 29.1454 4.17472 29.3766 4.08302C30.1203 3.78795 30.2049 2.8842 29.5267 2.47974L29.2929 2.34034L20.9712 2.32364L12.6496 2.30695L12.5043 2.02371C12.0565 1.15015 11.0607 0.399175 9.98039 0.120178C9.46043 -0.0140378 8.38662 -0.041231 7.8395 0.0660417ZM9.51553 1.93925C9.96776 2.11066 10.1745 2.28045 10.3846 2.6529C10.6027 3.03961 10.6102 3.43382 10.4065 3.8094C10.2015 4.18748 9.99841 4.36033 9.55292 4.53599C9.09038 4.71834 8.61886 4.72459 8.16963 4.5543C7.48232 4.29381 7.16573 3.88141 7.16573 3.24678C7.16573 2.61214 7.48232 2.19974 8.16963 1.93925C8.598 1.7769 9.08716 1.7769 9.51553 1.93925ZM20.881 7.51493C19.8239 7.81731 19.0301 8.39724 18.5751 9.19948L18.3013 9.68226L9.59524 9.68395C1.08439 9.68558 0.882282 9.68839 0.585136 9.80892C0.417944 9.87674 0.23363 9.99614 0.175681 10.0742C-0.0909585 10.4331 -0.049684 10.9461 0.269595 11.2409C0.630523 11.5741 0.247314 11.5609 9.60661 11.5627L18.3013 11.5644L18.5855 12.0664C19.0523 12.8907 19.9305 13.5054 21.0254 13.7743C21.8472 13.9761 23.0406 13.8798 23.8345 13.5475C24.6632 13.2007 25.4535 12.4967 25.7211 11.867L25.851 11.561H27.4627C28.9869 11.561 29.0921 11.5534 29.4024 11.4204C29.8334 11.2356 30.0234 10.9467 29.9809 10.5406C29.9443 10.1909 29.7676 9.96445 29.4038 9.80135C29.175 9.69877 28.9588 9.68564 27.4984 9.68564H25.851L25.7211 9.37964C25.5572 8.99393 25.0372 8.39924 24.6106 8.10974C24.207 7.83587 23.5824 7.56857 23.0868 7.45773C22.49 7.32427 21.4534 7.35115 20.881 7.51493ZM23.0148 9.40689C23.7337 9.78129 24.0311 10.62 23.6604 11.2273C23.1206 12.112 21.835 12.3281 20.9892 11.6764C20.5699 11.3532 20.4039 10.995 20.4462 10.5053C20.5397 9.42415 21.9172 8.83515 23.0148 9.40689ZM13.2916 15.5297C13.0448 15.5753 12.6915 15.6679 12.5064 15.7354C11.6944 16.0318 10.8182 16.7879 10.4801 17.4842L10.3207 17.8124H5.56141C1.06181 17.8124 0.787994 17.8187 0.541618 17.9288C-0.155712 18.2406 -0.185621 19.1581 0.490399 19.5027C0.721222 19.6204 0.900901 19.6248 5.52746 19.625L10.3252 19.6252L10.6239 20.141C11.2999 21.3083 12.615 22.002 14.1484 22C15.2092 21.9986 16.0495 21.7116 16.8566 21.0751C17.2632 20.7545 17.4399 20.5541 17.6763 20.1458L17.9776 19.6252H23.6482H29.3188L29.5515 19.4615C30.1677 19.0281 30.1457 18.3072 29.5054 17.9564C29.3129 17.8509 28.9306 17.8416 23.586 17.8124L17.8725 17.7811L17.7298 17.4775C17.1753 16.2972 15.5605 15.4155 14.0019 15.4423C13.858 15.4448 13.5383 15.4841 13.2916 15.5297ZM14.7707 17.3965C15.8955 17.7906 16.2131 19.0214 15.3651 19.7006C14.8664 20.1 14.3822 20.2279 13.7788 20.1197C12.7958 19.9435 12.2254 19.1215 12.5185 18.3036C12.6344 17.9801 13.0636 17.5719 13.4369 17.4302C13.796 17.2938 14.4317 17.2778 14.7707 17.3965Z"
+                d="M2.58292 10.8359H5.12576C5.26409 11.1628 5.39338 11.4731 5.5404 11.7929C5.99055 12.6973 6.45845 13.3739 7.16257 14.0901C7.92944 14.8532 8.83764 15.4673 9.84072 15.8827C10.8094 16.2841 11.8768 16.5056 13.0001 16.5056C14.1222 16.5056 15.1884 16.2845 16.156 15.8842C17.1628 15.4654 18.0722 14.8513 18.8353 14.0882C19.5205 13.437 20.0345 12.6342 20.4593 11.7929C20.6041 11.4731 20.7364 11.1613 20.8735 10.8359H46.583C47.2962 10.8359 47.9421 10.5464 48.4093 10.0792C48.8764 9.61208 49.166 8.96581 49.166 8.25299C49.166 7.53979 48.8764 6.89386 48.4093 6.42671C47.9421 5.95956 47.2962 5.67003 46.583 5.67003H20.9167C20.2292 4.2939 19.9222 3.5074 18.8371 2.41587C18.0703 1.65278 17.1624 1.03822 16.1594 0.622847C15.1907 0.221461 14.1233 0 13.0001 0C11.8779 0 10.8113 0.221082 9.84375 0.621334C8.83688 1.04011 7.92754 1.65467 7.16446 2.41775C6.11337 3.42273 5.72597 4.38423 5.08269 5.67003H2.58292C1.8701 5.67003 1.22379 5.95956 0.756644 6.42671C0.289494 6.89386 0 7.53979 0 8.25299C0 8.96581 0.289494 9.61208 0.756644 10.0792C1.22379 10.5464 1.8701 10.8359 2.58292 10.8359ZM10.8166 6.06991C11.1023 5.78795 11.4433 5.55817 11.8224 5.4017C12.1893 5.25014 12.5881 5.16585 13.0001 5.16585C13.4124 5.16585 13.8104 5.25014 14.1792 5.4017C14.5561 5.55704 14.8959 5.78609 15.1812 6.07183C15.4632 6.35 15.6922 6.69165 15.8509 7.07565C16.0025 7.44264 16.0868 7.84064 16.0868 8.25299C16.0868 8.66496 16.0025 9.0633 15.8509 9.43029C15.6922 9.81429 15.4632 10.156 15.1831 10.436C14.903 10.7161 14.5614 10.9451 14.1774 11.1039C13.8104 11.2554 13.4124 11.3397 13.0001 11.3397C12.5881 11.3397 12.1893 11.2554 11.8224 11.1039C11.4384 10.9451 11.0967 10.7161 10.8166 10.436C10.5365 10.156 10.3075 9.81429 10.1488 9.43029C9.99721 9.0633 9.91292 8.66496 9.91292 8.25299C9.91292 7.40033 10.2584 6.62814 10.8166 6.06991Z"
+                fill="#264B87"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M24.6265 26.1534H3.55269C2.83987 26.1534 2.19356 26.443 1.72641 26.9101C1.25926 27.3773 0.969727 28.0232 0.969727 28.7364C0.969727 29.4492 1.25926 30.0955 1.72641 30.5626C2.19356 31.0298 2.83987 31.3193 3.55269 31.3193H24.6689C24.8061 31.641 24.9388 31.9546 25.0839 32.2714C25.2585 32.6225 25.754 33.5447 26.0503 33.838C26.262 34.0988 26.471 34.3346 26.7064 34.5735C27.4729 35.3362 28.3811 35.9507 29.3846 36.3665C30.3533 36.7675 31.4206 36.9893 32.5439 36.9893C33.6672 36.9893 34.7342 36.7675 35.7028 36.3665C36.7059 35.9511 37.6141 35.3366 38.3791 34.5716C38.7714 34.2065 39.0938 33.7635 39.3992 33.3323C39.8339 32.7268 40.1294 32.0019 40.4174 31.3193H47.5528C48.266 31.3193 48.9119 31.0298 49.3791 30.5626C49.8462 30.0955 50.1357 29.4492 50.1357 28.7364C50.1357 28.0232 49.8462 27.3773 49.3791 26.9101C48.9119 26.443 48.266 26.1534 47.5528 26.1534H40.4605C40.2844 25.8012 40.123 25.4614 39.9597 25.1065C39.5266 24.2508 39.0508 23.5803 38.381 22.8993C37.6145 22.1366 36.7059 21.5216 35.7028 21.1062C34.7342 20.7052 33.6672 20.4834 32.5439 20.4834C31.4206 20.4834 30.3533 20.7052 29.3846 21.1062C28.3811 21.522 27.4729 22.1366 26.7083 22.9012C25.6655 23.8918 25.2626 24.882 24.6265 26.1534ZM29.4568 28.7364C29.4568 27.8837 29.8022 27.1115 30.3605 26.5533C30.642 26.2717 30.983 26.0427 31.3628 25.8851C31.7336 25.7335 32.1319 25.6492 32.5439 25.6492C32.9563 25.6492 33.3543 25.7335 33.7231 25.8851C34.1041 26.0427 34.4454 26.2717 34.727 26.5533C35.007 26.8334 35.2361 27.1751 35.3948 27.5591C35.5464 27.926 35.6307 28.324 35.6307 28.7364C35.6307 29.5891 35.2852 30.3612 34.727 30.9194C34.4454 31.201 34.1041 31.43 33.725 31.5876C33.3542 31.7392 32.9563 31.8235 32.5439 31.8235C31.6913 31.8235 30.9183 31.4773 30.3605 30.9194C30.0804 30.6394 29.8514 30.2977 29.6926 29.9137C29.5411 29.5467 29.4568 29.1484 29.4568 28.7364Z"
                 fill="#264B87"
               />
             </svg>
@@ -1406,5 +1548,6 @@
     <script src="/assets/scripts/modalRight.js"></script>
     <script src="/assets/scripts/favouritesScripts.js"></script>
     <script src="/assets/scripts/bookingPageScripts.js"></script>
+    <script src="/assets/scripts/calendar.js"></script>
   </body>
 </html>

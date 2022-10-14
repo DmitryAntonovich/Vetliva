@@ -255,6 +255,7 @@ input {
 @media screen and (max-width: 1280px) {
   .booking {
     margin: 0rem auto 8rem auto;
+    max-width: 111.6rem;
   }
   .booking-form__wrapper {
     width: 100%;

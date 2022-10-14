@@ -9,6 +9,9 @@
 .showmore-search {
   margin-bottom: 15rem;
 }
+/* .header-lang__svg path {
+  fill: var(--main-color) !important;
+} */
 
 @media screen and (max-width: 1280px) {
   .search-cards {

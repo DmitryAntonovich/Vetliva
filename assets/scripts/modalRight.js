@@ -1,4 +1,18 @@
-$(".header-burger").click(() => {
+// function rightModalToggler() {
+//   console.log("modal toggler");
+
+//   $(".header-burger").click(() => {
+//     modalShow($(".right-modal"));
+
+//     $(".left-modal__bg").removeClass("left-modal__bg");
+//     $(".left-modal__content").removeClass("left-modal__content");
+
+//     $(".modal-actions").removeClass("modal-menu__hide");
+//     $(".modal-booking_filter").css("display", "none");
+//   });
+// }
+
+function rightModalToggler() {
   modalShow($(".right-modal"));
 
   $(".left-modal__bg").removeClass("left-modal__bg");
@@ -6,7 +20,7 @@ $(".header-burger").click(() => {
 
   $(".modal-actions").removeClass("modal-menu__hide");
   $(".modal-booking_filter").css("display", "none");
-});
+}
 
 $(".booking-filter").click(function () {
   modalShow($(".right-modal"));
@@ -43,16 +57,18 @@ function hideRates() {
   $(".modal-nav__back").removeClass("modal-nav__back__active");
 }
 
-$(".booking-filter_tab").click(function () {
+$(".booking-filter_tab__title").click(function () {
   expandFilter($(this));
 });
 
 function expandFilter(item) {
   item
-    .children(".booking-filter_tab__arrow")
+    .siblings(".booking-filter_tab__arrow")
     .toggleClass("booking-filter__arrow__rotate");
   // console.log(item.next());
-  item.next().toggleClass("booking-filter_details__hide");
+
+  // console.log(item.parent().next());
+  item.parent().next().toggleClass("booking-filter_details__hide");
 }
 
 function modalShow(item) {

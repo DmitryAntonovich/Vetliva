@@ -16,9 +16,9 @@
   transform: translate(-50%, -50%);
 }
 
-.header-lang__svg path {
+/* .header-lang__svg path {
   fill: var(--main-color) !important;
-}
+} */
 
 @media screen and (max-width: 1280px) {
   .showmore-booking {
