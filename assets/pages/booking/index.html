@@ -251,25 +251,98 @@
         <!-- МОДАЛКА ФИЛЬТР -->
         <div class="modal-booking_filter">
           <div class="booking-filter__tab__wrapper">
-            <div class="booking-filter_tab cu-p">
-              <div class="booking-filter_tab__arrow">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+            <div class="booking-filter_tab booking-sort__tab cu-p">
+              <div class="booking-filter__drop">
+                <div class="booking-filter_tab__arrow">
+                  <svg
+                    class="cu-p main-arrow"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                      fill="#264B87"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="booking-filter_tab__title">
+                  <span class="filter_tab__title__span bold text-main"
+                    >Сортировать по</span
+                  >
+                </div>
+              </div>
+              <div class="booking-filter_tab__reset">
+                <span class="filter_tab__reset__span medium text-gray"
+                  >Сбросить</span
                 >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  ></path>
-                </svg>
+              </div>
+            </div>
+            <div class="booking-filter_details booking-filter_details__hide">
+              <div class="filter-check">
+                <div class="chk-radio">
+                  <input
+                    type="radio"
+                    class="checkbox-radio"
+                    name="sort"
+                    id=""
+                  />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >популярности</span
+                >
               </div>
 
-              <div class="booking-filter_tab__title">
-                <span class="filter_tab__title__span bold text-main"
-                  >Цена, BYN</span
+              <div class="filter-check">
+                <div class="chk-radio">
+                  <input
+                    type="radio"
+                    class="checkbox-radio"
+                    name="sort"
+                    id=""
+                  />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >возрастанию цены</span
                 >
+              </div>
+              <div class="filter-check">
+                <div class="chk-radio">
+                  <input
+                    type="radio"
+                    class="checkbox-radio"
+                    name="sort"
+                    id=""
+                  />
+                </div>
+                <span class="text-main semi-bold checkbox-title"
+                  >убыванию цены</span
+                >
+              </div>
+            </div>
+
+            <div class="booking-filter_tab cu-p">
+              <div class="booking-filter__drop">
+                <div class="booking-filter_tab__arrow">
+                  <svg
+                    class="cu-p main-arrow"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                      fill="#264B87"
+                    ></path>
+                  </svg>
+                </div>
+
+                <div class="booking-filter_tab__title">
+                  <span class="filter_tab__title__span bold text-main"
+                    >Цена, BYN</span
+                  >
+                </div>
               </div>
               <div class="booking-filter_tab__reset">
                 <span class="filter_tab__reset__span medium text-gray"
@@ -304,24 +377,26 @@
             </div>
 
             <div class="booking-filter_tab cu-p">
-              <div class="booking-filter_tab__arrow">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  ></path>
-                </svg>
-              </div>
+              <div class="booking-filter__drop">
+                <div class="booking-filter_tab__arrow">
+                  <svg
+                    class="cu-p main-arrow"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                      fill="#264B87"
+                    ></path>
+                  </svg>
+                </div>
 
-              <div class="booking-filter_tab__title">
-                <span class="filter_tab__title__span bold text-main"
-                  >Наличие мест</span
-                >
+                <div class="booking-filter_tab__title">
+                  <span class="filter_tab__title__span bold text-main"
+                    >Наличие мест</span
+                  >
+                </div>
               </div>
               <div class="booking-filter_tab__reset">
                 <span class="filter_tab__reset__span medium text-gray"
@@ -376,24 +451,26 @@
             </div>
 
             <div class="booking-filter_tab cu-p">
-              <div class="booking-filter_tab__arrow">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  ></path>
-                </svg>
-              </div>
+              <div class="booking-filter__drop">
+                <div class="booking-filter_tab__arrow">
+                  <svg
+                    class="cu-p main-arrow"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                      fill="#264B87"
+                    ></path>
+                  </svg>
+                </div>
 
-              <div class="booking-filter_tab__title">
-                <span class="filter_tab__title__span bold text-main"
-                  >Санатории за рубежом</span
-                >
+                <div class="booking-filter_tab__title">
+                  <span class="filter_tab__title__span bold text-main"
+                    >Санатории за рубежом</span
+                  >
+                </div>
               </div>
               <div class="booking-filter_tab__reset">
                 <span class="filter_tab__reset__span medium text-gray"
@@ -419,24 +496,26 @@
             </div>
 
             <div class="booking-filter_tab cu-p">
-              <div class="booking-filter_tab__arrow">
-                <svg
-                  class="cu-p main-arrow"
-                  viewBox="0 0 15 15"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
-                    fill="#264B87"
-                  ></path>
-                </svg>
-              </div>
+              <div class="booking-filter__drop">
+                <div class="booking-filter_tab__arrow">
+                  <svg
+                    class="cu-p main-arrow"
+                    viewBox="0 0 15 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.617962 5.67354C-0.0915052 4.96258 -0.207119 3.66485 0.359752 2.77504C0.926622 1.88523 1.96134 1.74023 2.6708 2.4512L7.5 7.29658L12.3292 2.4512C13.0387 1.74023 14.0734 1.88523 14.6402 2.77504C15.2071 3.66485 15.0915 4.96258 14.382 5.67354L8.55223 11.5229C7.96475 12.1376 7.09456 12.1711 6.47358 11.5488L0.617962 5.67354Z"
+                      fill="#264B87"
+                    ></path>
+                  </svg>
+                </div>
 
-              <div class="booking-filter_tab__title">
-                <span class="filter_tab__title__span bold text-main"
-                  >Медицинские профили</span
-                >
+                <div class="booking-filter_tab__title">
+                  <span class="filter_tab__title__span bold text-main"
+                    >Медицинские профили</span
+                  >
+                </div>
               </div>
               <div class="booking-filter_tab__reset">
                 <span class="filter_tab__reset__span medium text-gray"

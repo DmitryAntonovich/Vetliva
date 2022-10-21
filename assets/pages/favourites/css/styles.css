@@ -17,6 +17,10 @@
 
 .nav-booking__blue {
   border: 0.3rem solid var(--main-color);
+  background: #ffffff;
+}
+.nav-booking__blue:hover {
+  background: #ffffff;
 }
 
 .header-burger__block__blue {
@@ -32,10 +36,8 @@
 
 .favourites-nav {
   max-width: 129rem;
-  margin-top: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin: 0rem auto 6rem auto;
+  font-size: 2rem;
   position: relative;
 }
 
@@ -80,18 +82,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
-  /* justify-content: center; */
+  justify-content: center;
 }
 
-.menu__active::after {
+/* .menu__active::after {
   top: 62%;
   left: 28%;
   transform: translate(-50%, -50%);
-}
+} */
 
 @media screen and (max-width: 1280px) {
   .favourites-nav {
-    max-width: 111.9rem;
+    max-width: 87vw;
   }
 
   .favourite-nav_items {
@@ -136,7 +138,7 @@
 
 @media screen and (max-width: 768px) {
   .favourites-nav {
-    max-width: 90%;
+    max-width: 87vw;
     margin-top: 3.5rem;
   }
   .favourites-cards {

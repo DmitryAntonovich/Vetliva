@@ -53,13 +53,13 @@ $(".popular-slider__sub").slick({
   arrows: false,
   infinite: true,
   variableWidth: true,
-
+  swipe: false,
   responsive: [
     {
       breakpoint: 1280,
       settings: {
         variableWidth: true,
-        swipe: true,
+        swipe: false,
         centerMode: false,
         infinite: true,
       },
@@ -71,6 +71,17 @@ $(".popular-slider__sub").slick({
         centerMode: false,
         centerPadding: "0px",
         slidesToShow: 2,
+        variableWidth: true,
+      },
+    },
+    {
+      breakpoint: 370,
+      settings: {
+        arrows: false,
+        centerMode: false,
+        centerPadding: "0px",
+        slidesToShow: 2,
+        swipe: true,
         variableWidth: true,
       },
     },

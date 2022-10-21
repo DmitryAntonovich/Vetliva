@@ -226,6 +226,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .blog {
+    margin-bottom: 5rem;
+  }
   .blog-left__content {
     justify-content: space-between;
   }
@@ -292,5 +295,11 @@
     line-height: 2.6rem;
     max-width: 16.5rem;
     width: 16.5rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 460px) {
+  .blog-item:not(.slick-active) > .blog-item__content {
+    visibility: hidden;
   }
 }

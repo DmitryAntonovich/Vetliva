@@ -55,6 +55,10 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .main-descriptions {
+    margin: 8rem auto 4rem auto;
+  }
+
   .h-1 {
     font-size: 7.9rem;
   }

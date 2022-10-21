@@ -60,7 +60,7 @@ $(".guide-dots").slick({
         arrows: false,
         centerMode: false,
         centerPadding: "20px",
-        slidesToShow: 3,
+        slidesToShow: 2,
         swipe: false,
       },
     },

@@ -1,4 +1,36 @@
+$(".form-nav__right").click(function () {
+  current = $(".tab_active");
+  $(".tab_active").removeClass("tab_active");
+  first = $(".form-content__item").first();
+  last = $(".form-content__item").last();
+  current.next().length == 0
+    ? first.addClass("tab_active")
+    : current.next().addClass("tab_active");
+  first.detach().appendTo($(".form-nav__content"));
+});
+
+$(".form-nav__left").click(function () {
+  current = $(".tab_active");
+  $(".tab_active").removeClass("tab_active");
+  first = $(".form-content__item").first();
+  last = $(".form-content__item").last();
+  current.prev().length == 0
+    ? last.addClass("tab_active")
+    : current.prev().addClass("tab_active");
+  last.detach().prependTo($(".form-nav__content"));
+});
+
+$(".search-region__input__clear").click(() => {
+  $(".search-region__input").val("");
+  $(".find-region__select__span").html("Вся Беларусь");
+});
+
+$(".booking-option__search").click((e) => {
+  $(".find-region__select__span").html($(e.target).html());
+});
+
 function modalLangToggler() {
+  $(".nav-lang__wrapper").toggleClass("block__active");
   $(".modal-lang__options").toggleClass("modal-lang__active");
   $(".modal-lang").children(".modal-arrow").toggleClass("modal-arrow__active");
 }
@@ -60,11 +92,13 @@ function modalLangItemToggler(e) {
 
 //onclick show options
 function navBookingClick() {
+  $(".nav-booking").toggleClass("block__active");
   $(".booking-options").toggleClass("booking-options__active");
   $(".nav-booking__svg").toggleClass("nav-booking__svg__active");
 }
 
 $(".tourists__select__count").click(function () {
+  $(".tourists__select").toggleClass("block__active");
   $(".tourists-options").toggleClass("tourists-options__active");
   $(".tourists-count__arrow").toggleClass("svg-arrow__active");
 });
@@ -138,6 +172,7 @@ $(".tab-reg").click(function () {
 });
 
 $(".find-region__select").click(function () {
+  $(".find-region__select").toggleClass("block__active");
   $(".booking-options__search").toggleClass("booking-options__active");
 });
 $(".booking-option__search").click(function () {
@@ -145,11 +180,13 @@ $(".booking-option__search").click(function () {
 });
 
 $(".booking-sort_type").click(function () {
+  $(".booking-sort_type").toggleClass("block__active");
   $(".booking-sort_type__arrow").toggleClass("main-arrow__active");
   $(".booking-sort_options").toggleClass("booking-sort_options__active");
 });
 
 $(".find-category__select").click(function () {
+  $(".find-category__select").toggleClass("block__active");
   $(".booking-category_type__arrow").toggleClass("main-arrow__active");
   $(".booking-type_options").toggleClass("booking-sort_options__active");
 });
@@ -177,7 +214,29 @@ $(".card-rate__select").click(function () {
     .toggleClass("card-rate__select__arrow__active");
 });
 
+//card details modal
+
+// console.log($(".card_image").children($(".slick-slide")));
+
+$(".card_image")
+  .children($(".slick-slide"))
+  .click(function () {
+    $(".leaving-details__modal").toggleClass("leaving-details__modal__active");
+    $(".leaving-details__modal__active")
+      ? $("body").css("overflow", "hidden")
+      : $("body").css("overflow", "auto");
+  });
+$(".card_title").click(function () {
+  $(".leaving-details__modal").toggleClass("leaving-details__modal__active");
+});
+$(".leaving-modal__close").click(function () {
+  $(".leaving-details__modal").toggleClass("leaving-details__modal__active");
+});
+
+/////////////////////////////////////////////
+
 function navLangClick() {
+  $(".nav-lang__wrapper").toggleClass("block__active");
   $(".header__modal-lang__options").toggleClass("modal-lang__options__active");
   $(".header-lang__svg").toggleClass("header-lang__svg__active");
 }
@@ -237,6 +296,8 @@ function windowSizeText() {
 
 //Interactive map
 $(".city").click(function () {
+  $(".map-color").removeClass("map-color");
+
   // console.log("test");
   if (!$(this).children(".map-fill__zone").hasClass("map-color")) {
     $(this).children(".map-fill__zone").addClass("map-color");
@@ -306,6 +367,15 @@ function setTourists() {
   `);
 }
 
+$(".card-select__option").click(function () {
+  selectedRate = $(this).html();
+  $(this)
+    .parents(".card-rate")
+    .children(".card-rate__select")
+    .children(".card-rate__select__title")
+    .html(selectedRate);
+});
+
 //Фиксированное меню
 jQuery("document").ready(function ($) {
   menuFix();
@@ -341,20 +411,20 @@ function menuFix() {
 
 windowSizeText();
 
-$(window).on("load resize", windowSizeText);
+$(window).resize(windowSizeText);
 
 //closing lists
 jQuery(function ($) {
-  $(document).mouseup(function (e) {
-    // событие клика по веб-документу
-    // var div = $(".tourists-options"); // тут указываем ID элемента
-    var div = $("[class*=__active]"); // тут указываем ID элемента
+  $(window).mouseup(function (e) {
+    //Чтобы возвращался скролл при закрытии модалок
 
+    // событие клика по веб-документу
+    var div = $("[class*=__active]"); // тут указываем ID элемента
     if (
-      !div.is(e.target) && // если клик был не по нашему блоку
-      div.has(e.target).length === 0
+      div.is(e.target) || // если клик был не по нашему блоку
+      div.has(e.target).length === 0 // и не по его дочерним элементам скрываем его
     ) {
-      // и не по его дочерним элементам скрываем его
+      console.log("closer");
       var list = $("[class*=__active]");
       list.removeClass(function (i, cls) {
         cls.split(" ").forEach((item) => {
@@ -362,6 +432,8 @@ jQuery(function ($) {
         });
         $(cls).removeClass(cls);
       });
+
+      $("body").css("overflow", "auto");
     }
   });
 });
@@ -418,17 +490,23 @@ let headerBlue = `
                   />
                 </svg>
               </div>
-              <span class="bold text-white nav-desktop">Забронировать</span>
-              <svg
-                class="cu-p nav-desktop main-arrow main-arrow__indent svg-blueFill nav-booking__svg"
-                viewBox="0 0 15 10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                  fill="#264B87"
-                />
-              </svg>
+              
+              <div class="desktop-booking">
+                <span class="bold text-white nav-desktop"
+                  >Забронировать</span
+                >
+                <svg
+                  class="cu-p nav-desktop main-arrow svg-blueFill nav-booking__svg"
+                  viewBox="0 0 15 10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
+                    fill="#264b87"
+                  />
+                </svg>
+              </div>
+
 
               <div class="options booking-options b-r">
                 <ul>

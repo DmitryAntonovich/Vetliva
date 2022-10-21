@@ -258,25 +258,12 @@
                 <span class="rate text-gray bold">USD</span>
                 <span class="rate text-gray bold">EUR</span>
               </div>
-            </div>
-            <div class="modal-rates__buy">
-              <div class="modal-rates__desc">
-                <span class="text-gray semi-bold">Покупка</span>
-              </div>
-              <div class="modal-buy__item">
-                <span class="text-main bold">0.038</span>
-                <span class="text-main bold">2.62</span>
-                <span class="text-main bold">2.74</span>
-              </div>
-            </div>
-            <div class="modal-rates__sell">
-              <div class="modal-rates__desc">
-                <span class="text-gray semi-bold">Продажа</span>
-              </div>
-              <div class="modal-sell__item">
-                <span class="text-main bold">0.048</span>
-                <span class="text-main bold">2.74</span>
-                <span class="text-main bold">2.85</span>
+
+              <div class="modal-rate__day">
+                <div class="modal-rate__date">25.07.2022</div>
+                <div class="modal-rate__value">0.038</div>
+                <div class="modal-rate__value">2.62</div>
+                <div class="modal-rate__value">2.74</div>
               </div>
             </div>
           </div>
@@ -320,7 +307,7 @@
                 </svg>
               </a>
             </div>
-            <div class="nav-booking cu-p" onclick="navBookingClick()">
+            <div class="nav-booking cu-p">
               <div class="mobile-nav mobile-booking">
                 <svg
                   class="mob-icon"
@@ -334,19 +321,22 @@
                   />
                 </svg>
               </div>
-              <span class="bold text-white nav-desktop text-shadow"
-                >Забронировать</span
-              >
-              <svg
-                class="cu-p nav-desktop main-arrow svg-whiteFill nav-booking__svg"
-                viewBox="0 0 15 10"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
-                  fill="#264B87"
-                />
-              </svg>
+
+              <div class="desktop-booking" onclick="navBookingClick()">
+                <span class="bold text-white nav-desktop text-shadow"
+                  >Забронировать</span
+                >
+                <svg
+                  class="cu-p nav-desktop main-arrow svg-whiteFill nav-booking__svg"
+                  viewBox="0 0 15 10"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.617962 3.67354C-0.0915052 2.96258 -0.207119 1.66485 0.359752 0.775043C0.926623 -0.114765 1.96134 -0.259767 2.6708 0.451198L7.5 5.29658L12.3292 0.451198C13.0387 -0.259767 14.0734 -0.114765 14.6402 0.775043C15.2071 1.66485 15.0915 2.96258 14.382 3.67354L8.55223 9.52289C7.96475 10.1376 7.09456 10.1711 6.47358 9.5488L0.617962 3.67354Z"
+                    fill="#264B87"
+                  />
+                </svg>
+              </div>
 
               <div class="options booking-options b-r">
                 <ul>
@@ -622,6 +612,7 @@
                   class="input bold datepicker_from"
                   placeholder="22.22.2022"
                   autocomplete="off"
+                  readonly="readonly"
                 />
                 <svg
                   viewBox="0 0 14 15"
@@ -646,6 +637,7 @@
                   class="input bold datepicker_to"
                   placeholder="22.22.2022"
                   autocomplete="off"
+                  readonly="readonly"
                 />
                 <svg
                   viewBox="0 0 14 15"
@@ -662,7 +654,7 @@
               </div>
               <div class="tourists">
                 <div class="tourists__select tourists__select__count">
-                  <span class="bold cu-p tourists__count">3 гостя</span>
+                  <span class="bold cu-p tourists__count">2 гостя</span>
                   <svg
                     class="cu-p main-arrow tourists-count__arrow"
                     viewBox="0 0 15 10"
@@ -691,7 +683,7 @@
                             fill="#264B87"
                           />
                         </svg>
-                        <span class="bold text-main adults__count">2</span>
+                        <span class="bold text-main adults__count">1</span>
                         <svg
                           class="cu-p rotate-left main-arrow adults__increment"
                           viewBox="0 0 15 10"
@@ -719,7 +711,7 @@
                             fill="#264B87"
                           />
                         </svg>
-                        <span class="bold text-main childs__count">2</span>
+                        <span class="bold text-main childs__count">1</span>
                         <svg
                           class="cu-p rotate-left childs__increment"
                           viewBox="0 0 15 10"

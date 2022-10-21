@@ -28,6 +28,7 @@
   position: relative;
   display: flex;
 }
+
 .guide-slide__desc {
   transition: visibility 0.3s linear, opacity 0.3s linear;
   visibility: hidden;
@@ -245,7 +246,7 @@
 
 @media screen and (max-width: 990px) {
   .guide-carousel {
-    width: 100%;
+    width: 95%;
   }
   .guide-slide__wrapper {
     max-width: 78rem;
@@ -267,6 +268,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .guide-slide__desc {
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    visibility: visible;
+    opacity: 1;
+    font-size: 9.4rem;
+    max-width: 69.6rem;
+    line-height: 86.4%;
+    padding: 0rem 0rem 7rem 8rem;
+    align-self: flex-end;
+  }
+
+  .guide {
+    margin-bottom: 4rem;
+  }
   .guide-carousel {
     width: 96%;
   }
@@ -289,6 +304,7 @@
   .dots-desc {
     margin-top: 0.5rem;
     line-height: 1.3rem;
+    max-width: 15rem;
   }
   .dots-desc span {
     font-size: 1.3rem;
@@ -315,5 +331,12 @@
   .guide-slide__desc {
     font-size: 2rem;
     padding: 0rem 0rem 3rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .guide-slide__desc {
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    visibility: hidden;
   }
 }
